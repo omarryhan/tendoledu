@@ -1,34 +1,98 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: 'Tendoledu',
+    description: "Tendoledu",
+    author: 'Tendoledu',
+    twitter: 'tendoledu',
+    github: 'tendoledu',
+    siteUrl: 'https://tendoledu.com',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-catch-links',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        name: `images`,
+        host: 'https://tendoledu.com',
+        sitemap: 'https://tendoledu.com/tendoledu.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+        omitGoogleFont: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            // 'Raleway',
+            // 'Montserrat',
+            // 'medium-content-sans-serif-font',
+            // '-apple-system',
+            // 'BlinkMacSystemFont',
+            // 'Segoe UI',
+            // 'Roboto',
+            // 'Oxygen',
+            'Ubuntu',
+            // 'Cantarell',
+            // 'Open Sans',
+            // 'Helvetica Neue',
+          ],
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        trackingId: '',
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Tendoledu',
+        short_name: 'Tendoledu',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/T.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$|\.ts$|\.tsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
+    // https://www.gatsbyjs.org/packages/gatsby-plugin-offline/#remove
+    'gatsby-plugin-offline',
   ],
-}
+};
