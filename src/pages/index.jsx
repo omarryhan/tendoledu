@@ -1,5 +1,9 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
-import { Redirect } from '@reach/router';
-
-export default () => <Redirect to="/students" />;
+export default () => {
+  useEffect(() => {
+    navigate('/students/');
+  }, []);
+  return null;
+};
