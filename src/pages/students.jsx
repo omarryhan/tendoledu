@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default () => (
-  <p> Hey you!</p>
+  <p> Hey you! </p>
 );
