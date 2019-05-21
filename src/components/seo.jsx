@@ -22,6 +22,8 @@ function SEO({
             title
             description
             author
+            twitter
+            logoFullUrl
           }
         }
       }
@@ -50,6 +52,10 @@ function SEO({
           content: title,
         },
         {
+          property: 'og:image',
+          content: site.siteMetadata.logoFullUrl,
+        },
+        {
           property: 'og:description',
           content: metaDescription,
         },
@@ -63,7 +69,7 @@ function SEO({
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitter,
         },
         {
           name: 'twitter:title',
@@ -72,6 +78,10 @@ function SEO({
         {
           name: 'twitter:description',
           content: metaDescription,
+        },
+        {
+          name: 'twitter:image',
+          content: site.siteMetadata.logoFullUrl,
         },
       ].concat(meta)}
     />

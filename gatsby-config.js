@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Tendoledu',
-    description: "Tendoledu",
+    description: 'Tendoledu',
     author: 'Tendoledu',
     twitter: 'tendoledu',
-    github: 'tendoledu',
     siteUrl: 'https://tendoledu.com',
+    logoFullUrl: 'https://tendoledu.com/static/logo.png',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
