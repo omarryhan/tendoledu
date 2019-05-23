@@ -5,7 +5,7 @@ module.exports = {
     author: 'Tendoledu',
     twitter: 'tendoledu',
     siteUrl: 'https://tendoledu.com',
-    logoFullUrl: 'https://tendoledu.com/static/logo.png',
+    logoFullUrl: 'https://tendoledu.com/imgs/logo.png',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
