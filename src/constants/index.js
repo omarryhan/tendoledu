@@ -47,6 +47,12 @@ export const EMPLOYERS_THEME = Object.freeze({
     scrollbarHandleColor: COLOR_PALETTE.blue.primary,
 });
 
+export const NOT_FOUND_THEME = Object.freeze({
+    color: COLOR_PALETTE.black.primary,
+    backgroundColor: COLOR_PALETTE.white.primary,
+    scrollbarHandleColor: COLOR_PALETTE.blue.primary,
+});
+
 export const FONT_SIZES = Object.freeze({
 
 });
