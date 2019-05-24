@@ -25,7 +25,6 @@ import RecognitionLogo from '../images/recognition.svg';
 
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   return (
     <Layout theme={SCHOOLS_THEME} currentPage="schools">
       <SEO
@@ -35,8 +34,6 @@ export default () => {
       <SignUpModal
         isModalVisible={isModalVisible}
         setIsModalVisible={setIsModalVisible}
-        isSubmitting={isSubmitting}
-        setIsSubmitting={setIsSubmitting}
         currentPage="schools"
       />
       <Section backgroundImage={HeroImage} height="80vh">
@@ -87,8 +84,6 @@ export default () => {
           outsideText="to know more!"
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}
-          isSubmitting={isSubmitting}
-          setIsSubmitting={setIsSubmitting}
         />
       </Section>
       <Section height="80vh">
@@ -124,8 +119,6 @@ export default () => {
           outsideText="to know more!"
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}
-          isSubmitting={isSubmitting}
-          setIsSubmitting={setIsSubmitting}
         />
       </Section>
     </Layout>

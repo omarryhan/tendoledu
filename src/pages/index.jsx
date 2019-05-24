@@ -1,11 +1,12 @@
-// import { useEffect } from 'react';
-// import { navigate } from 'gatsby';
+import { useEffect } from 'react';
+import { navigate } from 'gatsby';
 
-// export default () => {
-//   useEffect(() => {
-//     navigate('/schools/');
-//   }, []);
-//   return null;
-// };
-
-export default () => null;
+// Redirects are mainly being handled by
+// Netlify through by 302 responses.
+// In case that failed, we do an app-level redirect
+export default () => {
+  useEffect(() => {
+    navigate('/schools/');
+  }, []);
+  return null;
+};

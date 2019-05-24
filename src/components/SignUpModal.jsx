@@ -1,5 +1,10 @@
 import React from 'react';
-import Modal from '@material-ui/core/Modal';
+
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+
 import SignUpForm from './SignUpForm';
 
 export default ({
@@ -7,11 +12,18 @@ export default ({
     setIsModalVisible,
     currentPage,
 }) => (
-  <Modal
+  <Dialog
     open={isModalVisible}
     onClose={() => setIsModalVisible(false)}
-    onBackdropClick={() => setIsModalVisible(false)}
+    tabIndex={-1}
+    aria-labelledby="Sign Up Dialogue"
   >
-    <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
-  </Modal>
+    <DialogTitle id="max-width-dialog-title">Sign Up</DialogTitle>
+    <DialogContent>
+      <DialogContentText>
+        Sign up for updates
+      </DialogContentText>
+      <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
+    </DialogContent>
+  </Dialog>
 );

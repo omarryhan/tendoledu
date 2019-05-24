@@ -8,7 +8,6 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button_ from '@material-ui/core/Button';
-
 import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 
 
@@ -25,7 +24,7 @@ const onSubmit = async (
     const recaptchaValue = recaptchaRef.current.getValue();
     try {
         const bodyFormData = new FormData();
-        bodyFormData.set('expertise', 'marketing');
+        bodyFormData.set('expertise', values.expertise);
         bodyFormData.set('email', values.email);
         bodyFormData.set('page_name', currentPage);
         bodyFormData.set('g-recaptcha-response', recaptchaValue);
@@ -36,6 +35,8 @@ const onSubmit = async (
           config: { headers: { 'Content-Type': 'multipart/form-data' } },
           });
     } catch (e) {
+        // If you get a CORS related error in development,
+        // don't worry about it. It's working correctly @ tendoledu.com
         alert.error('Something went wrong :(. Please try again later. Or send us an email at: contact@tendoledu.com');
         console.error(e);
         return;
@@ -47,13 +48,13 @@ const onSubmit = async (
     alert.success('Thank you! You\'ll be hearing from us soon');
 };
 
-// const expertiseOptions = Object.freeze([
-//     'Marketing',
-//     'Finance',
-//     'Web Development',
-//     'Graphic Design',
-//     'Other',
-// ]);
+const expertiseOptions = Object.freeze([
+    'Marketing',
+    'Finance',
+    'Web Development',
+    'Graphic Design',
+    'Other',
+]);
 
 const Button = styled(Button_)`
     width: 1000px;
@@ -63,7 +64,7 @@ export default ({ currentPage, onSubmit: modalSubmitHandler }) => {
     const alert = useAlert();
     return (
       <Formik
-        initialValues={{ email: '', password: '' }}
+        initialValues={{ email: '', expertise: '' }}
         validate={(values) => {
                 const errors = {};
 
@@ -75,14 +76,25 @@ export default ({ currentPage, onSubmit: modalSubmitHandler }) => {
                 errors.email = 'Invalid email address';
                 }
 
+                if (!values.expertise) {
+                  errors.expertise = 'Missing expertise';
+                }
+
                 return errors;
             }}
-        onSubmit={(...args) => onSubmit(...args, alert, currentPage, modalSubmitHandler)}
+        onSubmit={async (...args) => onSubmit(...args, alert, currentPage, modalSubmitHandler)}
       >
         {({ isSubmitting }) => (
           <Form>
-            <Field type="email" name="email" />
+            <Field type="email" name="email" required />
             <ErrorMessage name="email" component="div" />
+            <Field component="select" name="expertise" required>
+              <option value="" disabled selected hidden>Select an Expertise</option>
+              {expertiseOptions.map(option => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </Field>
+            <ErrorMessage name="expertise" component="div" />
             <Button
               type="submit"
               variant="contained"

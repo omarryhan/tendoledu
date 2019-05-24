@@ -1,3 +1,4 @@
 [[redirects]]
   from = "/"
   to = "/schools"
+  status = 302
