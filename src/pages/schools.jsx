@@ -9,7 +9,7 @@ import HeroSubtitle from '../components/HeroSubtitle';
 import HeroLead from '../components/HeroLead';
 import HowItWorksContainer from '../components/HowItWorksContainer';
 import HowItWorksCard from '../components/HowItWorksCard';
-import YourGainContainer from '../components/YourGainContainer';
+import YourGainContainer, { SubText } from '../components/YourGainContainer';
 import YourGainCard from '../components/YourGainCard';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
@@ -37,6 +37,7 @@ export default () => {
         setIsModalVisible={setIsModalVisible}
         isSubmitting={isSubmitting}
         setIsSubmitting={setIsSubmitting}
+        currentPage="schools"
       />
       <Section backgroundImage={HeroImage} height="80vh">
         <HeroTitle> Make Your Online School Different </HeroTitle>
@@ -58,21 +59,25 @@ export default () => {
               logo={<img src={CreateLogo} alt="Create logo" />}
               mainText="Create a space for your students to work in"
               subText={null}
+              key="create logo"
             />,
             <HowItWorksCard
               logo={<img src={AdmitLogo} alt="Admit logo" />}
               mainText="Admit students based on criteria you Set"
               subText="You can add an Ratings. admission fee too!"
+              key="admit logo"
             />,
             <HowItWorksCard
               logo={<img src={SelectLogo} alt="Select logo" />}
               mainText="Select requested marketing jobs then assign to students"
               subText={null}
+              key="select logo"
             />,
             <HowItWorksCard
               logo={<img src={DeliverLogo} alt="Deliver logo" />}
               mainText="Deliver finished work and get ratings"
               subText={null}
+              key="deliver logo"
             />,
           ]}
           subText="Tendoledu makes you do even more"
@@ -93,15 +98,17 @@ export default () => {
               logo={<img src={RecognitionLogo} alt="Recognition logo" />}
               title="Tangible Value"
               text="Their employers can see their work!"
+              key="recognition logo"
             />,
             <YourGainCard
               logo={<img src={WorkLogo} alt="Work logo" />}
               title="Market Value"
               text="Real work experience!"
+              key="work logo"
             />,
         ]}
           subText={(
-            <p>
+            <SubText>
               WE
               {' '}
               <span role="img" aria-label="heart emoji">
@@ -109,7 +116,7 @@ export default () => {
               </span>
               {' '}
               YOUR STUDENTS AS MUCH AS YOU DO!
-            </p>
+            </SubText>
           )}
         />
         <SignUpButtonDiv

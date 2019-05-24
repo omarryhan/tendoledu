@@ -5,12 +5,13 @@ import SignUpForm from './SignUpForm';
 export default ({
     isModalVisible,
     setIsModalVisible,
+    currentPage,
 }) => (
   <Modal
     open={isModalVisible}
     onClose={() => setIsModalVisible(false)}
     onBackdropClick={() => setIsModalVisible(false)}
   >
-    <SignUpForm />
+    <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
   </Modal>
 );

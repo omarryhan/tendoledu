@@ -24,10 +24,15 @@ html body {
 ::-webkit-scrollbar {
     width: 0.5vw;
 }
+  
+/* Track */
 ::-webkit-scrollbar-track {
     box-shadow: gray; 
 }
+  
+/* Handle */
 ::-webkit-scrollbar-thumb {
     background: ${props => props.theme.scrollbarHandleColor}; 
+    border-radius: 5vh;
 }
 `;

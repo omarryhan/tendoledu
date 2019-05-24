@@ -79,8 +79,8 @@ export const media = generateMedia(BREAKPOINTS);
 export const alertSettings = {
     position: positions.TOP_RIGHT,
     timeout: 5000,
-    offset: '30px',
     transition: transitions.SCALE,
 };
 
 export const RECAPTCHA_PUBLIC_KEY = '6LcOB6UUAAAAAGFpmRUeUHX66ybYyoPn-au8xyMi';
+export const SIGNUP_ROUTE = 'https://api.tendoledu.com/signup/';

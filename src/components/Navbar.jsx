@@ -34,41 +34,17 @@ const NavbarContainer = styled.header`
 
 const NavbarSubContainer = styled.div`
     display: flex;
-    width: 25%;
     text-align: center;
 `;
 
-const IndexOl = styled.ol`
-
-`;
-
-const IndexLi = styled.li`
-
-`;
-
-const IndexP = styled.p`
-
-`;
-
-const Title = styled.h2`
-
+const Title = styled.p`
+  font-size: 3em;
 `;
 
 export default () => (
   <NavbarContainer>
     <NavbarSubContainer>
       <Title> Tendoledu </Title>
-    </NavbarSubContainer>
-
-    <NavbarSubContainer>
-      <IndexOl>
-        <IndexLi>
-          <IndexP> How It Works </IndexP>
-        </IndexLi>
-        <IndexLi>
-          <IndexP> Value </IndexP>
-        </IndexLi>
-      </IndexOl>
     </NavbarSubContainer>
   </NavbarContainer>
 );

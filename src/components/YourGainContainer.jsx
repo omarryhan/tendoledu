@@ -13,7 +13,7 @@ const SubTextContainer = styled.div`
 
 `;
 
-const SubText = styled.p`
+export const SubText = styled.p`
 
 `;
 
@@ -32,9 +32,7 @@ export default ({ cards, subText }) => (
     </CardsContainer>
 
     <SubTextContainer>
-      <SubText>
-        {subText}
-      </SubText>
+      {subText}
     </SubTextContainer>
   </OuterContainer>
 );
