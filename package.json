@@ -6,6 +6,7 @@
   "author": "contact@tendoledu.com <contact@tendoledu.com>",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.10.0",
     "formik": "^1.5.7",
     "gatsby": "^2.5.5",
@@ -36,7 +37,6 @@
     "react-typography": "^0.16.19",
     "styled-components": "^4.2.0",
     "styled-media-query": "^2.1.1",
-    "superagent": "^5.0.5",
     "typography": "^0.16.19",
     "typography-theme-lincoln": "^0.16.19"
   },

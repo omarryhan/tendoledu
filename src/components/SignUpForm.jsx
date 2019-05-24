@@ -4,7 +4,7 @@ import {
 } from 'formik';
 import styled from 'styled-components';
 import { useAlert } from 'react-alert';
-import request from 'superagent';
+import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button_ from '@material-ui/core/Button';
@@ -24,19 +24,22 @@ const onSubmit = async (
     await recaptchaRef.current.execute();
     const recaptchaValue = recaptchaRef.current.getValue();
     try {
-        await request.post(SIGNUP_ROUTE)
-            .type('form')
-            // .send({ expertise: values.expertise })
-            .send({ expertise: 'marketing' })
-            .send({ email: values.email })
-            .send({ page_name: currentPage })
-            .send({ 'g-recaptcha-response': recaptchaValue });
+        const bodyFormData = new FormData();
+        bodyFormData.set('expertise', 'marketing');
+        bodyFormData.set('email', values.email);
+        bodyFormData.set('page_name', currentPage);
+        bodyFormData.set('g-recaptcha-response', recaptchaValue);
+        await axios({
+          method: 'post',
+          url: SIGNUP_ROUTE,
+          data: bodyFormData,
+          config: { headers: { 'Content-Type': 'multipart/form-data' } },
+          });
     } catch (e) {
         alert.error('Something went wrong :(. Please try again later. Or send us an email at: contact@tendoledu.com');
         console.error(e);
         return;
     } finally {
-        console.log('calling modal submit handler');
         modalSubmitHandler();
         resetForm();
         setSubmitting(false);
