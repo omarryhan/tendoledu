@@ -7,6 +7,6 @@ export default styled.section`
     background-color: ${props => props.backgroundColor};
 
     margin: 0 auto;
-    padding: 5vh;
+    padding: 3vh;
     margin-bottom: 3vh;
 `;

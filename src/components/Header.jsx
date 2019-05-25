@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Title = styled.h2`
-  font-size: 2em;
+  font-size: 1.5em;
 `;
 
 export default () => (

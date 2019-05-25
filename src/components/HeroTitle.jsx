@@ -4,17 +4,19 @@ import { media } from '../constants';
 
 export default styled.h1`
     ${media.lessThan('laptop')`
-        font-size: 3em;
+        font-size: 2.5em;
     `};
 
     ${media.lessThan('tablet')`
-        font-size: 2em;
-    `};
-
-    ${media.lessThan('mobileMedium')`
         font-size: 1.5em;
     `};
 
-    font-size: 4em;
+    ${media.lessThan('mobileMedium')`
+        font-size: 1em;
+    `};
+
+    font-size: 3.5em;
     text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 `;

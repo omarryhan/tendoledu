@@ -15,4 +15,6 @@ export default styled.h2`
     `};
 
     text-align: center;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 `;
