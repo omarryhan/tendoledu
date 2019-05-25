@@ -4,7 +4,7 @@ import {
   } from '../constants';
 
 
-export default styled.h1`
+export default styled.h2`
     ${media.greaterThan('laptop')`
         margin-left: 10vw;
     `}

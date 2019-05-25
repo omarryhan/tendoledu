@@ -7,10 +7,25 @@ export const TYPOGRAPHY = Object.freeze({
     suppressDeprecationWarnings: true,
 });
 
+export const COLOR_PALETTE = Object.freeze({
+    red: {
+        primary: '#FF5252',
+    },
+    cyan: {
+        primary: '#1DE9B6',
+    },
+    black: {
+        primary: '#000000',
+    },
+    white: {
+        primary: '#fff',
+    },
+});
+
 export const SCHOOLS_THEME = Object.freeze({
     palette: {
-        primary: { main: '#1DE9B6', contrastText: '#000000' },
-        secondary: { main: '#FF5252', contrastText: '#000000' },
+        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
+        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
     },
     status: {
         danger: 'orange',
@@ -20,8 +35,8 @@ export const SCHOOLS_THEME = Object.freeze({
 
 export const STUDENTS_THEME = Object.freeze({
     palette: {
-        primary: { main: '#1DE9B6', contrastText: '#000000' },
-        secondary: { main: '#FF5252', contrastText: '#000000' },
+        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
+        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
     },
     status: {
         danger: 'orange',
@@ -31,8 +46,8 @@ export const STUDENTS_THEME = Object.freeze({
 
 export const STARTUPS_THEME = Object.freeze({
     palette: {
-        primary: { main: '#1DE9B6', contrastText: '#000000' },
-        secondary: { main: '#FF5252', contrastText: '#000000' },
+        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
+        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
     },
     status: {
         danger: 'orange',
@@ -42,8 +57,8 @@ export const STARTUPS_THEME = Object.freeze({
 
 export const NOT_FOUND_THEME = Object.freeze({
     palette: {
-        primary: { main: '#1DE9B6', contrastText: '#000000' },
-        secondary: { main: '#FF5252', contrastText: '#000000' },
+        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
+        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
     },
     typography: TYPOGRAPHY,
 });

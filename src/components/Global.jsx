@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { COLOR_PALETTE } from '../constants';
 
 export default createGlobalStyle`
 * {
@@ -42,12 +43,12 @@ html body {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: gray; 
+    box-shadow: ${COLOR_PALETTE.black.primary}; 
 }
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: red; 
+    background: ${COLOR_PALETTE.red.primary}; 
     border-radius: 5vh;
 }
 `;

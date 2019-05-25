@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeProvider } from '@material-ui/styles';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 import Layout from '../components/Layout';
@@ -11,7 +11,7 @@ import SEO from '../components/SEO';
 const muiTheme = createMuiTheme(STUDENTS_THEME, 'studentsTheme');
 
 export default () => (
-  <ThemeProvider theme={muiTheme}>
+  <MuiThemeProvider theme={muiTheme}>
     <Layout currentPage="students">
       <SEO
         title="Studetns"
@@ -19,5 +19,5 @@ export default () => (
       />
       <h1> Under Construction! </h1>
     </Layout>
-  </ThemeProvider>
+  </MuiThemeProvider>
 );

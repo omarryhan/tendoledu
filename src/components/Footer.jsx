@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FOOTER_HEIGHT } from '../constants';
+import { FOOTER_HEIGHT, COLOR_PALETTE } from '../constants';
 
 
 const FooterContainer = styled.footer`
     height: ${FOOTER_HEIGHT}vh;
-    background-color: black;
+    background-color: ${COLOR_PALETTE.black.primary};
     display: flex;
     align-items: center;
 `;
@@ -13,7 +13,7 @@ const FooterContainer = styled.footer`
 const FooterText = styled.p`
   margin: 0 auto;
   text-align: center;
-  color: white;
+  color: ${COLOR_PALETTE.white.primary};
 `;
 
 export default () => (

@@ -39,11 +39,16 @@ const HowItWorksCard = ({ logo, mainText, subText }) => (
       </MainText>
     </MainTextContainer>
 
-    <SubTextContainer>
-      <SubText>
-        {subText}
-      </SubText>
-    </SubTextContainer>
+    {subText
+      ? (
+        <SubTextContainer>
+          <SubText>
+            {subText}
+          </SubText>
+        </SubTextContainer>
+        )
+      : null
+    }
   </Outline>
 );
 

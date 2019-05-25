@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ThemeProvider } from '@material-ui/styles';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 import { SCHOOLS_THEME } from '../constants/index';
@@ -31,7 +31,7 @@ const muiTheme = createMuiTheme(SCHOOLS_THEME, 'schoolsTheme');
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
-    <ThemeProvider theme={muiTheme}>
+    <MuiThemeProvider theme={muiTheme}>
       <Layout currentPage="schools">
         <SEO
           title="Schools"
@@ -71,7 +71,7 @@ export default () => {
               />,
               <HowItWorksCard
                 logo={<img src={SelectLogo} alt="Select logo" />}
-                mainText="Select requested marketing jobs then assign to students"
+                mainText="Select marketing jobs posted by startups, then assign to students"
                 key="select logo"
               />,
               <HowItWorksCard
@@ -125,6 +125,6 @@ export default () => {
           />
         </Section>
       </Layout>
-    </ThemeProvider>
+    </MuiThemeProvider>
   );
 };

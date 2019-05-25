@@ -8,7 +8,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import GlobalStyle from './Global';
-import Navbar from './Navbar';
+import HeaderContainer from './Header';
 import Footer from './Footer';
 import {
   media,
@@ -62,7 +62,7 @@ const Layout = ({ children }) => (
         <CssBaseline />
         <AlertProvider template={AlertTemplate} {...alertSettings}>
           <GlobalStyle />
-          <Navbar siteTitle={data.site.siteMetadata.title} />
+          <HeaderContainer siteTitle={data.site.siteMetadata.title} />
           <BodyLayout>
             <Main>{children}</Main>
           </BodyLayout>
