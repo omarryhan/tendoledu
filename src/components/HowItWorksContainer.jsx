@@ -8,7 +8,7 @@ const OuterContainer = styled.div`
 
 const Title = styled.h2`
   text-align: center;
-  margin: 3vh 3vw 3vh 3vw;
+  margin: 8vh 0 8vh 0;
 `;
 
 const SubTextContainer = styled.div`

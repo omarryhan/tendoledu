@@ -5,7 +5,11 @@ import Button from '@material-ui/core/Button';
 
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  margin: 0 auto;
 `;
 
 const OutsideText = styled.p`
@@ -25,6 +29,8 @@ const SignUpButton = ({
     <Button
       onClick={() => setIsModalVisible(true)}
       disabled={isModalVisible}
+      color="primary"
+      size="large"
     >
       <Text>{text}</Text>
     </Button>
