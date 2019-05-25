@@ -2,21 +2,9 @@ import { generateMedia } from 'styled-media-query';
 import { transitions, positions } from 'react-alert';
 
 
-const TYPOGRAPY_THEME = Object.freeze({
-    fontFamily: [
-        'Raleway',
-        'Montserrat',
-        'medium-content-sans-serif-font',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Segoe UI',
-        'Roboto',
-        'Oxygen',
-        'Ubuntu',
-        'Cantarell',
-        'Open Sans',
-        'Helvetica Neue',
-    ].join(','),
+export const TYPOGRAPHY = Object.freeze({
+    useNextVariants: true,
+    suppressDeprecationWarnings: true,
 });
 
 export const SCHOOLS_THEME = Object.freeze({
@@ -27,7 +15,7 @@ export const SCHOOLS_THEME = Object.freeze({
     status: {
         danger: 'orange',
     },
-    typography: TYPOGRAPY_THEME,
+    typography: TYPOGRAPHY,
 });
 
 export const STUDENTS_THEME = Object.freeze({
@@ -38,7 +26,7 @@ export const STUDENTS_THEME = Object.freeze({
     status: {
         danger: 'orange',
     },
-    typography: TYPOGRAPY_THEME,
+    typography: TYPOGRAPHY,
 });
 
 export const STARTUPS_THEME = Object.freeze({
@@ -49,7 +37,7 @@ export const STARTUPS_THEME = Object.freeze({
     status: {
         danger: 'orange',
     },
-    typography: TYPOGRAPY_THEME,
+    typography: TYPOGRAPHY,
 });
 
 export const NOT_FOUND_THEME = Object.freeze({
@@ -57,6 +45,7 @@ export const NOT_FOUND_THEME = Object.freeze({
         primary: { main: '#1DE9B6', contrastText: '#000000' },
         secondary: { main: '#FF5252', contrastText: '#000000' },
     },
+    typography: TYPOGRAPHY,
 });
 
 export const FOOTER_HEIGHT = 10; // vh

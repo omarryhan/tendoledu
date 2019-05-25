@@ -10,12 +10,36 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import GlobalStyle from './Global';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
-import { FOOTER_HEIGHT, alertSettings, HEADER_HEIGHT } from '../constants';
+import {
+  media,
+  LaptopLayoutWidth,
+  TabletLayoutWidth,
+  MobileLargeLayoutWidth,
+  MobileLayoutWidth,
+  HEADER_HEIGHT,
+  FOOTER_HEIGHT,
+  alertSettings,
+} from '../constants';
 
 
 const BodyLayout = styled.div`
   min-height: ${(100 - FOOTER_HEIGHT - HEADER_HEIGHT).toString()}vh;
+
+  ${media.lessThan('laptop')`
+    width: ${TabletLayoutWidth};
+  `};
+
+  ${media.lessThan('tablet')`
+    width: ${MobileLargeLayoutWidth};
+  `};
+
+  ${media.lessThan('mobileMedium')`
+    width: ${MobileLayoutWidth};
+  `};
+
+  width: ${LaptopLayoutWidth};
+
+  margin: 0 auto;
 `;
 
 const Main = styled.main`

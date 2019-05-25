@@ -5,7 +5,7 @@ import { FOOTER_HEIGHT } from '../constants';
 
 const FooterContainer = styled.footer`
     height: ${FOOTER_HEIGHT}vh;
-    background-color: blue;
+    background-color: black;
     display: flex;
     align-items: center;
 `;

@@ -64,6 +64,27 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: [
+            'Raleway',
+            'Montserrat',
+            'medium-content-sans-serif-font',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            'Segoe UI',
+            'Roboto',
+            'Oxygen',
+            'Ubuntu',
+            'Cantarell',
+            'Open Sans',
+            'Helvetica Neue',
+          ],
+        },
+      },
+    },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-offline/#remove
     'gatsby-plugin-offline',
   ],

@@ -5,6 +5,20 @@ export default createGlobalStyle`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: ${[
+        'Ubuntu',
+        'Raleway',
+        'Montserrat',
+        'medium-content-sans-serif-font',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Cantarell',
+        'Open Sans',
+        'Helvetica Neue',
+    ].join(',')};
 }
 
 html {
@@ -23,6 +37,7 @@ html body {
 
 ::-webkit-scrollbar {
     width: 0.5vw;
+    height: 1vh;
 }
   
 /* Track */
