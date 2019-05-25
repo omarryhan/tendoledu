@@ -10,7 +10,6 @@ import {
 
 const HeaderContainer = styled.header`
   height: ${HEADER_HEIGHT};
-  padding: 20px;
   text-align: center;
 `;
 
@@ -19,7 +18,7 @@ const Title = styled.h1`
 
 export default () => (
   <HeaderContainer>
-    <AppBar postition="static" color="secondary">
+    <AppBar position="static" color="secondary">
       <Toolbar>
         <Title> Tendoledu </Title>
       </Toolbar>

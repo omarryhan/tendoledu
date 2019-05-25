@@ -56,7 +56,6 @@ const expertiseOptions = Object.freeze([
 ]);
 
 const Button = styled(Button_)`
-    width: 1000px;
 `;
 
 const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {

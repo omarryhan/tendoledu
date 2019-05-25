@@ -85,6 +85,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      options: {
+      },
+    },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-offline/#remove
     'gatsby-plugin-offline',
   ],
