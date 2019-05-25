@@ -24,6 +24,18 @@ const LeadContainer = styled.div`
 const LeadMessage = styled.p`
   text-align: center;
   font-size: 2em;
+
+  ${media.lessThan('laptop')`
+      font-size: 1.75em;
+  `};
+
+  ${media.lessThan('tablet')`
+      font-size: 1.5em;
+  `};
+
+  ${media.lessThan('mobileMedium')`
+      font-size: 1.25em;
+  `};
 `;
 
 const HeroLead = ({ message }) => (

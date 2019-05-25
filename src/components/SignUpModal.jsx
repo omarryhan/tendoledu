@@ -25,7 +25,7 @@ const SignUpModal = ({
         Tendoledu is going to launch really really soon.
         {' '}
         <br />
-        Sign up Now to get notified on any and all developments
+        Sign up now to get notified on any and all developments
       </DialogContentText>
       <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
     </DialogContent>

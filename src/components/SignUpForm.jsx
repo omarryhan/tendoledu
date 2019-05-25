@@ -15,15 +15,27 @@ import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 const recaptchaRef = React.createRef();
 
 const StyledForm = styled(Form)`
+
+`;
+
+const FieldAndFieldErrorWrapper = styled.div`
+  margin: 2vh 0;
 `;
 
 const StyledField = styled(Field)`
+
+  border-radius: 6px;
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
 `;
 
 const StyledButton = styled(Button_)`
+`;
+
+const StyledLabel = styled.label`
+  display: block;
+  margin: 0.75vh 0;
 `;
 
 const ButtonText = styled.p`
@@ -99,15 +111,23 @@ const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
       >
         {({ isSubmitting }) => (
           <StyledForm>
-            <StyledField type="email" name="email" required />
-            <StyledErrorMessage name="email" component="div" />
-            <StyledField component="select" name="expertise" required>
-              <option value="" disabled selected hidden>Select an Expertise</option>
-              {expertiseOptions.map(option => (
-                <option key={option} value={option}>{option}</option>
-              ))}
-            </StyledField>
-            <StyledErrorMessage name="expertise" component="div" />
+            <FieldAndFieldErrorWrapper>
+              <StyledLabel htmlFor="email">Email</StyledLabel>
+              <StyledField type="email" name="email" required />
+              <StyledErrorMessage name="email" component="div" />
+            </FieldAndFieldErrorWrapper>
+
+            <FieldAndFieldErrorWrapper>
+              <StyledLabel htmlFor="expertise">Expertise</StyledLabel>
+              <StyledField component="select" name="expertise" required>
+                <option value="" disabled selected hidden>Select an Expertise</option>
+                {expertiseOptions.map(option => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </StyledField>
+              <StyledErrorMessage name="expertise" component="div" />
+            </FieldAndFieldErrorWrapper>
+
             <StyledButton
               type="submit"
               variant="contained"

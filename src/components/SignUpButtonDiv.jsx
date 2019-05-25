@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -15,7 +16,7 @@ const Container = styled.div`
 `;
 
 const OutsideText = styled.strong`
-  margin-left: 1vw;
+  margin-left: 10px;
 `;
 
 const Text = styled.strong`
