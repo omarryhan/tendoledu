@@ -126,7 +126,7 @@ export default () => {
           />
           <SignUpButtonDiv
             text="Sign Up Here"
-            outsideText="to know more!"
+            outsideText="to see how!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />

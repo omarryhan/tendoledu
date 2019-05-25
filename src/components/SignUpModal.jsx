@@ -22,7 +22,10 @@ const SignUpModal = ({
     <DialogTitle id="max-width-dialog-title">Sign Up</DialogTitle>
     <DialogContent>
       <DialogContentText>
-        Sign up for updates
+        Subscribe to future updates.
+        {' '}
+        <br />
+        We promise we won't spam you :)
       </DialogContentText>
       <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
     </DialogContent>

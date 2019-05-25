@@ -10,13 +10,15 @@ const Container = styled.div`
   align-items: center;
 
   margin: 0 auto;
+  margin-bottom: 7vh;
 `;
 
-const OutsideText = styled.p`
-
+const OutsideText = styled.strong`
+  margin-left: 1vw;
 `;
 
-const Text = styled.p`
+const Text = styled.strong`
+  font-weight: bold;
 `;
 
 const SignUpButton = ({
@@ -31,6 +33,7 @@ const SignUpButton = ({
       disabled={isModalVisible}
       color="primary"
       size="large"
+      variant="contained"
     >
       <Text>{text}</Text>
     </Button>

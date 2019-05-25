@@ -25,7 +25,7 @@ const MainText = styled.strong`
 `;
 
 const SubText = styled.strong`
-
+  font-style: italic;
 `;
 
 const HowItWorksCard = ({ logo, mainText, subText }) => (

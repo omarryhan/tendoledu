@@ -22,10 +22,11 @@ const TextContainer = styled.div`
 
 const TitleText = styled.strong`
   font-weight: bold;
+  font-size: 1.4em;
 `;
 
 const Text = styled.p`
-
+  font-weight: bold;
 `;
 
 const YourGainCard = ({ logo, title, text }) => (
