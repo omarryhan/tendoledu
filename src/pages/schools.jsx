@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import { ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
 import { SCHOOLS_THEME } from '../constants/index';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -23,104 +26,108 @@ import WorkLogo from '../images/work.svg';
 import RecognitionLogo from '../images/recognition.svg';
 
 
+const muiTheme = createMuiTheme(SCHOOLS_THEME, 'schoolsTheme');
+
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
-    <Layout theme={SCHOOLS_THEME} currentPage="schools">
-      <SEO
-        title="Schools"
-        description="Take your school to the next level with Tendoledu"
-      />
-      <SignUpModal
-        isModalVisible={isModalVisible}
-        setIsModalVisible={setIsModalVisible}
-        currentPage="schools"
-      />
-      <Section backgroundImage={HeroImage} height="80vh">
-        <HeroTitle> Make Your Online School Different </HeroTitle>
-        <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
-        <HeroLead
-          message="It’s really hard to be unique when all online schools do the same thing (only teach)"
+    <ThemeProvider theme={muiTheme}>
+      <Layout currentPage="schools">
+        <SEO
+          title="Schools"
+          description="Take your school to the next level with Tendoledu"
         />
-        <SignUpButtonDiv
-          text="Sign Up Here"
-          outsideText="to change that!"
+        <SignUpModal
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}
+          currentPage="schools"
         />
-      </Section>
-      <Section height="80vh">
-        <HowItWorksContainer
-          cards={[
-            <HowItWorksCard
-              logo={<img src={CreateLogo} alt="Create logo" />}
-              mainText="Create a space for your students to work in"
-              subText={null}
-              key="create logo"
-            />,
-            <HowItWorksCard
-              logo={<img src={AdmitLogo} alt="Admit logo" />}
-              mainText="Admit students based on criteria you Set"
-              subText="You can add an Ratings. admission fee too!"
-              key="admit logo"
-            />,
-            <HowItWorksCard
-              logo={<img src={SelectLogo} alt="Select logo" />}
-              mainText="Select requested marketing jobs then assign to students"
-              subText={null}
-              key="select logo"
-            />,
-            <HowItWorksCard
-              logo={<img src={DeliverLogo} alt="Deliver logo" />}
-              mainText="Deliver finished work and get ratings"
-              subText={null}
-              key="deliver logo"
-            />,
+        <Section backgroundImage={HeroImage} height="80vh">
+          <HeroTitle> Make Your Online School Different </HeroTitle>
+          <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
+          <HeroLead
+            message="It’s really hard to be unique when all online schools do the same thing (only teach)"
+          />
+          <SignUpButtonDiv
+            text="Sign Up Here"
+            outsideText="to change that!"
+            isModalVisible={isModalVisible}
+            setIsModalVisible={setIsModalVisible}
+          />
+        </Section>
+        <Section height="80vh">
+          <HowItWorksContainer
+            cards={[
+              <HowItWorksCard
+                logo={<img src={CreateLogo} alt="Create logo" />}
+                mainText="Create a space for your students to work in"
+                subText={null}
+                key="create logo"
+              />,
+              <HowItWorksCard
+                logo={<img src={AdmitLogo} alt="Admit logo" />}
+                mainText="Admit students based on criteria you Set"
+                subText="You can add an Ratings. admission fee too!"
+                key="admit logo"
+              />,
+              <HowItWorksCard
+                logo={<img src={SelectLogo} alt="Select logo" />}
+                mainText="Select requested marketing jobs then assign to students"
+                subText={null}
+                key="select logo"
+              />,
+              <HowItWorksCard
+                logo={<img src={DeliverLogo} alt="Deliver logo" />}
+                mainText="Deliver finished work and get ratings"
+                subText={null}
+                key="deliver logo"
+              />,
+            ]}
+            subText="Tendoledu makes you do even more"
+          />
+          <SignUpButtonDiv
+            text="Sign Up Here"
+            outsideText="to know more!"
+            isModalVisible={isModalVisible}
+            setIsModalVisible={setIsModalVisible}
+          />
+        </Section>
+        <Section height="80vh">
+          <YourGainContainer
+            cards={[
+              <YourGainCard
+                logo={<img src={RecognitionLogo} alt="Recognition logo" />}
+                title="Tangible Value"
+                text="Their employers can see their work!"
+                key="recognition logo"
+              />,
+              <YourGainCard
+                logo={<img src={WorkLogo} alt="Work logo" />}
+                title="Market Value"
+                text="Real work experience!"
+                key="work logo"
+              />,
           ]}
-          subText="Tendoledu makes you do even more"
-        />
-        <SignUpButtonDiv
-          text="Sign Up Here"
-          outsideText="to know more!"
-          isModalVisible={isModalVisible}
-          setIsModalVisible={setIsModalVisible}
-        />
-      </Section>
-      <Section height="80vh">
-        <YourGainContainer
-          cards={[
-            <YourGainCard
-              logo={<img src={RecognitionLogo} alt="Recognition logo" />}
-              title="Tangible Value"
-              text="Their employers can see their work!"
-              key="recognition logo"
-            />,
-            <YourGainCard
-              logo={<img src={WorkLogo} alt="Work logo" />}
-              title="Market Value"
-              text="Real work experience!"
-              key="work logo"
-            />,
-        ]}
-          subText={(
-            <SubText>
-              WE
-              {' '}
-              <span role="img" aria-label="heart emoji">
-                 ❤️
-              </span>
-              {' '}
-              YOUR STUDENTS AS MUCH AS YOU DO!
-            </SubText>
-          )}
-        />
-        <SignUpButtonDiv
-          text="Sign Up Here"
-          outsideText="to know more!"
-          isModalVisible={isModalVisible}
-          setIsModalVisible={setIsModalVisible}
-        />
-      </Section>
-    </Layout>
+            subText={(
+              <SubText>
+                WE
+                {' '}
+                <span role="img" aria-label="heart emoji">
+                  ❤️
+                </span>
+                {' '}
+                YOUR STUDENTS AS MUCH AS YOU DO!
+              </SubText>
+            )}
+          />
+          <SignUpButtonDiv
+            text="Sign Up Here"
+            outsideText="to know more!"
+            isModalVisible={isModalVisible}
+            setIsModalVisible={setIsModalVisible}
+          />
+        </Section>
+      </Layout>
+    </ThemeProvider>
   );
 };

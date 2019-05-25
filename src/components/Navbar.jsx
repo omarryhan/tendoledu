@@ -6,10 +6,12 @@ import {
     TabletLayoutWidth,
     MobileLargeLayoutWidth,
     MobileLayoutWidth,
+    HEADER_HEIGHT,
   } from '../constants';
 
 
 const NavbarContainer = styled.header`
+    height: ${HEADER_HEIGHT};
     display: flex;
     padding: 20px;
     align-items: center;

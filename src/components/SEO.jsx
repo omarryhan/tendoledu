@@ -52,6 +52,10 @@ function SEO({
           content: title,
         },
         {
+          name: 'viewport',
+          content: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no',
+        },
+        {
           property: 'og:image',
           content: site.siteMetadata.logoFullUrl,
         },

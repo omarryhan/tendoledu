@@ -5,7 +5,7 @@ import { FOOTER_HEIGHT } from '../constants';
 
 const FooterContainer = styled.footer`
     height: ${FOOTER_HEIGHT}vh;
-    background-color: ${props => props.theme.primaryColor};
+    background-color: blue;
     display: flex;
     align-items: center;
 `;
@@ -16,8 +16,8 @@ const FooterText = styled.p`
   color: white;
 `;
 
-export default ({ theme }) => (
-  <FooterContainer theme={theme}>
+export default () => (
+  <FooterContainer>
     <FooterText>
       Made with
       {' '}

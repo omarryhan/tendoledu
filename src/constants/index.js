@@ -2,62 +2,32 @@ import { generateMedia } from 'styled-media-query';
 import { transitions, positions } from 'react-alert';
 
 
-export const COLOR_PALETTE = Object.freeze({
-    blue: {
-        lightAlt: 'rgb(97, 184, 196)',
-        lightAlt2: 'rgb(2, 137, 140)',
-        light: '#005E7C',
-        primary: '#001242',
-        dark: '#000022',
-    },
-    green: {
-        primary: '#00FEB6',
-    },
-    black: {
-        primary: 'rgb(28, 27, 32)',
-    },
-    white: {
-        primary: '#fff',
-    },
-    fuschia: {
-        primary: 'rgb(235, 71, 126)',
-    },
-    orange: {
-        primary: '#FB9800',
-    },
-});
-
 export const SCHOOLS_THEME = Object.freeze({
-    color: COLOR_PALETTE.black.primary,
-    backgroundColor: COLOR_PALETTE.white.primary,
-    scrollbarHandleColor: COLOR_PALETTE.blue.primary,
-    primaryColor: COLOR_PALETTE.blue.primary,
-    secondaryColor: COLOR_PALETTE.green.primary,
+    palette: {
+        primary: { main: '#1DE9B6', contrastText: '#000000' },
+        secondary: { main: '#FF5252', contrastText: '#000000' },
+    },
 });
 
 export const STUDENTS_THEME = Object.freeze({
-    color: COLOR_PALETTE.black.primary,
-    backgroundColor: COLOR_PALETTE.white.primary,
-    scrollbarHandleColor: COLOR_PALETTE.blue.primary,
+    palette: {
+        primary: { main: '#1DE9B6', contrastText: '#000000' },
+        secondary: { main: '#FF5252', contrastText: '#000000' },
+    },
 });
 
-export const EMPLOYERS_THEME = Object.freeze({
-    color: COLOR_PALETTE.black.primary,
-    backgroundColor: COLOR_PALETTE.white.primary,
-    scrollbarHandleColor: COLOR_PALETTE.blue.primary,
+export const STARTUPS_THEME = Object.freeze({
 });
 
 export const NOT_FOUND_THEME = Object.freeze({
-    color: COLOR_PALETTE.black.primary,
-    backgroundColor: COLOR_PALETTE.white.primary,
-    scrollbarHandleColor: COLOR_PALETTE.blue.primary,
-});
-
-export const FONT_SIZES = Object.freeze({
-
+    palette: {
+        primary: { main: '#1DE9B6', contrastText: '#000000' },
+        secondary: { main: '#FF5252', contrastText: '#000000' },
+    },
 });
 
 export const FOOTER_HEIGHT = 10; // vh
+export const HEADER_HEIGHT = 7; // vh
 
 export const LaptopLayoutWidth = '65vw';
 export const TabletLayoutWidth = '75vw';

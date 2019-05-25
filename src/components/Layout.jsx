@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
@@ -12,20 +5,24 @@ import styled from 'styled-components';
 
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 import GlobalStyle from './Global';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { FOOTER_HEIGHT, alertSettings } from '../constants';
+
+import { FOOTER_HEIGHT, alertSettings, HEADER_HEIGHT } from '../constants';
+
 
 const BodyLayout = styled.div`
-  min-height: ${(100 - FOOTER_HEIGHT).toString()}vh;
+  min-height: ${(100 - FOOTER_HEIGHT - HEADER_HEIGHT).toString()}vh;
 `;
 
 const Main = styled.main`
 
 `;
 
-const Layout = ({ children, theme }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -37,25 +34,23 @@ const Layout = ({ children, theme }) => (
       }
     `}
     render={data => (
-      <AlertProvider template={AlertTemplate} {...alertSettings}>
-        <GlobalStyle theme={theme} />
-        <BodyLayout theme={theme}>
-          <Navbar siteTitle={data.site.siteMetadata.title} theme={theme} />
-          <Main>{children}</Main>
-        </BodyLayout>
-        <Footer theme={theme} />
-      </AlertProvider>
+      <>
+        <CssBaseline />
+        <AlertProvider template={AlertTemplate} {...alertSettings}>
+          <GlobalStyle />
+          <Navbar siteTitle={data.site.siteMetadata.title} />
+          <BodyLayout>
+            <Main>{children}</Main>
+          </BodyLayout>
+          <Footer />
+        </AlertProvider>
+      </>
     )}
   />
 );
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    backgroundColor: PropTypes.string.isRequired,
-    scrollbarHandleColor: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default Layout;
