@@ -73,7 +73,7 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 mainText="Admit students based on criteria you Set"
-                subText="You can add an Ratings. admission fee too!"
+                subText="You can add an admission fee too!"
                 key="admit logo"
               />,
               <HowItWorksCard
