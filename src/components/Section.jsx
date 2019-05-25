@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export default styled.section`
-    height: ${props => props.height || '100px'};
+    height: ${props => props.height};
     ${
         props => (props.backgroundImage
             ? `background-image url("${props.backgroundImage}");
@@ -15,7 +15,7 @@ export default styled.section`
             background-repeat: no-repeat;`
             : '')
     };
-    background-color: ${props => props.backgroundColor || ''};
+    background-color: ${props => props.backgroundColor};
 
     margin: 0 auto;
 `;

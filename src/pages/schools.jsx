@@ -16,6 +16,7 @@ import YourGainContainer, { SubText } from '../components/YourGainContainer';
 import YourGainCard from '../components/YourGainCard';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
+import HeroImageWrapper from '../components/HeroImageWrapper';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -42,9 +43,15 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section backgroundImage={HeroImage} height="80vh">
+        <Section>
           <HeroTitle> Make Your Online School Different </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
+          <HeroImageWrapper>
+            <img
+              src={HeroImage}
+              alt="Has a yellow tube where students enter to learn and when exiting, they start applying for jobs"
+            />
+          </HeroImageWrapper>
           <HeroLead
             message="It’s really hard to be unique when all online schools do the same thing (only teach)"
           />
@@ -55,7 +62,7 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section height="80vh">
+        <Section>
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
@@ -89,7 +96,7 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section height="80vh">
+        <Section>
           <YourGainContainer
             cards={[
               <YourGainCard

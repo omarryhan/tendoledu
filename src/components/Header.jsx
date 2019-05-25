@@ -13,7 +13,8 @@ const HeaderContainer = styled.header`
   text-align: center;
 `;
 
-const Title = styled.h1`
+const Title = styled.h2`
+  font-size: 2em;
 `;
 
 export default () => (

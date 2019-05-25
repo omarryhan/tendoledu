@@ -7,7 +7,7 @@ const OuterContainer = styled.div`
 `;
 
 const Title = styled.h2`
-
+text-align: center;
 `;
 
 const SubTextContainer = styled.div`
@@ -15,7 +15,7 @@ const SubTextContainer = styled.div`
 `;
 
 export const SubText = styled.p`
-
+font-weight: bold;
 `;
 
 const CardsContainer = styled.div`

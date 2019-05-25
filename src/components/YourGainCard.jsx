@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 
 const Outline = styled.div`
-
+width: 250px;
+margin: 0 auto;
 `;
 
 const LogoContainer = styled.div`
@@ -12,15 +13,15 @@ const LogoContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-
+  text-align: center;
 `;
 
 const TextContainer = styled.div`
-
+  text-align: center;
 `;
 
 const TitleText = styled.strong`
-
+  font-weight: bold;
 `;
 
 const Text = styled.p`
