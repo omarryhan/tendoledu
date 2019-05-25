@@ -1,9 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { media } from '../constants';
 
 const LeadContainer = styled.div`
   width: 50%;
+  
+  ${media.lessThan('laptop')`
+    width: 70%;
+  `};
+
+  ${media.lessThan('tablet')`
+    width: 80%;
+  `};
+
+  ${media.lessThan('mobileMedium')`
+    width: 100%;
+  `};
+  
   margin: 0 auto;
 `;
 

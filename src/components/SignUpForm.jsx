@@ -14,6 +14,24 @@ import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 
 const recaptchaRef = React.createRef();
 
+const StyledForm = styled(Form)`
+`;
+
+const StyledField = styled(Field)`
+`;
+
+const StyledErrorMessage = styled(ErrorMessage)`
+`;
+
+const StyledButton = styled(Button_)`
+`;
+
+const ButtonText = styled.p`
+  font-weight: bold;
+  margin: 0;
+`;
+
+
 const onSubmit = async (
     values,
     { setSubmitting, resetForm },
@@ -55,9 +73,6 @@ const expertiseOptions = Object.freeze([
     'Other',
 ]);
 
-const Button = styled(Button_)`
-`;
-
 const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
     const alert = useAlert();
     return (
@@ -83,30 +98,32 @@ const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
         onSubmit={async (...args) => onSubmit(...args, alert, currentPage, modalSubmitHandler)}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <Field type="email" name="email" required />
-            <ErrorMessage name="email" component="div" />
-            <Field component="select" name="expertise" required>
+          <StyledForm>
+            <StyledField type="email" name="email" required />
+            <StyledErrorMessage name="email" component="div" />
+            <StyledField component="select" name="expertise" required>
               <option value="" disabled selected hidden>Select an Expertise</option>
               {expertiseOptions.map(option => (
                 <option key={option} value={option}>{option}</option>
               ))}
-            </Field>
-            <ErrorMessage name="expertise" component="div" />
-            <Button
+            </StyledField>
+            <StyledErrorMessage name="expertise" component="div" />
+            <StyledButton
               type="submit"
               variant="contained"
               color="primary"
               disabled={isSubmitting}
             >
-                Sign Up
-            </Button>
+              <ButtonText>
+                  Sign Up!
+              </ButtonText>
+            </StyledButton>
             <ReCAPTCHA
               ref={recaptchaRef}
               size="invisible"
               sitekey={RECAPTCHA_PUBLIC_KEY}
             />
-          </Form>
+          </StyledForm>
             )}
       </Formik>
     );

@@ -9,4 +9,5 @@ export default styled.section`
     margin: 0 auto;
     padding: 3vh;
     margin-bottom: 3vh;
+    margin-top: 2vh;
 `;

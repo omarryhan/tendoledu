@@ -43,7 +43,7 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section>
+        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
           <HeroTitle> Make Your Online School Different </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>

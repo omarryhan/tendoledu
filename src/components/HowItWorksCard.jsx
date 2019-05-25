@@ -14,6 +14,7 @@ const LogoContainer = styled.div`
 
 const MainTextContainer = styled.div`
   text-align: center;
+  margin: 1.5vh 0;
 `;
 
 const SubTextContainer = styled.div`
