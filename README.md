@@ -24,7 +24,7 @@ https://tendoledu.com
 
 5. `$ yarn start`
 
-### Good to know before editing
+### Main technoligies used
 
 1. GatsbyJS (JS Framework build ontop of React)
 
