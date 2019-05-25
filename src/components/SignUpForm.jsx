@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
  Formik, Form, Field, ErrorMessage,
 } from 'formik';
@@ -58,7 +59,7 @@ const Button = styled(Button_)`
     width: 1000px;
 `;
 
-export default ({ currentPage, onSubmit: modalSubmitHandler }) => {
+const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
     const alert = useAlert();
     return (
       <Formik
@@ -111,3 +112,10 @@ export default ({ currentPage, onSubmit: modalSubmitHandler }) => {
       </Formik>
     );
 };
+
+SignUpForm.propTypes = {
+  currentPage: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default SignUpForm;

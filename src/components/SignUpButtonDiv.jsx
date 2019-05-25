@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
@@ -14,7 +15,7 @@ const OutsideText = styled.p`
 const Text = styled.p`
 `;
 
-export default ({
+const SignUpButton = ({
     text,
     outsideText,
     isModalVisible,
@@ -32,3 +33,12 @@ export default ({
     </OutsideText>
   </Container>
 );
+
+SignUpButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  outsideText: PropTypes.string.isRequired,
+  isModalVisible: PropTypes.bool.isRequired,
+  setIsModalVisible: PropTypes.func.isRequired,
+};
+
+export default SignUpButton;

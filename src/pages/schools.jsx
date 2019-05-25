@@ -61,7 +61,6 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={CreateLogo} alt="Create logo" />}
                 mainText="Create a space for your students to work in"
-                subText={null}
                 key="create logo"
               />,
               <HowItWorksCard
@@ -73,13 +72,11 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={SelectLogo} alt="Select logo" />}
                 mainText="Select requested marketing jobs then assign to students"
-                subText={null}
                 key="select logo"
               />,
               <HowItWorksCard
                 logo={<img src={DeliverLogo} alt="Deliver logo" />}
                 mainText="Deliver finished work and get ratings"
-                subText={null}
                 key="deliver logo"
               />,
             ]}

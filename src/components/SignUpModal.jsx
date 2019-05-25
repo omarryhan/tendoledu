@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -7,7 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 
 import SignUpForm from './SignUpForm';
 
-export default ({
+const SignUpModal = ({
     isModalVisible,
     setIsModalVisible,
     currentPage,
@@ -27,3 +28,11 @@ export default ({
     </DialogContent>
   </Dialog>
 );
+
+SignUpModal.propTypes = {
+  isModalVisible: PropTypes.bool.isRequired,
+  setIsModalVisible: PropTypes.func.isRequired,
+  currentPage: PropTypes.string.isRequired,
+};
+
+export default SignUpModal;

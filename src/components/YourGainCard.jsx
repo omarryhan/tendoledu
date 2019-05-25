@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
@@ -26,7 +27,7 @@ const Text = styled.p`
 
 `;
 
-export default ({ logo, title, text }) => (
+const YourGainCard = ({ logo, title, text }) => (
   <Outline>
     <TitleContainer>
       <TitleText>
@@ -45,3 +46,11 @@ export default ({ logo, title, text }) => (
     </TextContainer>
   </Outline>
 );
+
+YourGainCard.propTypes = {
+  logo: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
+
+export default YourGainCard;

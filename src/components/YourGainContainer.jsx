@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
@@ -21,7 +22,7 @@ const CardsContainer = styled.div`
     display: flex;
 `;
 
-export default ({ cards, subText }) => (
+const YourGainContainer = ({ cards, subText }) => (
   <OuterContainer>
     <Title>
         Your Students Gain
@@ -36,3 +37,17 @@ export default ({ cards, subText }) => (
     </SubTextContainer>
   </OuterContainer>
 );
+
+YourGainContainer.defaultProps = {
+  subText: null,
+};
+
+YourGainContainer.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.element).isRequired,
+  subText: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+};
+
+export default YourGainContainer;

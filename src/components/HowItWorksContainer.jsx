@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
@@ -21,7 +22,7 @@ const CardsContainer = styled.div`
     display: flex;
 `;
 
-export default ({ cards, subText }) => (
+const HowItWorksContainer = ({ cards, subText }) => (
   <OuterContainer>
     <Title>
         How it works
@@ -38,3 +39,14 @@ export default ({ cards, subText }) => (
     </SubTextContainer>
   </OuterContainer>
 );
+
+HowItWorksContainer.defaultProps = {
+  subText: null,
+};
+
+HowItWorksContainer.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.element).isRequired,
+  subText: PropTypes.string,
+};
+
+export default HowItWorksContainer;

@@ -20,7 +20,6 @@
         "import/prefer-default-export": "off",
         "no-else-return": "off",
         "react/no-unescaped-entities": "off",
-        "react/prop-types": "off",
         "no-console": "off"
     },
     "settings": {

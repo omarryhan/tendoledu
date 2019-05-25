@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
@@ -26,7 +27,7 @@ const SubText = styled.p`
 
 `;
 
-export default ({ logo, mainText, subText }) => (
+const HowItWorksCard = ({ logo, mainText, subText }) => (
   <Outline>
     <LogoContainer>
       {logo}
@@ -45,3 +46,15 @@ export default ({ logo, mainText, subText }) => (
     </SubTextContainer>
   </Outline>
 );
+
+HowItWorksCard.defaultProps = {
+  subText: null,
+};
+
+HowItWorksCard.propTypes = {
+  logo: PropTypes.element.isRequired,
+  mainText: PropTypes.string.isRequired,
+  subText: PropTypes.string,
+};
+
+export default HowItWorksCard;
