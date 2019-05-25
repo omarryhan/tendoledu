@@ -30,4 +30,4 @@ https://tendoledu.com
 
 2. Material UI (CSS Framework)
 
-3. Styled Components (inline JS)
+3. Styled Components (CSS in JS)
