@@ -5,7 +5,6 @@ export default createGlobalStyle`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: ubuntu;
 }
 
 html {
@@ -33,7 +32,7 @@ html body {
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: blue; 
+    background: red; 
     border-radius: 5vh;
 }
 `;

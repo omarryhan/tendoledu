@@ -26,27 +26,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: [
-            // 'Raleway',
-            // 'Montserrat',
-            // 'medium-content-sans-serif-font',
-            // '-apple-system',
-            // 'BlinkMacSystemFont',
-            // 'Segoe UI',
-            // 'Roboto',
-            // 'Oxygen',
-            'Ubuntu',
-            // 'Cantarell',
-            // 'Open Sans',
-            // 'Helvetica Neue',
-          ],
-        },
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',

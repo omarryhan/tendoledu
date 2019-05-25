@@ -35,8 +35,6 @@ const onSubmit = async (
           config: { headers: { 'Content-Type': 'multipart/form-data' } },
           });
     } catch (e) {
-        // If you get a CORS related error in development,
-        // don't worry about it. It's working correctly @ tendoledu.com
         alert.error('Something went wrong :(. Please try again later. Or send us an email at: contact@tendoledu.com');
         console.error(e);
         return;
@@ -66,22 +64,22 @@ export default ({ currentPage, onSubmit: modalSubmitHandler }) => {
       <Formik
         initialValues={{ email: '', expertise: '' }}
         validate={(values) => {
-                const errors = {};
+          const errors = {};
 
-                if (!values.email) {
-                errors.email = 'Required';
-                } else if (
-                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                errors.email = 'Invalid email address';
-                }
+          if (!values.email) {
+            errors.email = 'Required';
+          } else if (
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+          ) {
+            errors.email = 'Invalid email address';
+          }
 
-                if (!values.expertise) {
-                  errors.expertise = 'Missing expertise';
-                }
+          if (!values.expertise) {
+            errors.expertise = 'Required';
+          }
 
-                return errors;
-            }}
+          return errors;
+        }}
         onSubmit={async (...args) => onSubmit(...args, alert, currentPage, modalSubmitHandler)}
       >
         {({ isSubmitting }) => (

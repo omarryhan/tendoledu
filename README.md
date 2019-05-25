@@ -11,3 +11,23 @@
 ## Visit
 
 https://tendoledu.com
+
+## Edit
+
+1. Install Node
+
+2. Install yarn
+
+3. `cd` into the repo
+
+4. `$ yarn`
+
+5. `$ yarn start`
+
+### Good to know before editing
+
+1. GatsbyJS (JS Framework build ontop of React)
+
+2. Material UI (CSS Framework)
+
+3. Styled Components (inline JS)
