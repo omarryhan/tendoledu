@@ -19,13 +19,13 @@ const SignUpModal = ({
     tabIndex={-1}
     aria-labelledby="Sign Up Dialogue"
   >
-    <DialogTitle id="max-width-dialog-title">Sign Up</DialogTitle>
+    <DialogTitle id="max-width-dialog-title">Join the Beta Waiting-list</DialogTitle>
     <DialogContent>
       <DialogContentText>
-        Subscribe to future updates.
+        Tendoledu is going to launch really really soon.
         {' '}
         <br />
-        We promise we won't spam you :)
+        Sign up Now to get notified on any and all developments
       </DialogContentText>
       <SignUpForm currentPage={currentPage} onSubmit={() => setIsModalVisible(false)} />
     </DialogContent>
