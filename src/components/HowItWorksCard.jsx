@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const Outline = styled.div`
   width: 250px;
   margin: 0 auto;
+  margin-bottom: 5vh;
 `;
 
 const LogoContainer = styled.div`
@@ -27,6 +28,7 @@ const MainText = styled.strong`
 
 const SubText = styled.strong`
   font-style: italic;
+  font-weight: 0;
 `;
 
 const HowItWorksCard = ({ logo, mainText, subText }) => (

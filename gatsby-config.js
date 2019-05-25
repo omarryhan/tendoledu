@@ -78,6 +78,7 @@ module.exports = {
             'Roboto',
             'Oxygen',
             'Ubuntu',
+            'Ubuntu Medium',
             'Cantarell',
             'Open Sans',
             'Helvetica Neue',

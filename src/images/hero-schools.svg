@@ -17,7 +17,7 @@
 	.st11{fill:#FFEC00;}
 	.st12{fill:#EFC700;}
 	.st13{fill:#00AEEF;}
-	.st14{font-family:'Raleway-ExtraBold';}
+	.st14{font-family:'Ubuntu Medium';}
 	.st15{font-size:61.2008px;}
 	.st16{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
 	.st17{fill:#FF3E3E;}
@@ -37,7 +37,7 @@
 	.st31{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st32{opacity:0.1;}
 	.st33{fill:#2B2B2B;}
-	.st34{font-family:'Ubuntu-Medium';}
+	.st34{font-family:'Ubuntu Medium';}
 	.st35{font-size:50px;}
 	.st36{fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 	.st37{clip-path:url(#SVGID_4_);fill:#FFF6E9;}

@@ -11,7 +11,7 @@
 	.st5{fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st6{fill:#FFFFFF;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st7{fill:#00FFB6;stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
-	.st8{font-family:'Ubuntu-Medium';}
+	.st8{font-family:'Ubuntu Medium';}
 	.st9{font-size:55.5px;}
 </style>
 <path id="XMLID_276_" class="st0" d="M860.1,804.6H148.9c-48.2,0-87.2-39-87.2-87.2V139.6c0-48.2,39-87.2,87.2-87.2h711.2

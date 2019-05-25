@@ -7,7 +7,7 @@ export default createGlobalStyle`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: ${[
-        'Ubuntu',
+        'Ubuntu Medium',
         'Raleway',
         'Montserrat',
         'medium-content-sans-serif-font',

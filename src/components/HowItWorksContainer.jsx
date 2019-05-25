@@ -24,6 +24,7 @@ const SubText = styled.p`
 
 const CardsContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
 `;
 
 const HowItWorksContainer = ({ cards, subText }) => (
