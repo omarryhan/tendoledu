@@ -14,8 +14,8 @@ export default () => (
   <MuiThemeProvider theme={muiTheme}>
     <Layout currentPage="students">
       <SEO
-        title="Studetns"
-        description="Learn"
+        title="Students"
+        description="Get Recognition For Learning Online"
       />
       <h1> Under Construction! </h1>
     </Layout>

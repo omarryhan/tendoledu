@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Tendoledu',
-    description: 'Tendoledu',
+    description: 'Get Recognition For Learning Online',
     author: 'Tendoledu',
     twitter: 'tendoledu',
     siteUrl: 'https://tendoledu.com',

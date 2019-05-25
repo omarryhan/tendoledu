@@ -1,5 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { navigate } from 'gatsby';
+
+import SEO from '../components/SEO';
+
 
 // Redirects are mainly being handled by
 // Netlify through by 302 responses.
@@ -8,5 +11,10 @@ export default () => {
   useEffect(() => {
     navigate('/schools/');
   }, []);
-  return null;
+  return (
+    <SEO
+      title="Home"
+      description="Get Recognition For Learning Online"
+    />
+  );
 };
