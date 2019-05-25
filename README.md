@@ -14,9 +14,9 @@ https://tendoledu.com
 
 ## Edit
 
-1. Install Node
+1. Install Node https://nodejs.org/en/
 
-2. Install yarn
+2. Install yarn https://yarnpkg.com/en/
 
 3. `cd` into the repo
 
@@ -26,8 +26,10 @@ https://tendoledu.com
 
 ### Main technoligies used
 
-1. GatsbyJS (JS Framework build ontop of React)
+0. React https://reactjs.org/
 
-2. Material UI (CSS Framework)
+1. GatsbyJS (JS Framework build ontop of React) https://www.gatsbyjs.org/
 
-3. Styled Components (CSS in JS)
+2. Material UI (CSS Framework) https://material-ui.com/
+
+3. Styled Components (CSS in JS) https://www.styled-components.com/
