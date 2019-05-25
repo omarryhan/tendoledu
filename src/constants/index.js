@@ -20,6 +20,9 @@ export const COLOR_PALETTE = Object.freeze({
     white: {
         primary: '#fff',
     },
+    blue: {
+        primary: '#00AEEF',
+    },
 });
 
 export const SCHOOLS_THEME = Object.freeze({

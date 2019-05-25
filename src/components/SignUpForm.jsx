@@ -15,7 +15,6 @@ import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 const recaptchaRef = React.createRef();
 
 const StyledForm = styled(Form)`
-
 `;
 
 const FieldAndFieldErrorWrapper = styled.div`
@@ -23,7 +22,6 @@ const FieldAndFieldErrorWrapper = styled.div`
 `;
 
 const StyledField = styled(Field)`
-
   border-radius: 6px;
 `;
 

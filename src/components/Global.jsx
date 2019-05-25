@@ -48,7 +48,7 @@ html body {
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: ${COLOR_PALETTE.red.primary}; 
+    background: ${COLOR_PALETTE.cyan.primary}; 
     border-radius: 5vh;
 }
 `;
