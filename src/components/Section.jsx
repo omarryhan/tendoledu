@@ -3,19 +3,10 @@ import styled from 'styled-components';
 
 export default styled.section`
     height: ${props => props.height};
-    ${
-        props => (props.backgroundImage
-            ? `background-image url("${props.backgroundImage}");
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: auto 100%;
-            background-size:contain;
-            background-position: center;
-            background-repeat: no-repeat;`
-            : '')
-    };
+    background-image: ${props => props.backgroundImage};
     background-color: ${props => props.backgroundColor};
 
     margin: 0 auto;
+    padding: 5vh;
+    margin-bottom: 3vh;
 `;

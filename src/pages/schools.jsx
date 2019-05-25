@@ -62,7 +62,7 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section>
+        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
@@ -96,7 +96,7 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section>
+        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
           <YourGainContainer
             cards={[
               <YourGainCard

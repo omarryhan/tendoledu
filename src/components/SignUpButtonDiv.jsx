@@ -11,6 +11,7 @@ const Container = styled.div`
 
   margin: 0 auto;
   margin-bottom: 7vh;
+  margin-top: 7vh;
 `;
 
 const OutsideText = styled.strong`
