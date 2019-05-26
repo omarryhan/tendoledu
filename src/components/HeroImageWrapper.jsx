@@ -5,12 +5,11 @@ import { media } from '../constants';
 
 
 const Container = styled.div`
-  width: 88%;
-
   ${media.lessThan('tablet')`
-    width: 100%;
+    margin:15px;
   `};
-  margin: 0 auto;
+  margin-left:18%;
+  margin-right:18%;
 `;
 
 
