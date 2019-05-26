@@ -17,6 +17,7 @@ import YourGainCard from '../components/YourGainCard';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
+import HowitWorksBg from '../components/HowitWorksBg';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -43,7 +44,7 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
+        <Section backgroundColor="#4C72E4">
           <HeroTitle> Make Your Online School Different </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
@@ -54,6 +55,7 @@ export default () => {
           </HeroImageWrapper>
           <HeroLead
             message="It’s really hard to be unique when all online schools do the same thing (only teach)"
+            Color="white"
           />
           <SignUpButtonDiv
             text="Sign Up Here"
@@ -62,27 +64,31 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
+        <Section position="relative">
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
                 logo={<img src={CreateLogo} alt="Create logo" />}
+                title="Create"
                 mainText="Create a space for your students to work in"
                 key="create logo"
               />,
               <HowItWorksCard
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
+                title="Admit"
                 mainText="Admit students based on criteria you Set"
                 subText="You can add an admission fee too!"
                 key="admit logo"
               />,
               <HowItWorksCard
                 logo={<img src={SelectLogo} alt="Select logo" />}
+                title="Select and assign"
                 mainText="Select marketing jobs posted by startups, then assign to students"
                 key="select logo"
               />,
               <HowItWorksCard
                 logo={<img src={DeliverLogo} alt="Deliver logo" />}
+                title="Deliver & Get Ratings"
                 mainText="Deliver finished work and get ratings"
                 key="deliver logo"
               />,
@@ -95,32 +101,30 @@ export default () => {
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
+
+          <HowitWorksBg />
         </Section>
-        <Section backgroundImage="linear-gradient(#FAFAFA, rgb(168,168,168,0.3))">
+        <Section backgroundColor="#4C72E4">
           <YourGainContainer
             cards={[
               <YourGainCard
-                logo={<img src={RecognitionLogo} alt="Recognition logo" />}
+                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
                 title="Tangible Value"
+                subtitle="Recognition"
                 text="Their employers can see their work!"
                 key="recognition logo"
               />,
               <YourGainCard
-                logo={<img src={WorkLogo} alt="Work logo" />}
+                logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
                 title="Market Value"
+                subtitle="Work"
                 text="Real work experience!"
                 key="work logo"
               />,
           ]}
             subText={(
               <SubText>
-                WE
-                {' '}
-                <span role="img" aria-label="heart emoji">
-                  ❤️
-                </span>
-                {' '}
-                YOUR STUDENTS AS MUCH AS YOU DO!
+                Help your students impress their employers
               </SubText>
             )}
           />
