@@ -26,6 +26,6 @@ export default () => (
       </span>
       {' '}
       by Tendoledu
-    </FooterText>
+    </FooterText> 
   </FooterContainer>
 );
