@@ -24,12 +24,12 @@ https://tendoledu.com
 
 5. `$ yarn start`
 
-### Main technoligies used
+### Main technologies used
 
-0. React https://reactjs.org/
+1. React https://reactjs.org/
 
-1. GatsbyJS (JS Framework build ontop of React) https://www.gatsbyjs.org/
+2. GatsbyJS (JS Framework build ontop of React) https://www.gatsbyjs.org/
 
-2. Material UI (CSS Framework) https://material-ui.com/
+3. Material UI (CSS Framework) https://material-ui.com/
 
-3. Styled Components (CSS in JS) https://www.styled-components.com/
+4. Styled Components (CSS in JS) https://www.styled-components.com/
