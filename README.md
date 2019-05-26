@@ -24,6 +24,12 @@ https://tendoledu.com
 
 5. `$ yarn start`
 
+## Build and run production version
+
+1. `$ yarn build`
+
+2. `$ yarn serve`
+
 ### Main technologies used
 
 1. React https://reactjs.org/
