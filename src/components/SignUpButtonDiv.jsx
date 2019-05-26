@@ -17,11 +17,23 @@ const Container = styled.div`
 
 const OutsideText = styled.strong`
   margin-left: 10px;
+  color:black;
 `;
 
 const Text = styled.strong`
   font-weight: bold;
+  font-size:1.4em;
 `;
+
+const BtnStyling = {
+  borderTopLeftRadius: '15px',
+  borderBottomRightRadius: '15px',
+  boxShadow: '0px -4px 55px -2px rgba(255,1,94,0.38)',
+  paddingLeft: '35px',
+  paddingRight: '35px',
+  paddingTop: '10px',
+  paddingBottom: '10px',
+};
 
 const SignUpButton = ({
     text,
@@ -36,6 +48,7 @@ const SignUpButton = ({
       color="primary"
       size="large"
       variant="contained"
+      style={BtnStyling}
     >
       <Text>{text}</Text>
     </Button>
