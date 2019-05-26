@@ -3,7 +3,8 @@ import { media } from '../constants';
 
 
 export default styled.h1`
-    font-size: 3.5em;
+    font-size: 4.5em;
+    font-weight:bold;
 
     ${media.lessThan('laptop')`
         font-size: 3em;
@@ -17,7 +18,8 @@ export default styled.h1`
         font-size: 2em;
     `};
 
-    text-align: center;
+    text-align: left;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    color:white;
 `;
