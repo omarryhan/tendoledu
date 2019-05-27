@@ -12,7 +12,7 @@ const Outline = styled.div`
   text-align:center;
   padding:30px;
   border-radius:10px;
-  box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
+  box-shadow: 0px 2px 36px -5px rgba(29, 233, 182, 0.37);
 `;
 
 const LogoContainer = styled.div`
