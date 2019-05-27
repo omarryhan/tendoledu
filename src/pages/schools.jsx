@@ -138,33 +138,54 @@ export default () => {
           />
         </Section>
 
-        <Section backgroundColor="white">
+        <Section backgroundColor="#F5F7F9">
           <TheTeamContainer
             cards={[
               <TheTeamCard
-                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxHeight: '200px' }} />}
-                title="Tangible Value"
-                subtitle="Recognition"
-                text="Lead your students into the real world market. Through Tendoledu you can provide real work experience to your students. Give your students an essential skill to stand out in the workforce."
+                title="Worker1"
+                subtitle="CEO"
                 key="recognition logo"
               />,
               <TheTeamCard
-                logo={<img src={WorkLogo} alt="Work logo" style={{ maxHeight: '200px' }} />}
-                title="Market Value"
-                subtitle="Work"
-                text="Your students can show their solid progress and work efforts to employers easily with Tendoledu."
+                title="Worker2"
+                subtitle="Marketeer"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker3"
+                subtitle="Programmer"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
                 key="work logo"
               />,
           ]}
-            subText={(
-              <SubText>
-                Help Your Students Impress Their Employers
-              </SubText>
-            )}
           />
         </Section>
-        
-        
+
+
       </Layout>
     </MuiThemeProvider>
   );

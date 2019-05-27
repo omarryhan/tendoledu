@@ -14,18 +14,7 @@ const Title = styled.h2`
   ${media.lessThan('tablet')`
     font-size:3em;
   `};
-  color:white;
-`;
-
-const SubTextContainer = styled.div`
-  text-align: center;
-  margin: 10vh 0 3vh 0;
-  color:white;
-`;
-
-export const SubText = styled.p`
-  font-weight: bold;
-  font-size: 2em;
+  color:black;
 `;
 
 const CardsContainer = styled.div`
@@ -34,35 +23,24 @@ flex-wrap:wrap;
 `;
 
 const CardsOuterContainer = styled.div`
-
+  margin-bottom:60px;
 `;
 
-const TheTeamContainer = ({ cards, subText }) => (
+const TheTeamContainer = ({ cards }) => (
   <OuterContainer>
     <Title>
-      What will my Students Gain?
+      The Team
     </Title>
     <CardsOuterContainer>
       <CardsContainer>
         {cards.map(card => card)}
       </CardsContainer>
     </CardsOuterContainer>
-    <SubTextContainer>
-      {subText}
-    </SubTextContainer>
   </OuterContainer>
 );
 
-TheTeamContainer.defaultProps = {
-  subText: null,
-};
-
 TheTeamContainer.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.element).isRequired,
-  subText: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
 };
 
 export default TheTeamContainer;
