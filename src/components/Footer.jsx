@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { /*FOOTER_HEIGHT,*/ COLOR_PALETTE } from '../constants';
+import { /* FOOTER_HEIGHT, */ COLOR_PALETTE } from '../constants';
 
 import PhoneImage from '../images/phone-solid.svg';
 import EmailImage from '../images/envelope-solid.svg';
@@ -51,13 +51,7 @@ export default () => (
       </ContactInfoContainer>
       <FooterTextDiv>
         <FooterText>
-          Made with
-          {' '}
-          <span role="img" aria-label="heart emoji">
-            ❤️
-          </span>
-          {' '}
-          by Tendoledu
+          © 2019 Tendoledu
         </FooterText>
       </FooterTextDiv>
     </FooterContact>
