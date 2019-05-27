@@ -9,13 +9,17 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button_ from '@material-ui/core/Button';
-import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
+import { media, SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 
 
 const recaptchaRef = React.createRef();
 
 const StyledForm = styled(Form)`
 padding:0px 50px 50px 50px;
+
+  ${media.lessThan('tablet')`
+  padding:0px;
+  `};
 `;
 
 const FieldAndFieldErrorWrapper = styled.div`
@@ -31,6 +35,9 @@ const StyledField = styled(Field)`
   border-radius:5px;
   border:1px solid black;
   font-size:1.5em;
+  ${media.lessThan('tablet')`
+    font-size:1em;
+  `};
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
@@ -38,6 +45,9 @@ const StyledErrorMessage = styled(ErrorMessage)`
   font-size:1.3em;
   font-weight:bold;
   padding-top:2px;
+  ${media.lessThan('tablet')`
+    font-size:1.2em;
+  `};
 `;
 
 const StyledButton = styled(Button_)`
@@ -49,12 +59,18 @@ const StyledLabel = styled.label`
   margin: 0 0;
   text-align:left;
   padding-top:10px;
+  ${media.lessThan('tablet')`
+    font-size:1.2em;
+  `};
 `;
 
 const ButtonText = styled.p`
   font-weight: bold;
   margin: 0;
   font-size:1.3em;
+  ${media.lessThan('tablet')`
+    font-size:1.2em;
+  `};
 `;
 
 
