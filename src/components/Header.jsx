@@ -56,6 +56,16 @@ const NavMenuItem = styled.li`
   font-size:1.3em;
   margin-right:30px;
 `;
+//scroll-behavior: smooth;
+const NavItemLink = styled.a`
+
+text-decoration:none;
+color:black;
+ &:hover {
+   color:#56EEC8;
+   text-decoration:none;
+ }
+`;
 
 export default () => (
   <HeaderContainer>
@@ -65,16 +75,22 @@ export default () => (
         <NavMenus>
           <NavContainer>
             <NavMenuItem>
-              Intro
+              <NavItemLink href="#">Intro</NavItemLink>
             </NavMenuItem>
+
             <NavMenuItem>
-              How It Works
+              <NavItemLink href="#HowItWorks">How It Works</NavItemLink>
             </NavMenuItem>
+
             <NavMenuItem>
-              Student Benefits
+              <NavItemLink href="#YourGain">Student Benefits</NavItemLink>
             </NavMenuItem>
-            <NavMenuItem>The Team</NavMenuItem>
+
+            <NavMenuItem>
+              <NavItemLink href="#TheTeam">The Team</NavItemLink>
+            </NavMenuItem>
           </NavContainer>
+
         </NavMenus>
       </Toolbar>
     </AppBar>
