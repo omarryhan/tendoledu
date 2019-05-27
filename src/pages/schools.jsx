@@ -18,6 +18,8 @@ import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
 import HowitWorksBg from '../components/HowitWorksBg';
+import TheTeamContainer from '../components/TheTeamContainer';
+import TheTeamCard from '../components/TheTeamCard';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -135,6 +137,34 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
+
+        <Section backgroundColor="white">
+          <TheTeamContainer
+            cards={[
+              <TheTeamCard
+                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxHeight: '200px' }} />}
+                title="Tangible Value"
+                subtitle="Recognition"
+                text="Lead your students into the real world market. Through Tendoledu you can provide real work experience to your students. Give your students an essential skill to stand out in the workforce."
+                key="recognition logo"
+              />,
+              <TheTeamCard
+                logo={<img src={WorkLogo} alt="Work logo" style={{ maxHeight: '200px' }} />}
+                title="Market Value"
+                subtitle="Work"
+                text="Your students can show their solid progress and work efforts to employers easily with Tendoledu."
+                key="work logo"
+              />,
+          ]}
+            subText={(
+              <SubText>
+                Help Your Students Impress Their Employers
+              </SubText>
+            )}
+          />
+        </Section>
+        
+        
       </Layout>
     </MuiThemeProvider>
   );
