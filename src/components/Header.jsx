@@ -30,11 +30,52 @@ const Title = styled.h2`
   `};
 `;
 
+const NavMenus = styled.ul`
+  text-align:center;
+  width:100%;
+  position:relative;
+  ${media.lessThan('687px')`
+    display:none;
+  `};
+`;
+
+const NavContainer = styled.div`
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  ${media.lessThan('1152px')`
+    width:100%;
+    margin-left:60px;
+`};
+`;
+
+const NavMenuItem = styled.li`
+  list-style-type:none;
+  float:left;
+  font-size:1.3em;
+  margin-right:30px;
+`;
+
 export default () => (
   <HeaderContainer>
     <AppBar position="static" color="secondary">
-      <Toolbar> 
+      <Toolbar>
         <Title> Tendoledu </Title>
+        <NavMenus>
+          <NavContainer>
+            <NavMenuItem>
+              Intro
+            </NavMenuItem>
+            <NavMenuItem>
+              How It Works
+            </NavMenuItem>
+            <NavMenuItem>
+              Student Benefits
+            </NavMenuItem>
+            <NavMenuItem>The Team</NavMenuItem>
+          </NavContainer>
+        </NavMenus>
       </Toolbar>
     </AppBar>
   </HeaderContainer>
