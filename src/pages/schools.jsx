@@ -44,7 +44,7 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section backgroundColor="#4C72E4">
+        <Section backgroundColor="#1de9b6bd">
           <HeroTitle> Win Over More Students for Your Online Course </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
