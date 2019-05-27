@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const OuterContainer = styled.div`
-
+margin: 0px 5% 0px 5%;
 `;
 
 const Title = styled.h2`
@@ -36,7 +36,7 @@ const CardsOuterContainer = styled.div`
 const YourGainContainer = ({ cards, subText }) => (
   <OuterContainer>
     <Title>
-        Your Students Gain
+      What will my Students Gain?
     </Title>
     <CardsOuterContainer>
       <CardsContainer>
