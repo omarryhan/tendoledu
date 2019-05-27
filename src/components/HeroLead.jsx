@@ -5,7 +5,9 @@ import { media } from '../constants';
 
 const LeadContainer = styled.div`
   width: 50%;
-  
+  font-weight:lighter;
+  color: white;
+
   ${media.lessThan('laptop')`
     width: 70%;
   `};
@@ -37,7 +39,6 @@ const LeadMessage = styled.p`
       font-size: 1.25em;
   `};
 `;
-
 const HeroLead = ({ message }) => (
   <LeadContainer>
     <LeadMessage>

@@ -5,8 +5,16 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-
 import SignUpForm from './SignUpForm';
+
+const DialogContentTitleStyling = {
+  textAlign: 'center',
+};
+
+const DialogContentTextStyling = {
+  fontSize: '1.5em',
+  color: 'black',
+};
 
 const SignUpModal = ({
     isModalVisible,
@@ -19,9 +27,9 @@ const SignUpModal = ({
     tabIndex={-1}
     aria-labelledby="Sign Up Dialogue"
   >
-    <DialogTitle id="max-width-dialog-title">Join the Beta Waiting-list</DialogTitle>
+    <DialogTitle id="max-width-dialog-title" style={DialogContentTitleStyling}>Join the Beta Waiting-list</DialogTitle>
     <DialogContent>
-      <DialogContentText>
+      <DialogContentText style={DialogContentTextStyling}>
         Tendoledu is going to launch really really soon.
         {' '}
         <br />

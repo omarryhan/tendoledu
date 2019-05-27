@@ -11,35 +11,19 @@ import GlobalStyle from './Global';
 import HeaderContainer from './Header';
 import Footer from './Footer';
 import {
-  media,
-  LaptopLayoutWidth,
-  TabletLayoutWidth,
-  MobileLargeLayoutWidth,
-  MobileLayoutWidth,
-  HEADER_HEIGHT,
-  FOOTER_HEIGHT,
+  // media,
+  // LaptopLayoutWidth,
+  // TabletLayoutWidth,
+  // MobileLargeLayoutWidth,
+  // MobileLayoutWidth,
+  // HEADER_HEIGHT,
+  // FOOTER_HEIGHT,
   alertSettings,
 } from '../constants';
 
 
 const BodyLayout = styled.div`
-  min-height: ${(100 - FOOTER_HEIGHT - HEADER_HEIGHT).toString()}vh;
 
-  ${media.lessThan('laptop')`
-    width: ${TabletLayoutWidth};
-  `};
-
-  ${media.lessThan('tablet')`
-    width: ${MobileLargeLayoutWidth};
-  `};
-
-  ${media.lessThan('mobileMedium')`
-    width: ${MobileLayoutWidth};
-  `};
-
-  width: ${LaptopLayoutWidth};
-
-  margin: 0 auto;
 `;
 
 const Main = styled.main`

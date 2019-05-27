@@ -23,12 +23,18 @@ export const COLOR_PALETTE = Object.freeze({
     blue: {
         primary: '#00AEEF',
     },
+    green: {
+        primary: '#28CC73',
+    },
+    pink: {
+        primary: '#FF015D',
+    },
 });
 
 export const SCHOOLS_THEME = Object.freeze({
     palette: {
-        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
-        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
+        primary: { main: COLOR_PALETTE.pink.primary, contrastText: COLOR_PALETTE.white.primary },
+        secondary: { main: COLOR_PALETTE.white.primary, contrastText: COLOR_PALETTE.black.primary },
     },
     status: {
         danger: 'orange',

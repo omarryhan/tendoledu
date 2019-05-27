@@ -15,6 +15,7 @@ import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
 const recaptchaRef = React.createRef();
 
 const StyledForm = styled(Form)`
+padding:0px 50px 50px 50px;
 `;
 
 const FieldAndFieldErrorWrapper = styled.div`
@@ -23,9 +24,20 @@ const FieldAndFieldErrorWrapper = styled.div`
 
 const StyledField = styled(Field)`
   border-radius: 6px;
+  width:100%;
+  padding:10px;
+  box-shadow:0px;
+  outline-color:#4C72E4;
+  border-radius:5px;
+  border:1px solid black;
+  font-size:1.5em;
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
+  color:red;
+  font-size:1.3em;
+  font-weight:bold;
+  padding-top:2px;
 `;
 
 const StyledButton = styled(Button_)`
@@ -33,12 +45,16 @@ const StyledButton = styled(Button_)`
 
 const StyledLabel = styled.label`
   display: block;
-  margin: 0.75vh 0;
+  font-size:1.5em;
+  margin: 0 0;
+  text-align:left;
+  padding-top:10px;
 `;
 
 const ButtonText = styled.p`
   font-weight: bold;
   margin: 0;
+  font-size:1.3em;
 `;
 
 
