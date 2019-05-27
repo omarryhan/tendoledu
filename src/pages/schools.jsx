@@ -66,7 +66,7 @@ export default () => {
             setIsModalVisible={setIsModalVisible}
           />
         </Section>
-        <Section position="relative">
+        <Section position="relative" id="HowItWorks">
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
@@ -106,7 +106,7 @@ export default () => {
 
           <HowitWorksBg />
         </Section>
-        <Section backgroundColor="#4C72E4">
+        <Section backgroundColor="#4C72E4" id="YourGain">
           <YourGainContainer
             cards={[
               <YourGainCard
@@ -138,7 +138,7 @@ export default () => {
           />
         </Section>
 
-        <Section backgroundColor="#F5F7F9">
+        <Section backgroundColor="#F5F7F9" id="TheTeam">
           <TheTeamContainer
             cards={[
               <TheTeamCard
