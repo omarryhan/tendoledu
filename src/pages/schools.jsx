@@ -68,26 +68,26 @@ export default () => {
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
-                logo={<img src={CreateLogo} alt="Create logo" />}
+                logo={<img src={CreateLogo} alt="Create logo" style={{ minHeight: '150px' }} />}
                 title="Create"
                 mainText="Create a space for your students to work in"
                 key="create logo"
               />,
               <HowItWorksCard
-                logo={<img src={AdmitLogo} alt="Admit logo" />}
+                logo={<img src={AdmitLogo} alt="Admit logo" style={{ minHeight: '150px' }} />}
                 title="Admit"
                 mainText="Admit students based on criteria you Set"
                 subText="You can add an admission fee too!"
                 key="admit logo"
               />,
               <HowItWorksCard
-                logo={<img src={SelectLogo} alt="Select logo" />}
+                logo={<img src={SelectLogo} alt="Select logo" style={{ minHeight: '150px' }} />}
                 title="Select and assign"
                 mainText="Select marketing jobs posted by startups, then assign to students"
                 key="select logo"
               />,
               <HowItWorksCard
-                logo={<img src={DeliverLogo} alt="Deliver logo" />}
+                logo={<img src={DeliverLogo} alt="Deliver logo" style={{ minHeight: '150px' }} />}
                 title="Deliver & Get Ratings"
                 mainText="Deliver finished work and get ratings"
                 key="deliver logo"
