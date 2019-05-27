@@ -56,7 +56,7 @@ const NavMenuItem = styled.li`
   font-size:1.3em;
   margin-right:30px;
 `;
-//scroll-behavior: smooth;
+
 const NavItemLink = styled.a`
 
 text-decoration:none;
