@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { media } from '../constants';
 
 const OuterContainer = styled.div`
 
@@ -9,7 +10,10 @@ const OuterContainer = styled.div`
 const Title = styled.h2`
   text-align: center;
   margin: 8vh 0 8vh 0;
-  font-size: 2.5em;
+  font-size: 3.5em;
+  ${media.lessThan('tablet')`
+    font-size:3em;
+  `};
 `;
 
 const SubTextContainer = styled.div`
@@ -30,7 +34,7 @@ const CardsContainer = styled.div`
 const HowItWorksContainer = ({ cards, subText }) => (
   <OuterContainer>
     <Title>
-        How it works
+        How It Works
     </Title>
 
     <CardsContainer>

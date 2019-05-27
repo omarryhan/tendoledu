@@ -20,7 +20,7 @@ const Outline = styled.div`
 const LogoContainer = styled.div`
 `;
 
-const Teste = styled.div`
+const ContentContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,6 +32,7 @@ const Teste = styled.div`
 const TitleContainer = styled.div`
   text-align: center;
   margin-bottom:17px;
+  
 `;
 
 const TextContainer = styled.div`
@@ -60,7 +61,7 @@ const YourGainCard = ({
  logo, title, subtitle, text,
 }) => (
   <Outline>
-    <Teste>
+    <ContentContainer>
       <TitleContainer>
         <TitleText>
           {title}
@@ -80,7 +81,7 @@ const YourGainCard = ({
           {text}
         </Text>
       </TextContainer>
-    </Teste>
+    </ContentContainer>
   </Outline>
 );
 

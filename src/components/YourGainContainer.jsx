@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { media } from '../constants';
 
 const OuterContainer = styled.div`
 margin: 0px 5% 0px 5%;
@@ -9,7 +10,10 @@ margin: 0px 5% 0px 5%;
 const Title = styled.h2`
   text-align: center;
   margin: 8vh 0 8vh 0;
-  font-size: 2.5em;
+  font-size: 3.5em;
+  ${media.lessThan('tablet')`
+    font-size:3em;
+  `};
   color:white;
 `;
 
