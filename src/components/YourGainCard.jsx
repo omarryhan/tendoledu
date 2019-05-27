@@ -18,6 +18,7 @@ const Outline = styled.div`
 `;
 
 const LogoContainer = styled.div`
+margin-bottom: 17px;
 `;
 
 const ContentContainer = styled.div`
@@ -62,19 +63,18 @@ const YourGainCard = ({
 }) => (
   <Outline>
     <ContentContainer>
-      <TitleContainer>
-        <TitleText>
-          {title}
-        </TitleText>
-      </TitleContainer>
-
       <LogoContainer>
         {logo}
       </LogoContainer>
 
-      <SubTitleText>
-        {subtitle}
-      </SubTitleText>
+      <TitleContainer>
+        <TitleText>
+          {title}
+        </TitleText>
+        <SubTitleText>
+          {subtitle}
+        </SubTitleText>
+      </TitleContainer>
 
       <TextContainer>
         <Text>
