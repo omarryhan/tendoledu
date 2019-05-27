@@ -4,15 +4,24 @@ import styled from 'styled-components';
 
 
 const Outline = styled.div`
-  width: 350px;
-  min-height:400px;
+  width: 400px;
+  min-height:500px;
   margin: 0 auto;
-  margin-bottom: 5vh;
   background-color:white;
   text-align:center;
   padding:30px;
   border-radius:10px;
   box-shadow: 0px 2px 36px -5px rgba(29, 233, 182, 0.37);
+  position:relative;
+`;
+
+const ContentContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 15px;
 `;
 
 const LogoContainer = styled.div`
@@ -33,13 +42,13 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  color:#4C72E4;
+  color:#1DE9B6;
   text-transform: uppercase;
 `;
 
 const MainText = styled.strong`
-  font-size:1.5em;
   font-weight: lighter;
+  font-size:1.25em;
 `;
 
 const SubText = styled.strong`
@@ -51,32 +60,34 @@ const HowItWorksCard = ({
  logo, title, mainText, subText,
 }) => (
   <Outline>
-    <LogoContainer>
-      {logo}
-    </LogoContainer>
+    <ContentContainer>
+      <LogoContainer>
+        {logo}
+      </LogoContainer>
 
-    <TitleContainer>
-      <Title>
-        {title}
-      </Title>
-    </TitleContainer>
+      <TitleContainer>
+        <Title>
+          {title}
+        </Title>
+      </TitleContainer>
 
-    <MainTextContainer>
-      <MainText>
-        {mainText}
-      </MainText>
-    </MainTextContainer>
+      <MainTextContainer>
+        <MainText>
+          {mainText}
+        </MainText>
+      </MainTextContainer>
 
-    {subText
-      ? (
-        <SubTextContainer>
-          <SubText>
-            {subText}
-          </SubText>
-        </SubTextContainer>
-        )
-      : null
-    }
+      {subText
+        ? (
+          <SubTextContainer>
+            <SubText>
+              {subText}
+            </SubText>
+          </SubTextContainer>
+          )
+        : null
+      }
+    </ContentContainer>
   </Outline>
 );
 
