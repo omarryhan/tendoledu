@@ -108,23 +108,23 @@ export default () => {
           <YourGainContainer
             cards={[
               <YourGainCard
-                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
+                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxHeight: '200px' }} />}
                 title="Tangible Value"
                 subtitle="Recognition"
-                text="Their employers can see their work!"
+                text="Lead your students into the real world market. Through Tendoledu you can provide real work experience to your students. Give your students an essential skill to stand out in the workforce."
                 key="recognition logo"
               />,
               <YourGainCard
-                logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
+                logo={<img src={WorkLogo} alt="Work logo" style={{ maxHeight: '200px' }} />}
                 title="Market Value"
                 subtitle="Work"
-                text="Real work experience!"
+                text="Your students can show their solid progress and work efforts to employers easily with Tendoledu."
                 key="work logo"
               />,
           ]}
             subText={(
               <SubText>
-                Help your students impress their employers
+                Help Your Students Impress Their Employers
               </SubText>
             )}
           />
