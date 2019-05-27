@@ -181,6 +181,16 @@ export default () => {
                 subtitle="CopyWriter"
                 key="work logo"
               />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
+              <TheTeamCard
+                title="Worker4"
+                subtitle="CopyWriter"
+                key="work logo"
+              />,
           ]}
           />
         </Section>

@@ -5,7 +5,7 @@ import Worker1 from '../images/worker1.jpg';
 
 
 const Outline = styled.div`
-  width: 350px;
+  width: 300px;
   margin: 0 auto;
   text-align:center;
   padding:30px;
@@ -18,12 +18,11 @@ const ContentContainer = styled.div`
   background-image:url(${Worker1});
   background-size:cover;
   background-position:center;
-  padding:40px;
   border-radius:50%;
   box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
   margin-bottom: 2vh;
   width: 100%;
-  height:250px;
+  height:220px;
 `;
 
 const TitleContainer = styled.div`
