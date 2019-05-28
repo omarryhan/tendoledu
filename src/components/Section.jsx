@@ -9,7 +9,7 @@ export default styled.section`
     position: ${props => props.position};
 
     margin: 0 auto;
-    padding: 3vh;
+    padding: 1vh;
 
     ${media.lessThan('tablet')`
     `};

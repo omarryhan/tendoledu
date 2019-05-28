@@ -18,6 +18,7 @@ import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
 import HowitWorksBg from '../components/HowitWorksBg';
+import HowItWorksArrow from '../components/HowItWorksArrow';
 import TheTeamContainer from '../components/TheTeamContainer';
 import TheTeamCard from '../components/TheTeamCard';
 
@@ -28,6 +29,9 @@ import SelectLogo from '../images/select.svg';
 import DeliverLogo from '../images/deliver.svg';
 import WorkLogo from '../images/work.svg';
 import RecognitionLogo from '../images/recognition.svg';
+import Arrow1 from '../images/arrow1.svg';
+import Arrow2 from '../images/arrow2.svg';
+import Arrow3 from '../images/arrow3.svg';
 
 
 const muiTheme = createMuiTheme(SCHOOLS_THEME, 'schoolsTheme');
@@ -46,7 +50,7 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section backgroundColor="#1de9b6bd">
+        <Section backgroundColor="#19B485">
           <HeroTitle> Win Over More Students for Your Online Course </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
@@ -60,8 +64,7 @@ export default () => {
             Color="white"
           />
           <SignUpButtonDiv
-            text="Sign Up Here"
-            outsideText="to change that!"
+            text="Sign Up Here to change that!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
@@ -69,44 +72,56 @@ export default () => {
         <Section position="relative" id="HowItWorks">
           <HowItWorksContainer
             cards={[
-              <HowItWorksCard
-                logo={<img src={CreateLogo} alt="Create logo" style={{ minHeight: '150px' }} />}
-                title="Create"
-                mainText="Create a space for your students to work in"
-                key="create logo"
-              />,
-              <HowItWorksCard
-                logo={<img src={AdmitLogo} alt="Admit logo" style={{ minHeight: '150px' }} />}
-                title="Admit"
-                mainText="Admit students based on criteria you Set"
-                subText="You can add an admission fee too!"
-                key="admit logo"
-              />,
-              <HowItWorksCard
-                logo={<img src={SelectLogo} alt="Select logo" style={{ minHeight: '150px' }} />}
-                title="Select and assign"
-                mainText="Select marketing jobs posted by startups, then assign to students"
-                key="select logo"
-              />,
-              <HowItWorksCard
-                logo={<img src={DeliverLogo} alt="Deliver logo" style={{ minHeight: '150px' }} />}
-                title="Deliver & Get Ratings"
-                mainText="Deliver finished work and get ratings"
-                key="deliver logo"
-              />,
+              <div class="HowItWorksCard" style={{width:'100%', textAlign:'center'}}>
+                <HowItWorksCard
+                  logo={<img src={CreateLogo} alt="Create logo" style={{ minHeight: '150px' }} />}
+                  title="Create"
+                  mainText="Create a space for your students to work in"
+                  key="create logo"
+                />
+                <HowItWorksArrow img= {<img src={Arrow1} alt="Create logo" style={{ minWidth: '100%', transform: 'translateY(-200%)'}} />}>
+                </HowItWorksArrow>
+                <HowItWorksCard
+                  logo={<img src={AdmitLogo} alt="Admit logo" style={{ minHeight: '150px' }} />}
+                  title="Admit"
+                  mainText="Admit students based on criteria you Set"
+                  subText="You can add an admission fee too!"
+                  key="admit logo"
+                />
+              </div>,
+              <div class="HowItWorksCard" style={{width:'100%', textAlign:'right'}}>
+              <HowItWorksArrow img= {<img src={Arrow2} alt="Create logo" style={{ minHeight: '100px'}} />}>
+                </HowItWorksArrow>
+              </div>,
+
+              <div class="HowItWorksCard" style={{width:'100%', textAlign:'center'}}>
+                <HowItWorksCard
+                  logo={<img src={SelectLogo} alt="Select logo" style={{ minHeight: '150px' }} />}
+                  title="Select and assign"
+                  mainText="Select marketing jobs posted by startups, then assign to students"
+                  key="select logo"
+                />
+                <HowItWorksArrow img= {<img src={Arrow3} alt="Create logo" style={{ minWidth: '100%', transform: 'translateY(-200%)'}} />}>
+                </HowItWorksArrow>
+                <HowItWorksCard
+                  logo={<img src={DeliverLogo} alt="Deliver logo" style={{ minHeight: '150px' }} />}
+                  title="Deliver & Get Ratings"
+                  mainText="Deliver finished work and get ratings"
+                  key="deliver logo"
+                />
+              </div>,
             ]}
             subText="Tendoledu makes you do even more"
           />
           <SignUpButtonDiv
-            text="Sign Up Here"
-            outsideText="to know more!"
+            text="Sign Up Here to know more!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
 
           <HowitWorksBg />
         </Section>
-        <Section backgroundColor="#4C72E4" id="YourGain">
+        <Section backgroundColor="#19B485" id="YourGain">
           <YourGainContainer
             cards={[
               <YourGainCard
@@ -131,8 +146,7 @@ export default () => {
             )}
           />
           <SignUpButtonDiv
-            text="Sign Up Here"
-            outsideText="to see how!"
+            text="Sign Up Here to see how!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
@@ -154,41 +168,6 @@ export default () => {
               <TheTeamCard
                 title="Worker3"
                 subtitle="Programmer"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
-                key="work logo"
-              />,
-              <TheTeamCard
-                title="Worker4"
-                subtitle="CopyWriter"
                 key="work logo"
               />,
           ]}

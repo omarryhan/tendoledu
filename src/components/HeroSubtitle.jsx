@@ -6,15 +6,15 @@ export default styled.h2`
     font-weight:lighter;
 
     ${media.lessThan('laptop')`
-        font-size: 1.75em;
+        font-size: 1.2em;
     `};
 
     ${media.lessThan('tablet')`
-        font-size: 1.5em;
+        font-size: 1.1em;
     `};
 
     ${media.lessThan('mobileMedium')`
-        font-size: 1.25em;
+        font-size: 1.1em;
     `};
 
     text-align: left;

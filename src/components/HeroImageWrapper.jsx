@@ -8,8 +8,12 @@ const Container = styled.div`
   ${media.lessThan('tablet')`
     margin:15px;
   `};
-  margin-left:18%;
-  margin-right:18%;
+  ${media.lessThan('laptop')`
+  margin-left:10%;
+  margin-right:10%;
+`};
+  margin-left:30%;
+  margin-right:30%;
 `;
 
 

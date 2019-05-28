@@ -15,7 +15,9 @@ const HeaderContainer = styled.header`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5em;
+  font-size: 2em;
+  color:black;
+  font-weight:bold;
 
   ${media.lessThan('laptop')`
     font-size: 1.35em;

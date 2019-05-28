@@ -4,15 +4,20 @@ import styled from 'styled-components';
 
 
 const Outline = styled.div`
-  width: 400px;
+  width: 350px;
   min-height:500px;
-  margin: 0 auto;
+  margin:auto;
   background-color:white;
   text-align:center;
-  padding:30px;
+  padding:1vh;
   border-radius:10px;
   box-shadow: 0px 2px 36px -5px rgba(29, 233, 182, 0.37);
   position:relative;
+  margin-bottom:20px;
+  margin-top:20px;
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
 `;
 
 const ContentContainer = styled.div`

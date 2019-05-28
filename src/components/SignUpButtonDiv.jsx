@@ -11,8 +11,8 @@ const Container = styled.div`
   align-items: center;
 
   margin: 0 auto;
-  margin-bottom: 7vh;
-  margin-top: 7vh;
+  margin-bottom: 25px;
+  margin-top: 25px;
 `;
 
 const OutsideText = styled.strong`
@@ -22,7 +22,7 @@ const OutsideText = styled.strong`
 
 const Text = styled.strong`
   font-weight: bold;
-  font-size:1.4em;
+  font-size:1.1em;
 `;
 
 const BtnStyling = {
