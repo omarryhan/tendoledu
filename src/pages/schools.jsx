@@ -54,7 +54,7 @@ export default () => {
             />
           </HeroImageWrapper>
           <HeroLead
-            message="It’s really hard to be unique when all online schools do the same thing (only teach)"
+            message="It’s really hard to be unique when all course creators do the same thing..."
             Color="white"
           />
           <SignUpButtonDiv
@@ -62,6 +62,7 @@ export default () => {
             outsideText="to change that!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
+            outsideTextColor="white"
           />
         </Section>
         <Section position="relative">
@@ -76,7 +77,7 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 title="Admit"
-                mainText="Admit students based on criteria you Set"
+                mainText="Admit students based on criteria you set"
                 subText="You can add an admission fee too!"
                 key="admit logo"
               />,
@@ -93,11 +94,11 @@ export default () => {
                 key="deliver logo"
               />,
             ]}
-            subText="Tendoledu makes you do even more"
+            subText="Thousands of students are waiting for you to create your Tendoledu space"
           />
           <SignUpButtonDiv
-            text="Sign Up Here"
-            outsideText="to know more!"
+            text="Sign Up Now"
+            outsideText="to be the first to use it, it’s free!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
@@ -109,14 +110,14 @@ export default () => {
             cards={[
               <YourGainCard
                 logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
-                title="Tangible Value"
+                title="Hands On Work Experience"
                 subtitle="Recognition"
                 text="Their employers can see their work!"
                 key="recognition logo"
               />,
               <YourGainCard
                 logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
-                title="Market Value"
+                title="Shareable Work Portfolios"
                 subtitle="Work"
                 text="Real work experience!"
                 key="work logo"
@@ -129,10 +130,11 @@ export default () => {
             )}
           />
           <SignUpButtonDiv
-            text="Sign Up Here"
-            outsideText="to see how!"
+            text="Sign Me Up"
+            outsideText="for the free product!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
+            outsideTextColor="white"
           />
         </Section>
       </Layout>

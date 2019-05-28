@@ -33,7 +33,7 @@ const Title = styled.h2`
 export default () => (
   <HeaderContainer>
     <AppBar position="static" color="secondary">
-      <Toolbar> 
+      <Toolbar>
         <Title> Tendoledu </Title>
       </Toolbar>
     </AppBar>

@@ -3,7 +3,7 @@ import { media } from '../constants';
 
 
 export default styled.h1`
-    font-size: 4.5em;
+    font-size: 4em;
     font-weight:bold;
 
     ${media.lessThan('laptop')`

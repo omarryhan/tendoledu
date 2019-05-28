@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const OutsideText = styled.strong`
   margin-left: 10px;
-  color:black;
+  color: ${props => props.outsideTextColor};
 `;
 
 const Text = styled.strong`
@@ -40,6 +40,7 @@ const SignUpButton = ({
     outsideText,
     isModalVisible,
     setIsModalVisible,
+    outsideTextColor,
 }) => (
   <Container>
     <Button
@@ -52,17 +53,22 @@ const SignUpButton = ({
     >
       <Text>{text}</Text>
     </Button>
-    <OutsideText>
+    <OutsideText outsideTextColor={outsideTextColor}>
       {outsideText}
     </OutsideText>
   </Container>
 );
+
+SignUpButton.defaultProps = {
+  outsideTextColor: 'black',
+};
 
 SignUpButton.propTypes = {
   text: PropTypes.string.isRequired,
   outsideText: PropTypes.string.isRequired,
   isModalVisible: PropTypes.bool.isRequired,
   setIsModalVisible: PropTypes.func.isRequired,
+  outsideTextColor: PropTypes.string,
 };
 
 export default SignUpButton;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media } from '../constants';
 
 export default styled.h2`
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight:lighter;
 
     ${media.lessThan('laptop')`
