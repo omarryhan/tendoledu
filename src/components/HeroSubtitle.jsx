@@ -3,6 +3,7 @@ import { media } from '../constants';
 
 export default styled.h2`
     font-size: 2em;
+    font-weight:lighter;
 
     ${media.lessThan('laptop')`
         font-size: 1.75em;
@@ -16,7 +17,8 @@ export default styled.h2`
         font-size: 1.25em;
     `};
 
-    text-align: center;
+    text-align: left;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
+    color:white;
 `;

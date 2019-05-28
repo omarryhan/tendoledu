@@ -4,9 +4,15 @@ import styled from 'styled-components';
 
 
 const Outline = styled.div`
-  width: 250px;
+  width: 350px;
+  min-height:400px;
   margin: 0 auto;
   margin-bottom: 5vh;
+  background-color:white;
+  text-align:center;
+  padding:30px;
+  border-radius:10px;
+  box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
 `;
 
 const LogoContainer = styled.div`
@@ -22,8 +28,18 @@ const SubTextContainer = styled.div`
   text-align: center;
 `;
 
+const TitleContainer = styled.div`
+  text-align:center;
+`;
+
+const Title = styled.h2`
+  color:#4C72E4;
+  text-transform: uppercase;
+`;
+
 const MainText = styled.strong`
-  font-weight: bold;
+  font-size:1.5em;
+  font-weight: lighter;
 `;
 
 const SubText = styled.strong`
@@ -31,11 +47,19 @@ const SubText = styled.strong`
   font-weight: 0;
 `;
 
-const HowItWorksCard = ({ logo, mainText, subText }) => (
+const HowItWorksCard = ({
+ logo, title, mainText, subText,
+}) => (
   <Outline>
     <LogoContainer>
       {logo}
     </LogoContainer>
+
+    <TitleContainer>
+      <Title>
+        {title}
+      </Title>
+    </TitleContainer>
 
     <MainTextContainer>
       <MainText>
@@ -62,6 +86,7 @@ HowItWorksCard.defaultProps = {
 
 HowItWorksCard.propTypes = {
   logo: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
   mainText: PropTypes.string.isRequired,
   subText: PropTypes.string,
 };
