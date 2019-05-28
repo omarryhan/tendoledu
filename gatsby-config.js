@@ -10,7 +10,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/students', 'page-2', 'copy-of-signin'],
+      },
+    },
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -69,6 +74,7 @@ module.exports = {
       options: {
         google: {
           families: [
+            'Ubuntu Medium',
             'Raleway',
             'Montserrat',
             'medium-content-sans-serif-font',
@@ -78,7 +84,6 @@ module.exports = {
             'Roboto',
             'Oxygen',
             'Ubuntu',
-            'Ubuntu Medium',
             'Cantarell',
             'Open Sans',
             'Helvetica Neue',
