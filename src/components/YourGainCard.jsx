@@ -7,7 +7,7 @@ import { FONT_SIZES, COLOR_PALETTE } from '../constants';
 const Outline = styled.div`
   width: 350px;
 
-  height: 400px;
+  height: 450px;
 
   margin: 0 auto;
   margin-bottom: 5vh;
@@ -61,7 +61,7 @@ const TitleText = styled.strong`
   color: ${COLOR_PALETTE.red.primary()};
 `;
 
-const SubTitleText = styled.h2`
+const SubTitleText = styled.p`
   ${FONT_SIZES.lg}
 `;
 

@@ -26,7 +26,7 @@ const OutsideText = styled.strong`
   color: ${props => props.color};
 `;
 
-const Text = styled.strong`
+export const Text = styled.strong`
   font-weight: bold;
   ${FONT_SIZES.md}
   color: ${props => props.color};

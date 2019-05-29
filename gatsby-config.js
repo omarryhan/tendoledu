@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/students', 'page-2', 'copy-of-signin'],
+        exclude: ['/students*', '/page-2*', '/copy-of-signin*'],
       },
     },
     'gatsby-plugin-catch-links',
@@ -74,7 +74,7 @@ module.exports = {
       options: {
         google: {
           families: [
-            'Ubuntu Medium',
+            'Ubuntu',
             'Raleway',
             'Montserrat',
             'medium-content-sans-serif-font',
@@ -83,7 +83,6 @@ module.exports = {
             'Segoe UI',
             'Roboto',
             'Oxygen',
-            'Ubuntu',
             'Cantarell',
             'Open Sans',
             'Helvetica Neue',

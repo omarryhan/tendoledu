@@ -4,15 +4,16 @@ import styled from 'styled-components';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 import {
   HEADER_HEIGHT,
   FONT_SIZES,
-  media,
 } from '../constants';
+import { Text } from './SignUpButtonDiv';
 
 
 const HeaderContainer = styled.header`
-  height: ${HEADER_HEIGHT};
+  height: ${HEADER_HEIGHT}vh;
   text-align: center;
 `;
 
@@ -23,20 +24,7 @@ const NavMenuContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  width: 30%;
-
-  ${media.lessThan('laptop')`
-    width: 70%;
-  `};
-
-  ${media.lessThan('tablet')`
-    width: 80%;
-  `};
-
-  ${media.lessThan('mobileMedium')`
-    width: 90%;
-  `};
+  padding: 1vh;
 `;
 
 const NavMenuItem = styled.div`
@@ -45,15 +33,20 @@ const NavMenuItem = styled.div`
   justify-content: center;
   text-align: center;
   margin: 0 1vw;
+
+  font-style: bold;
+  ${FONT_SIZES.lg}
+
 `;
 
 const Title = styled.h2`
-  ${FONT_SIZES.xl}
+  ${FONT_SIZES.xxxl}
+  margin: 15px 0;
 `;
 
-const Header = ({ navLinks }) => (
+const Header = ({ navLinks, setIsModalVisible }) => (
   <HeaderContainer>
-    <AppBar position="static" color="secondary">
+    <AppBar color="secondary">
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
         <TitleContainer>
           <Title> Tendoledu </Title>
@@ -66,6 +59,26 @@ const Header = ({ navLinks }) => (
               </a>
             </NavMenuItem>
           ))}
+
+          {
+            setIsModalVisible
+              ? (
+                <NavMenuItem key="Sign Up button">
+                  <Button
+                    style={{ color: 'black' }}
+                    variant="contained"
+                    color="primary"
+                    onClick={() => setIsModalVisible(true)}
+                    size="medium"
+                  >
+                    <Text>
+                      Sign Up
+                    </Text>
+                  </Button>
+                </NavMenuItem>
+              )
+            : null
+          }
         </NavMenuContainer>
       </Toolbar>
     </AppBar>
@@ -74,6 +87,7 @@ const Header = ({ navLinks }) => (
 
 Header.defaultProps = {
   navLinks: [],
+  setIsModalVisible: null,
 };
 
 Header.propTypes = {
@@ -81,6 +95,7 @@ Header.propTypes = {
     href: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
+  setIsModalVisible: PropTypes.func,
 };
 
 export default Header;

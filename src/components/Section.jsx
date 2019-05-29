@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { media } from '../constants';
 
 
 export default styled.section`
@@ -10,7 +9,4 @@ export default styled.section`
 
     margin: 0 auto;
     padding: 3vh;
-
-    ${media.lessThan('tablet')`
-    `};
 `;

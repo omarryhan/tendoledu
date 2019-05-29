@@ -9,7 +9,7 @@ const Outline = styled.div`
   width: 350px;
 
   height: 500px;
-  
+
   margin: 0 auto;
   margin-bottom: 5vh;
   margin-right: 2vw;
@@ -18,7 +18,7 @@ const Outline = styled.div`
 
   background-color: white;
   box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
-  
+
   border-radius: 10px;
 `;
 
@@ -38,7 +38,6 @@ const TitleContainer = styled.div`
   width: 80%;
   margin: 0 auto;
 
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +48,6 @@ const MainTextContainer = styled.div`
   height: 40%;
   width: 80%;
   margin: 0 auto;
-
 
   display: flex;
   align-items: center;
@@ -72,7 +70,7 @@ const Title = styled.h2`
 `;
 
 const MainText = styled.strong`
-  ${FONT_SIZES.xl}
+  ${FONT_SIZES.lg}
   font-weight: lighter;
 `;
 

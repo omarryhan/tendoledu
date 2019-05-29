@@ -11,26 +11,21 @@ import GlobalStyle from './Global';
 import Header from './Header';
 import Footer from './Footer';
 import {
-  // media,
-  // LaptopLayoutWidth,
-  // TabletLayoutWidth,
-  // MobileLargeLayoutWidth,
-  // MobileLayoutWidth,
-  // HEADER_HEIGHT,
-  // FOOTER_HEIGHT,
+  HEADER_HEIGHT,
+  FOOTER_HEIGHT,
   alertSettings,
 } from '../constants';
 
 
 const BodyLayout = styled.div`
-
+  min-height: ${100 - HEADER_HEIGHT - FOOTER_HEIGHT}vh;
 `;
 
 const Main = styled.main`
 
 `;
 
-const Layout = ({ children, navLinks }) => (
+const Layout = ({ children, navLinks, setIsModalVisible }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -46,7 +41,11 @@ const Layout = ({ children, navLinks }) => (
         <CssBaseline />
         <AlertProvider template={AlertTemplate} {...alertSettings}>
           <GlobalStyle />
-          <Header navLinks={navLinks} siteTitle={data.site.siteMetadata.title} />
+          <Header
+            navLinks={navLinks}
+            siteTitle={data.site.siteMetadata.title}
+            setIsModalVisible={setIsModalVisible}
+          />
           <BodyLayout>
             <Main>{children}</Main>
           </BodyLayout>
@@ -59,6 +58,7 @@ const Layout = ({ children, navLinks }) => (
 
 Layout.defaultProps = {
   navLinks: [],
+  setIsModalVisible: null,
 };
 
 Layout.propTypes = {
@@ -67,6 +67,7 @@ Layout.propTypes = {
     href: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
   })),
+  setIsModalVisible: PropTypes.func,
 };
 
 export default Layout;

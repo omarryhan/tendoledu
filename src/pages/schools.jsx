@@ -35,6 +35,7 @@ export default () => {
     <MuiThemeProvider theme={muiTheme}>
       <Layout
         currentPage="schools"
+        setIsModalVisible={setIsModalVisible}
         navLinks={[
           {
             href: '#intro',
@@ -84,7 +85,7 @@ export default () => {
         </Section>
         <Section
           id="how-it-works"
-          backgroundColor={COLOR_PALETTE.red.primary('0.9')}
+          backgroundColor={COLOR_PALETTE.red.primary('0.8')}
           style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer
@@ -99,7 +100,7 @@ export default () => {
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students based on criteria you set"
-                subText="* You can add an admission fee too!"
+                subText="* You can monetize if you want!"
                 key="admit logo"
               />,
               <HowItWorksCard
@@ -129,7 +130,7 @@ export default () => {
 
         <Section id="gain">
           <YourGainContainer
-            title="What will my Students Gain?"
+            title="What Will my Students Gain?"
             cards={[
               <YourGainCard
                 logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
