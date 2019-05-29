@@ -8,7 +8,7 @@ import AlertTemplate from 'react-alert-template-basic';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import GlobalStyle from './Global';
-import HeaderContainer from './Header';
+import Header from './Header';
 import Footer from './Footer';
 import {
   // media,
@@ -30,7 +30,7 @@ const Main = styled.main`
 
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, navLinks }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -46,7 +46,7 @@ const Layout = ({ children }) => (
         <CssBaseline />
         <AlertProvider template={AlertTemplate} {...alertSettings}>
           <GlobalStyle />
-          <HeaderContainer siteTitle={data.site.siteMetadata.title} />
+          <Header navLinks={navLinks} siteTitle={data.site.siteMetadata.title} />
           <BodyLayout>
             <Main>{children}</Main>
           </BodyLayout>
@@ -57,8 +57,16 @@ const Layout = ({ children }) => (
   />
 );
 
+Layout.defaultProps = {
+  navLinks: [],
+};
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  navLinks: PropTypes.arrayOf(PropTypes.shape({
+    href: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+  })),
 };
 
 export default Layout;

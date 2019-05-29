@@ -1,20 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle_ from '@material-ui/core/DialogTitle';
+import DialogContent_ from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import SignUpForm from './SignUpForm';
 
-const DialogContentTitleStyling = {
-  textAlign: 'center',
-};
+import { FONT_SIZES } from '../constants';
 
-const DialogContentTextStyling = {
-  fontSize: '1.5em',
-  color: 'black',
-};
+
+const DialogTitle = styled(DialogTitle_)`
+  text-align: center;
+`;
+
+const DialogTitleText = styled.p`  
+  ${FONT_SIZES.lg}
+  margin: 0 0;
+`;
+
+const DialogContent = styled(DialogContent_)`
+  margin: 20px;
+
+  ${FONT_SIZES.sm}
+`;
 
 const SignUpModal = ({
     isModalVisible,
@@ -26,10 +36,17 @@ const SignUpModal = ({
     onClose={() => setIsModalVisible(false)}
     tabIndex={-1}
     aria-labelledby="Sign Up Dialogue"
+    fullWidth
+    maxWidth="sm"
   >
-    <DialogTitle id="max-width-dialog-title" style={DialogContentTitleStyling}>Join the Beta Waiting-list</DialogTitle>
+    <DialogTitle id="max-width-dialog-title">
+      <DialogTitleText>
+        Join the Beta Waiting-list
+      </DialogTitleText>
+    </DialogTitle>
+
     <DialogContent>
-      <DialogContentText style={DialogContentTextStyling}>
+      <DialogContentText style={{ textAlign: 'center' }}>
         Tendoledu is going to launch really really soon.
         {' '}
         <br />

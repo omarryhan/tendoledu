@@ -5,11 +5,11 @@ import { media } from '../constants';
 
 
 const Container = styled.div`
-  ${media.lessThan('tablet')`
-    margin:15px;
+  margin: 0 20vw;
+
+  ${media.lessThan('laptopLarge')`
+    margin: 0 0;
   `};
-  margin-left:18%;
-  margin-right:18%;
 `;
 
 

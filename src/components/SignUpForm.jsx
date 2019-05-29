@@ -9,13 +9,12 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button_ from '@material-ui/core/Button';
-import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY } from '../constants';
+import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY, FONT_SIZES } from '../constants';
 
 
 const recaptchaRef = React.createRef();
 
 const StyledForm = styled(Form)`
-padding:0px 50px 50px 50px;
 `;
 
 const FieldAndFieldErrorWrapper = styled.div`
@@ -30,14 +29,14 @@ const StyledField = styled(Field)`
   outline-color:#4C72E4;
   border-radius:5px;
   border:1px solid black;
-  font-size:1.5em;
+  ${FONT_SIZES.lg}
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
-  color:red;
-  font-size:1.3em;
-  font-weight:bold;
-  padding-top:2px;
+  color: red;
+  ${FONT_SIZES.lg}
+  font-weight: bold;
+  padding-top: 2px;
 `;
 
 const StyledButton = styled(Button_)`
@@ -45,7 +44,7 @@ const StyledButton = styled(Button_)`
 
 const StyledLabel = styled.label`
   display: block;
-  font-size:1.5em;
+  ${FONT_SIZES.lg}
   margin: 0 0;
   text-align:left;
   padding-top:10px;
@@ -54,7 +53,7 @@ const StyledLabel = styled.label`
 const ButtonText = styled.p`
   font-weight: bold;
   margin: 0;
-  font-size:1.3em;
+  ${FONT_SIZES.lg}
 `;
 
 

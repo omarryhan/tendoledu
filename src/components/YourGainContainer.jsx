@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { FONT_SIZES } from '../constants';
+
 const OuterContainer = styled.div`
 
 `;
@@ -9,34 +11,35 @@ const OuterContainer = styled.div`
 const Title = styled.h2`
   text-align: center;
   margin: 8vh 0 8vh 0;
-  font-size: 2.5em;
-  color:white;
+  ${FONT_SIZES.xxxxxl}
 `;
 
 const SubTextContainer = styled.div`
   text-align: center;
   margin: 10vh 0 3vh 0;
-  color:white;
 `;
 
 export const SubText = styled.p`
   font-weight: bold;
-  font-size: 2em;
+  ${FONT_SIZES.xxl}
 `;
 
 const CardsContainer = styled.div`
-display:flex;
-flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
 `;
 
 const CardsOuterContainer = styled.div`
 
 `;
 
-const YourGainContainer = ({ cards, subText }) => (
+const YourGainContainer = ({ cards, subText, title }) => (
   <OuterContainer>
     <Title>
-        Your Students Gain
+      {title}
     </Title>
     <CardsOuterContainer>
       <CardsContainer>
@@ -59,6 +62,7 @@ YourGainContainer.propTypes = {
     PropTypes.string,
     PropTypes.element,
   ]),
+  title: PropTypes.string.isRequired,
 };
 
 export default YourGainContainer;

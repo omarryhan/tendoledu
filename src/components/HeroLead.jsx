@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { media } from '../constants';
+import { FONT_SIZES, media } from '../constants';
 
 const LeadContainer = styled.div`
   width: 50%;
   font-weight:lighter;
-  color: white;
 
   ${media.lessThan('laptop')`
     width: 70%;
@@ -25,19 +24,7 @@ const LeadContainer = styled.div`
 
 const LeadMessage = styled.p`
   text-align: center;
-  font-size: 2em;
-
-  ${media.lessThan('laptop')`
-      font-size: 1.75em;
-  `};
-
-  ${media.lessThan('tablet')`
-      font-size: 1.5em;
-  `};
-
-  ${media.lessThan('mobileMedium')`
-      font-size: 1.25em;
-  `};
+  ${FONT_SIZES.xxl}
 `;
 const HeroLead = ({ message }) => (
   <LeadContainer>

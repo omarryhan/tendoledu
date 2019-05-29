@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
+import Button_ from '@material-ui/core/Button';
+
+import { FONT_SIZES } from '../constants';
 
 
 const Container = styled.div`
@@ -15,24 +17,25 @@ const Container = styled.div`
   margin-top: 7vh;
 `;
 
+const Button = styled(Button_)`
+  margin-bottom: 1vh;
+`;
+
 const OutsideText = styled.strong`
   margin-left: 10px;
-  color: ${props => props.outsideTextColor};
+  color: ${props => props.color};
 `;
 
 const Text = styled.strong`
   font-weight: bold;
-  font-size:1.4em;
+  ${FONT_SIZES.md}
+  color: ${props => props.color};
 `;
 
 const BtnStyling = {
-  borderTopLeftRadius: '15px',
-  borderBottomRightRadius: '15px',
-  boxShadow: '0px -4px 55px -2px rgba(255,1,94,0.38)',
-  paddingLeft: '35px',
-  paddingRight: '35px',
-  paddingTop: '10px',
-  paddingBottom: '10px',
+  // borderTopLeftRadius: '15px',
+  // borderBottomRightRadius: '15px',
+  padding: '1vh 15px',
 };
 
 const SignUpButton = ({
@@ -53,14 +56,14 @@ const SignUpButton = ({
     >
       <Text>{text}</Text>
     </Button>
-    <OutsideText outsideTextColor={outsideTextColor}>
+    <OutsideText color={outsideTextColor}>
       {outsideText}
     </OutsideText>
   </Container>
 );
 
 SignUpButton.defaultProps = {
-  outsideTextColor: 'black',
+  outsideTextColor: 'inherit',
 };
 
 SignUpButton.propTypes = {

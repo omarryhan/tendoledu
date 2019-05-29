@@ -37,18 +37,17 @@ html body {
 }
 
 ::-webkit-scrollbar {
-    width: 0.5vw;
-    height: 1vh;
+    width: 15px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: ${COLOR_PALETTE.black.primary}; 
+    box-shadow: ${COLOR_PALETTE.black.primary()}; 
 }
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: ${COLOR_PALETTE.cyan.primary}; 
-    border-radius: 5vh;
+    background: ${COLOR_PALETTE.black.primary()}; 
+    border-radius: 30px;
 }
 `;

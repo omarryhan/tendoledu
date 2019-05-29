@@ -9,65 +9,75 @@ export const TYPOGRAPHY = Object.freeze({
 
 export const COLOR_PALETTE = Object.freeze({
     red: {
-        primary: '#FF5252',
+        primary: opacity => `rgba(255, 82, 82, ${opacity || '1'})`,
     },
-    cyan: {
-        primary: '#1DE9B6',
+    turquoise: {
+        primary: opacity => `rgba(29, 233, 182, ${opacity || '1'})`,
+        dark: opacity => `rgba(39, 243, 190, ${opacity || '1'})`,
     },
     black: {
-        primary: '#000000',
+        primary: opacity => `rgba(0, 0, 0, ${opacity || '1'})`,
     },
     white: {
-        primary: '#fff',
+        primary: opacity => `rgba(255, 255, 255, ${opacity || '1'})`,
     },
     blue: {
-        primary: '#00AEEF',
-    },
-    green: {
-        primary: '#28CC73',
-    },
-    pink: {
-        primary: '#FF015D',
+        primary: opacity => `rgba(0, 174, 239, ${opacity || '1'})`,
     },
 });
 
 export const SCHOOLS_THEME = Object.freeze({
     palette: {
-        primary: { main: COLOR_PALETTE.pink.primary, contrastText: COLOR_PALETTE.white.primary },
-        secondary: { main: COLOR_PALETTE.white.primary, contrastText: COLOR_PALETTE.black.primary },
-    },
-    status: {
-        danger: 'orange',
+        primary: {
+            main: COLOR_PALETTE.turquoise.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+        },
+        secondary: {
+            main: COLOR_PALETTE.red.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+        },
     },
     typography: TYPOGRAPHY,
 });
 
 export const STUDENTS_THEME = Object.freeze({
     palette: {
-        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
-        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
-    },
-    status: {
-        danger: 'orange',
+        primary: {
+            main: COLOR_PALETTE.turquoise.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+        },
+        secondary: {
+            main: COLOR_PALETTE.red.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+        },
     },
     typography: TYPOGRAPHY,
 });
 
 export const STARTUPS_THEME = Object.freeze({
     palette: {
-        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
-        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
-    },
-    status: {
-        danger: 'orange',
+        primary: {
+            main: COLOR_PALETTE.turquoise.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+        },
+        secondary: {
+            main: COLOR_PALETTE.red.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+        },
     },
     typography: TYPOGRAPHY,
 });
 
 export const NOT_FOUND_THEME = Object.freeze({
     palette: {
-        primary: { main: COLOR_PALETTE.cyan.primary, contrastText: COLOR_PALETTE.black.primary },
-        secondary: { main: COLOR_PALETTE.red.primary, contrastText: COLOR_PALETTE.white.primary },
+        primary: {
+            main: COLOR_PALETTE.turquoise.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+        },
+        secondary: {
+            main: COLOR_PALETTE.red.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+        },
     },
     typography: TYPOGRAPHY,
 });
@@ -100,3 +110,149 @@ export const alertSettings = {
 
 export const RECAPTCHA_PUBLIC_KEY = '6LcOB6UUAAAAAGFpmRUeUHX66ybYyoPn-au8xyMi';
 export const SIGNUP_ROUTE = 'https://api.tendoledu.com/signup/';
+
+export const FONT_SIZES = {
+    xxxxxl: `
+        font-size: 3em;
+
+        ${media.lessThan('laptop')`
+            font-size: 2.5em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 2em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 1.75em;
+        `};
+    `,
+
+    xxxxl: `
+        font-size: 2.5em;
+
+        ${media.lessThan('laptop')`
+            font-size: 2em;
+        `};
+    
+        ${media.lessThan('tablet')`
+            font-size: 1.5em;
+        `};
+    
+        ${media.lessThan('mobileMedium')`
+            font-size: 1.25em;
+        `};
+    `,
+
+    xxxl: `
+        font-size: 2.25em;
+
+        ${media.lessThan('laptop')`
+            font-size: 1.75em;
+        `};
+    
+        ${media.lessThan('tablet')`
+            font-size: 1.55em;
+        `};
+    
+        ${media.lessThan('mobileMedium')`
+            font-size: 1.35em;
+        `};
+    `,
+
+    xxl: `
+        font-size: 2em;
+
+        ${media.lessThan('laptop')`
+            font-size: 1.5em;
+        `};
+    
+        ${media.lessThan('tablet')`
+            font-size: 1.25em;
+        `};
+    
+        ${media.lessThan('mobileMedium')`
+            font-size: 1em;
+        `};
+    `,
+
+    xl: `
+        font-size: 1.5em;
+
+        ${media.lessThan('laptop')`
+            font-size: 1.25em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 1em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 0.75em;
+        `};
+    `,
+
+    lg: `
+        font-size: 1.25em;
+
+        ${media.lessThan('laptop')`
+            font-size: 1em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 0.85em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 0.65em;
+        `};
+    `,
+
+    md: `
+        font-size: 1em;
+
+        ${media.lessThan('laptop')`
+            font-size: 0.85em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 0.75em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 0.65em;
+        `};
+    `,
+
+    sm: `
+        font-size: 0.85em;
+
+        ${media.lessThan('laptop')`
+            font-size: 0.75em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 0.65em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 0.55em;
+        `};
+    `,
+
+    xs: `
+        font-size: 0.75em;
+
+        ${media.lessThan('laptop')`
+            font-size: 0.65em;
+        `};
+
+        ${media.lessThan('tablet')`
+            font-size: 0.55em;
+        `};
+
+        ${media.lessThan('mobileMedium')`
+            font-size: 0.45em;
+        `};
+    `,
+};

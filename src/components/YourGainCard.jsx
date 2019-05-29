@@ -2,76 +2,96 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { FONT_SIZES, COLOR_PALETTE } from '../constants';
 
 const Outline = styled.div`
-width: 350px;
-min-height:400px;
-margin: 0 auto;
-margin-bottom: 5vh;
-background-color:white;
-text-align:center;
-padding:30px;
-border-radius:10px;
-box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
+  width: 350px;
+
+  height: 400px;
+
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  margin-right: 2vw;
+  margin-left : 2vw;
+  padding: 2%;
+
+  background-color: white;
+  box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
+
+  border-radius: 10px;
 `;
 
 const LogoContainer = styled.div`
+  height: 50%;
+  padding: 2vh 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 `;
 
 const TitleContainer = styled.div`
+  height: 10%;
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom:17px;
 `;
 
-const TextContainer = styled.div`
+const SubTitleTextContainer = styled.div`
+  height: 30%;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2em;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   text-align: center;
 `;
 
 const TitleText = styled.strong`
   font-weight: bold;
-  font-size: 1.5em;
+  ${FONT_SIZES.xl}
+  text-transform: uppercase;
+
+  color: ${COLOR_PALETTE.red.primary()};
 `;
 
 const SubTitleText = styled.h2`
-  color:#4C72E4;
-  text-transform: uppercase;
+  ${FONT_SIZES.lg}
 `;
 
-const Text = styled.p`
-  font-size:1.5em;
-  font-weight: lighter;
-`;
 
 const YourGainCard = ({
- logo, title, subtitle, text,
+ logo, title, subtitle,
 }) => (
   <Outline>
+    <LogoContainer>
+      {logo}
+    </LogoContainer>
+
     <TitleContainer>
       <TitleText>
         {title}
       </TitleText>
     </TitleContainer>
 
-    <LogoContainer>
-      {logo}
-    </LogoContainer>
 
-    <SubTitleText>
-      {subtitle}
-    </SubTitleText>
-
-    <TextContainer>
-      <Text>
-        {text}
-      </Text>
-    </TextContainer>
+    <SubTitleTextContainer>
+      <SubTitleText>
+        {subtitle}
+      </SubTitleText>
+    </SubTitleTextContainer>
   </Outline>
 );
 
 YourGainCard.propTypes = {
   logo: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
 };
 

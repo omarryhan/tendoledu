@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { SCHOOLS_THEME } from '../constants/index';
+import { SCHOOLS_THEME, COLOR_PALETTE } from '../constants/index';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Section from '../components/Section';
@@ -17,7 +17,6 @@ import YourGainCard from '../components/YourGainCard';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
-import HowitWorksBg from '../components/HowitWorksBg';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -34,7 +33,27 @@ export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   return (
     <MuiThemeProvider theme={muiTheme}>
-      <Layout currentPage="schools">
+      <Layout
+        currentPage="schools"
+        navLinks={[
+          {
+            href: '#intro',
+            value: 'Introduction',
+          },
+          {
+            href: '#how-it-works',
+            value: 'How it Works',
+          },
+          {
+            href: '#gain',
+            value: 'Student Benefits',
+          },
+          {
+            href: '#team',
+            value: 'The Team',
+          },
+        ]}
+      >
         <SEO
           title="Schools"
           description="Take your school to the next level with Tendoledu"
@@ -44,8 +63,8 @@ export default () => {
           setIsModalVisible={setIsModalVisible}
           currentPage="schools"
         />
-        <Section backgroundColor="#4C72E4">
-          <HeroTitle> Win Over More Student For Your Online School </HeroTitle>
+        <Section id="intro">
+          <HeroTitle> Win Over More Students For Your Online School </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
             <img
@@ -55,17 +74,19 @@ export default () => {
           </HeroImageWrapper>
           <HeroLead
             message="It’s really hard to be unique when all course creators do the same thing..."
-            Color="white"
           />
           <SignUpButtonDiv
             text="Sign Up Here"
             outsideText="to change that!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
-            outsideTextColor="white"
           />
         </Section>
-        <Section position="relative">
+        <Section
+          id="how-it-works"
+          backgroundColor={COLOR_PALETTE.red.primary('0.9')}
+          style={{ borderRadius: '15px' }}
+        >
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
@@ -78,12 +99,12 @@ export default () => {
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students based on criteria you set"
-                subText="You can add an admission fee too!"
+                subText="* You can add an admission fee too!"
                 key="admit logo"
               />,
               <HowItWorksCard
                 logo={<img src={SelectLogo} alt="Select logo" />}
-                title="Select and assign"
+                title="Select & assign"
                 mainText="Select marketing jobs posted by startups, then assign to students"
                 key="select logo"
               />,
@@ -95,31 +116,31 @@ export default () => {
               />,
             ]}
             subText="Thousands of students are waiting for you to create your Tendoledu space"
+            color="white"
           />
           <SignUpButtonDiv
             text="Sign Up Now"
             outsideText="to be the first to use it, it’s free!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
+            outsideTextColor="white"
           />
-
-          <HowitWorksBg />
         </Section>
-        <Section backgroundColor="#4C72E4">
+
+        <Section id="gain">
           <YourGainContainer
+            title="What will my Students Gain?"
             cards={[
               <YourGainCard
                 logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
-                title="Hands On Work Experience"
-                subtitle="Recognition"
-                text="Their employers can see their work!"
+                title="Recognition"
+                subtitle="Hands-on work experience & their employers can see their work!"
                 key="recognition logo"
               />,
               <YourGainCard
                 logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
-                title="Shareable Work Portfolios"
-                subtitle="Work"
-                text="Real work experience!"
+                title="Work"
+                subtitle="Shareable work portfolios & real work experience!"
                 key="work logo"
               />,
           ]}
@@ -134,7 +155,6 @@ export default () => {
             outsideText="for the free product!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
-            outsideTextColor="white"
           />
         </Section>
       </Layout>

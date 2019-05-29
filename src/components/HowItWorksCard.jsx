@@ -2,43 +2,77 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { COLOR_PALETTE, FONT_SIZES } from '../constants';
+
 
 const Outline = styled.div`
   width: 350px;
-  min-height:400px;
+
+  height: 500px;
+  
   margin: 0 auto;
   margin-bottom: 5vh;
-  background-color:white;
-  text-align:center;
-  padding:30px;
-  border-radius:10px;
+  margin-right: 2vw;
+  margin-left : 2vw;
+  padding: 2%;
+
+  background-color: white;
   box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
+  
+  border-radius: 10px;
 `;
 
 const LogoContainer = styled.div`
+  height: 40%;
+  padding: 2vh 0;
+  width: 80%;
+  margin: 0 auto;
 
-`;
-
-const MainTextContainer = styled.div`
-  text-align: center;
-  margin: 1.5vh 0;
-`;
-
-const SubTextContainer = styled.div`
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const TitleContainer = styled.div`
-  text-align:center;
+  height: 10%;
+  width: 80%;
+  margin: 0 auto;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const MainTextContainer = styled.div`
+  height: 40%;
+  width: 80%;
+  margin: 0 auto;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const SubTextContainer = styled.div`
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 const Title = styled.h2`
-  color:#4C72E4;
   text-transform: uppercase;
+  color: ${COLOR_PALETTE.red.primary()};
 `;
 
 const MainText = styled.strong`
-  font-size:1.5em;
+  ${FONT_SIZES.xl}
   font-weight: lighter;
 `;
 
