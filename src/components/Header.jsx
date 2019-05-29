@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import {
   HEADER_HEIGHT,
   FONT_SIZES,
+  COLOR_PALETTE,
 } from '../constants';
 import { Text } from './SignUpButtonDiv';
 
@@ -34,7 +35,6 @@ const NavMenuItem = styled.div`
   text-align: center;
   margin: 0 1vw;
 
-  font-style: bold;
   ${FONT_SIZES.lg}
 
 `;
@@ -42,6 +42,16 @@ const NavMenuItem = styled.div`
 const Title = styled.h2`
   ${FONT_SIZES.xxxl}
   margin: 15px 0;
+`;
+
+const NavMenuAnchor = styled.a`
+  text-decoration: none;
+  color: white;
+  // font-weight: bold;
+
+  &:hover {
+    color: ${COLOR_PALETTE.white.dark()};;
+  }
 `;
 
 const Header = ({ navLinks, setIsModalVisible }) => (
@@ -54,9 +64,9 @@ const Header = ({ navLinks, setIsModalVisible }) => (
         <NavMenuContainer>
           {navLinks.map(item => (
             <NavMenuItem key={item.value}>
-              <a href={item.href} style={{ textDecoration: 'none', color: 'white' }}>
+              <NavMenuAnchor href={item.href}>
                 {item.value}
-              </a>
+              </NavMenuAnchor>
             </NavMenuItem>
           ))}
 

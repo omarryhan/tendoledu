@@ -6,18 +6,18 @@ import { COLOR_PALETTE, FONT_SIZES } from '../constants';
 
 
 const Outline = styled.div`
-  width: 350px;
+  width: 300px;
 
-  height: 500px;
+  height: 450px;
 
   margin: 0 auto;
   margin-bottom: 5vh;
-  margin-right: 2vw;
-  margin-left : 2vw;
+  margin-right: 1vw;
+  margin-left : 1vw;
   padding: 2%;
 
   background-color: white;
-  box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
+  box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.5);
 
   border-radius: 10px;
 `;

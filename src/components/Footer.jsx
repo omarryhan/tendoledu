@@ -6,18 +6,40 @@ import { FOOTER_HEIGHT, COLOR_PALETTE } from '../constants';
 const FooterContainer = styled.footer`
     height: ${FOOTER_HEIGHT}vh;
     background-color: ${COLOR_PALETTE.black.primary()};
+
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 const FooterText = styled.p`
-  margin: 0 auto;
   text-align: center;
   color: ${COLOR_PALETTE.white.primary()};
+  margin: 0 0;
+`;
+
+const ContactUsAnchor = styled.a`
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: ${COLOR_PALETTE.white.dark()};;
+  };
+
+  font-weight: bold;
+
+  text-align: center;
+  margin: 0 0;
 `;
 
 export default () => (
   <FooterContainer>
+    <ContactUsAnchor
+      href="mailto:info@tendoledu.com"
+    >
+      Contact Us
+    </ContactUsAnchor>
+    <br />
     <FooterText>
       <span role="img" aria-label="Copyright mark">
         ©

@@ -38,7 +38,7 @@ export default () => {
         setIsModalVisible={setIsModalVisible}
         navLinks={[
           {
-            href: '#intro',
+            href: '#top', // TODO: should be intro
             value: 'Introduction',
           },
           {
@@ -100,7 +100,7 @@ export default () => {
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students based on criteria you set"
-                subText="* You can monetize if you want!"
+                subText="* You can also monetize your content!"
                 key="admit logo"
               />,
               <HowItWorksCard

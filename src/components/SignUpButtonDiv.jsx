@@ -33,8 +33,6 @@ export const Text = styled.strong`
 `;
 
 const BtnStyling = {
-  // borderTopLeftRadius: '15px',
-  // borderBottomRightRadius: '15px',
   padding: '1vh 15px',
 };
 

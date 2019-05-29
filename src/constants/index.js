@@ -20,6 +20,7 @@ export const COLOR_PALETTE = Object.freeze({
     },
     white: {
         primary: opacity => `rgba(255, 255, 255, ${opacity || '1'})`,
+        dark: opacity => `rgba(230, 230, 230, ${opacity || '1'})`,
     },
     blue: {
         primary: opacity => `rgba(0, 174, 239, ${opacity || '1'})`,
