@@ -45,7 +45,7 @@ export default () => {
           currentPage="schools"
         />
         <Section backgroundColor="#4C72E4">
-          <HeroTitle> Make Your Online School Different </HeroTitle>
+          <HeroTitle> Win Over More Student For Your Online School </HeroTitle>
           <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
             <img
