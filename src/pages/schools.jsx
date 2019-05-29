@@ -49,10 +49,10 @@ export default () => {
             href: '#gain',
             value: 'Students Gain',
           },
-          {
-            href: '#team',
-            value: 'The Team',
-          },
+          // {
+          //   href: '#team',
+          //   value: 'The Team',
+          // },
         ]}
       >
         <SEO

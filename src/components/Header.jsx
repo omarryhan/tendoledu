@@ -16,6 +16,10 @@ import { Text } from './SignUpButtonDiv';
 const HeaderContainer = styled.header`
   height: ${HEADER_HEIGHT}vh;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const TitleContainer = styled.div`
@@ -56,8 +60,15 @@ const NavMenuAnchor = styled.a`
 
 const Header = ({ navLinks, setIsModalVisible }) => (
   <HeaderContainer>
-    <AppBar color="secondary">
-      <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <AppBar
+      color="secondary"
+      style={{
+        height: `${HEADER_HEIGHT}vh`,
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
         <TitleContainer>
           <Title> Tendoledu </Title>
         </TitleContainer>
