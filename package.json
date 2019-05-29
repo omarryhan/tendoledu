@@ -6,6 +6,7 @@
   "author": "contact@tendoledu.com <contact@tendoledu.com>",
   "dependencies": {
     "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.1",
     "@material-ui/styles": "^4.0.0",
     "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.10.0",
@@ -53,7 +54,27 @@
   },
   "keywords": [
     "Tendoledu",
-    "Online Education"
+    "Online Education",
+    "Online course",
+    "Grow Online school ",
+    "Work Experience ",
+    "Student experience ",
+    "Learning experience",
+    "Online school",
+    "More students ",
+    "Course creator ",
+    "Online education",
+    "Elearning ",
+    "Hands on experience ",
+    "Impress employers ",
+    "Work portfolios ",
+    "Create course ",
+    "Expand ",
+    "Applying skills ",
+    "Learning ",
+    "Marketing course ",
+    "Graphic design course ",
+    "Web development course"
   ],
   "license": "MIT",
   "scripts": {

@@ -47,7 +47,7 @@ export default () => {
           },
           {
             href: '#gain',
-            value: 'Student Benefits',
+            value: 'Students Gain',
           },
           {
             href: '#team',
@@ -57,7 +57,7 @@ export default () => {
       >
         <SEO
           title="Schools"
-          description="Take your school to the next level with Tendoledu"
+          description="Give your students actual startup projects to work on. Stand out by giving your students real work experience. Sign up. Create a unique online school. Win over more students!"
         />
         <SignUpModal
           isModalVisible={isModalVisible}

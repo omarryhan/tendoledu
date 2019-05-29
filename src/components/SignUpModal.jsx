@@ -6,6 +6,8 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogTitle_ from '@material-ui/core/DialogTitle';
 import DialogContent_ from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
+import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@material-ui/core/IconButton';
 import SignUpForm from './SignUpForm';
 
 import { FONT_SIZES } from '../constants';
@@ -39,11 +41,28 @@ const SignUpModal = ({
     fullWidth
     maxWidth="sm"
   >
-    <DialogTitle id="max-width-dialog-title">
-      <DialogTitleText>
-        Join the Beta Waiting-list
-      </DialogTitleText>
-    </DialogTitle>
+    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <span width="10%">
+        {' '}
+      </span>
+
+      <div width="80%">
+        <DialogTitle>
+          <DialogTitleText>
+            Join the Beta Waiting-list
+          </DialogTitleText>
+        </DialogTitle>
+      </div>
+
+      <div width="10%">
+        <IconButton
+          onClick={() => setIsModalVisible(false)}
+          aria-label="Close Dialog"
+        >
+          <CloseIcon />
+        </IconButton>
+      </div>
+    </div>
 
     <DialogContent>
       <DialogContentText style={{ textAlign: 'center' }}>

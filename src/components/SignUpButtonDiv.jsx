@@ -24,6 +24,7 @@ const Button = styled(Button_)`
 const OutsideText = styled.strong`
   margin-left: 10px;
   color: ${props => props.color};
+  ${FONT_SIZES.md}
 `;
 
 export const Text = styled.strong`

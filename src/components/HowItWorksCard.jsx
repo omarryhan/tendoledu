@@ -48,9 +48,10 @@ const MainTextContainer = styled.div`
   height: 40%;
   width: 80%;
   margin: 0 auto;
+  padding-top: 3vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
 `;
