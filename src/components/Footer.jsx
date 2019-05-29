@@ -4,7 +4,7 @@ import { FOOTER_HEIGHT, COLOR_PALETTE } from '../constants';
 
 
 const FooterContainer = styled.footer`
-    height: ${FOOTER_HEIGHT}vh;
+    height: ${FOOTER_HEIGHT}px;
     background-color: ${COLOR_PALETTE.black.primary()};
 
     display: flex;

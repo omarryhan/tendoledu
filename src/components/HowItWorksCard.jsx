@@ -6,9 +6,9 @@ import { COLOR_PALETTE, FONT_SIZES } from '../constants';
 
 
 const Outline = styled.div`
-  width: 300px;
+  width: 255px;
 
-  height: 450px;
+  height: 430px;
 
   margin: 0 auto;
   margin-bottom: 5vh;

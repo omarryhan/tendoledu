@@ -14,7 +14,7 @@ import { Text } from './SignUpButtonDiv';
 
 
 const HeaderContainer = styled.header`
-  height: ${HEADER_HEIGHT}vh;
+  height: ${HEADER_HEIGHT}px;
   text-align: center;
 
   display: flex;
@@ -46,12 +46,14 @@ const NavMenuItem = styled.div`
 const Title = styled.h2`
   ${FONT_SIZES.xxxl}
   margin: 15px 0;
+  color: white;
 `;
 
 const NavMenuAnchor = styled.a`
   text-decoration: none;
   color: white;
   // font-weight: bold;
+  ${FONT_SIZES.md}
 
   &:hover {
     color: ${COLOR_PALETTE.white.dark()};;
@@ -61,11 +63,12 @@ const NavMenuAnchor = styled.a`
 const Header = ({ navLinks, setIsModalVisible }) => (
   <HeaderContainer>
     <AppBar
-      color="secondary"
+      // color="secondary"
       style={{
-        height: `${HEADER_HEIGHT}vh`,
+        height: `${HEADER_HEIGHT}px`,
         display: 'flex',
         alignItems: 'center',
+        backgroundColor: COLOR_PALETTE.black.primary(),
       }}
     >
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>

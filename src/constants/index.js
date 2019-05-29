@@ -84,8 +84,8 @@ export const NOT_FOUND_THEME = Object.freeze({
     typography: TYPOGRAPHY,
 });
 
-export const FOOTER_HEIGHT = 10; // vh
-export const HEADER_HEIGHT = 7; // vh
+export const HEADER_HEIGHT = 70; // px
+export const FOOTER_HEIGHT = 130; // px
 
 export const LaptopLayoutWidth = '65vw';
 export const TabletLayoutWidth = '75vw';

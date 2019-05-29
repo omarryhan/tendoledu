@@ -47,7 +47,7 @@ export default () => {
           },
           {
             href: '#gain',
-            value: 'Students Gain',
+            value: 'Student Gains',
           },
           // {
           //   href: '#team',
