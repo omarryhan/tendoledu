@@ -66,7 +66,7 @@ export default () => {
         />
         <Section id="intro">
           <HeroTitle> Win Over More Students For Your Online School </HeroTitle>
-          <HeroSubtitle> Get Your Students Real Work Experience with Tendoledu </HeroSubtitle>
+          <HeroSubtitle> Give Your Students Real Work Experience with Tendoledu </HeroSubtitle>
           <HeroImageWrapper>
             <img
               src={HeroImage}
