@@ -9,6 +9,7 @@ import {
   HEADER_HEIGHT,
   FONT_SIZES,
   COLOR_PALETTE,
+  media,
 } from '../constants';
 import { Text } from './SignUpButtonDiv';
 
@@ -30,6 +31,10 @@ const NavMenuContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 1vh;
+
+  ${media.lessThan('tablet')`
+    display: none;
+  `};
 `;
 
 const NavMenuItem = styled.div`
