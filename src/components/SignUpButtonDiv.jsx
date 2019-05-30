@@ -17,6 +17,10 @@ const Container = styled.div`
   margin-top: 7vh;
 `;
 
+const FlexItem = styled.div`
+  margin: 1vh 0;
+`;
+
 const Button = styled(Button_)`
   margin-bottom: 1vh;
 `;
@@ -45,19 +49,24 @@ const SignUpButton = ({
     outsideTextColor,
 }) => (
   <Container>
-    <Button
-      onClick={() => setIsModalVisible(true)}
-      disabled={isModalVisible}
-      color="primary"
-      size="large"
-      variant="contained"
-      style={BtnStyling}
-    >
-      <Text>{text}</Text>
-    </Button>
-    <OutsideText color={outsideTextColor}>
-      {outsideText}
-    </OutsideText>
+    <FlexItem>
+      <Button
+        onClick={() => setIsModalVisible(true)}
+        disabled={isModalVisible}
+        color="primary"
+        size="large"
+        variant="contained"
+        style={BtnStyling}
+      >
+        <Text>{text}</Text>
+      </Button>
+    </FlexItem>
+
+    <FlexItem>
+      <OutsideText color={outsideTextColor}>
+        {outsideText}
+      </OutsideText>
+    </FlexItem>
   </Container>
 );
 

@@ -9,7 +9,9 @@ import axios from 'axios';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button_ from '@material-ui/core/Button';
-import { SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY, FONT_SIZES } from '../constants';
+import {
+ SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY, FONT_SIZES, COLOR_PALETTE,
+} from '../constants';
 
 
 const recaptchaRef = React.createRef();
@@ -22,14 +24,22 @@ const FieldAndFieldErrorWrapper = styled.div`
 `;
 
 const StyledField = styled(Field)`
-  border-radius: 6px;
   width:100%;
   padding:10px;
   box-shadow:0px;
-  outline-color:#4C72E4;
-  border-radius:5px;
-  border:1px solid black;
+  outline-color: ${COLOR_PALETTE.turquoise.primary()};
+
   ${FONT_SIZES.lg}
+
+  border: 2px solid #67cbc3; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+
+  font-family: 'Ubuntu';
+
+  &:hover {
+    border-color: #349890;
+  }
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`
@@ -141,16 +151,18 @@ const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
               <StyledErrorMessage name="expertise" component="div" />
             </FieldAndFieldErrorWrapper>
 
-            <StyledButton
-              type="submit"
-              variant="contained"
-              color="primary"
-              disabled={isSubmitting}
-            >
-              <ButtonText>
-                  Sign Up!
-              </ButtonText>
-            </StyledButton>
+            <div style={{ marginTop: '3.5vh' }}>
+              <StyledButton
+                type="submit"
+                variant="contained"
+                color="primary"
+                disabled={isSubmitting}
+              >
+                <ButtonText>
+                    Sign Up!
+                </ButtonText>
+              </StyledButton>
+            </div>
             <ReCAPTCHA
               ref={recaptchaRef}
               size="invisible"

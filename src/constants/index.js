@@ -119,15 +119,15 @@ export const FONT_SIZES = {
         font-size: 3em;
 
         ${media.lessThan('laptop')`
-            font-size: 2.5em;
+            font-size: 2.25em;
         `};
 
         ${media.lessThan('tablet')`
-            font-size: 2em;
+            font-size: 1.75em;
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 1.75em;
+            font-size: 1.35em;
         `};
     `,
 
@@ -143,7 +143,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 1.25em;
+            font-size: 1.05em;
         `};
     `,
 
@@ -159,7 +159,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 1.35em;
+            font-size: 0.9em;
         `};
     `,
 
@@ -175,7 +175,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 1em;
+            font-size: 0.8em;
         `};
     `,
 
@@ -191,7 +191,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.75em;
+            font-size: 0.7em;
         `};
     `,
 
@@ -223,7 +223,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.65em;
+            font-size: 0.6em;
         `};
     `,
 

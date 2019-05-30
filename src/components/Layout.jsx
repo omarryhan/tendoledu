@@ -18,7 +18,7 @@ import {
 
 
 const BodyLayout = styled.div`
-  min-height: calc(~"100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px");
+  min-height: calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT}px);
 `;
 
 const Main = styled.main`

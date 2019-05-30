@@ -65,7 +65,7 @@ const SignUpModal = ({
     </div>
 
     <DialogContent>
-      <DialogContentText style={{ textAlign: 'center' }}>
+      <DialogContentText>
         Tendoledu is going to launch really really soon.
         {' '}
         <br />

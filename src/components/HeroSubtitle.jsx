@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_SIZES } from '../constants';
+import { FONT_SIZES, media } from '../constants';
 
 export default styled.h2`
     ${FONT_SIZES.xl}
@@ -7,4 +7,8 @@ export default styled.h2`
     text-align: left;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
+
+    ${media.lessThan('tablet')`
+        text-align: center;
+    `};
 `;
