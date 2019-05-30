@@ -24,22 +24,20 @@ const FieldAndFieldErrorWrapper = styled.div`
 `;
 
 const StyledField = styled(Field)`
-  width:100%;
-  padding:10px;
-  box-shadow:0px;
-  outline-color: ${COLOR_PALETTE.turquoise.primary()};
+  width: 100%;
+  padding: 10px;
 
   ${FONT_SIZES.lg}
 
-  border: 2px solid #67cbc3; 
+  border: 1.5px solid ${COLOR_PALETTE.black.primary()};
   -webkit-border-radius: 5px;
   border-radius: 5px;
 
   font-family: 'Ubuntu';
 
-  &:hover {
-    border-color: #349890;
-  }
+  &:focus {
+    border-color: ${COLOR_PALETTE.blue.primary()};
+  };
 `;
 
 const StyledErrorMessage = styled(ErrorMessage)`

@@ -106,7 +106,7 @@ export const BREAKPOINTS = Object.freeze({
 export const media = generateMedia(BREAKPOINTS);
 
 export const alertSettings = {
-    position: positions.TOP_RIGHT,
+    position: positions.BOTTOM_LEFT,
     timeout: 5000,
     transition: transitions.SCALE,
 };
