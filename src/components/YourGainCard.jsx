@@ -7,13 +7,13 @@ import { FONT_SIZES, COLOR_PALETTE } from '../constants';
 const Outline = styled.div`
   width: 350px;
 
-  height: 450px;
+  height: 550px;
 
   margin: 0 auto;
   margin-bottom: 5vh;
   margin-right: 2vw;
   margin-left : 2vw;
-  padding: 2%;
+  padding: 1%;
 
   background-color: white;
   box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.37);
@@ -26,7 +26,7 @@ const LogoContainer = styled.div`
   padding: 2vh 0;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 `;
 

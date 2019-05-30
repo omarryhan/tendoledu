@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { COLOR_PALETTE } from '../constants';
 
+
 export default createGlobalStyle`
 * {
     -webkit-box-sizing: border-box;
@@ -10,15 +11,6 @@ export default createGlobalStyle`
         'Ubuntu',
         'Raleway',
         'Montserrat',
-        'medium-content-sans-serif-font',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Segoe UI',
-        'Roboto',
-        'Oxygen',
-        'Cantarell',
-        'Open Sans',
-        'Helvetica Neue',
     ].join(',')};
 }
 
@@ -44,7 +36,7 @@ html body {
 ::-webkit-scrollbar-track {
     box-shadow: ${COLOR_PALETTE.black.primary()};
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     // background-color: linear-gradient(${COLOR_PALETTE.black.primary(0.8)}, white);

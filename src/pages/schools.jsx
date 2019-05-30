@@ -100,7 +100,7 @@ export default () => {
                 logo={<img src={AdmitLogo} alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students based on criteria you set"
-                subText="* You can also monetize your content!"
+                subText="* You can monetize your Tendoledu student experience"
                 key="admit logo"
               />,
               <HowItWorksCard
@@ -134,14 +134,14 @@ export default () => {
             cards={[
               <YourGainCard
                 logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
-                title="Recognition"
-                subtitle="Hands-on work experience & their employers can see their work!"
+                title="Hands-on work experience"
+                subtitle="Most course creators only provide their students with content. We help you give your students practical skills and experience. Lead them into the real world market and kill your competition."
                 key="recognition logo"
               />,
               <YourGainCard
                 logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
-                title="Work"
-                subtitle="Shareable work portfolios & real work experience!"
+                title="Shareable work portfolios"
+                subtitle="After startups rate their projects, your students can showcase their work easily with Tendoledu. Now employers can recognize their work."
                 key="work logo"
               />,
           ]}

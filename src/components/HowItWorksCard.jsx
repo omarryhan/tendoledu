@@ -14,7 +14,7 @@ const Outline = styled.div`
   margin-bottom: 5vh;
   margin-right: 1vw;
   margin-left : 1vw;
-  padding: 2%;
+  padding: 1%;
 
   background-color: white;
   box-shadow: 0px 2px 36px -5px rgba(0,0,0,0.5);
@@ -46,7 +46,6 @@ const TitleContainer = styled.div`
 
 const MainTextContainer = styled.div`
   height: 40%;
-  width: 80%;
   margin: 0 auto;
   padding-top: 3vh;
 
