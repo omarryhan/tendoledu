@@ -33,6 +33,12 @@ export const SchoolsSignedUpAlertMessages = [
         waitTime: [19, 20, 21, 22, 23, 24, 25, 26][Math.floor(Math.random() * 8)] * 1000,
         alertTime: 5 * 1000,
     },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: [27, 28, 29, 30, 31, 32, 33, 34, 35][Math.floor(Math.random() * 9)] * 1000,
+        alertTime: 5 * 1000,
+    },
 ];
 
 export const TYPOGRAPHY = Object.freeze({
