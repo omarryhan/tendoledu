@@ -10,15 +10,17 @@ const SCHOOLS_AVAILABLE = Object.freeze([
 
 export const SchoolsSignedUpAlertMessages = [
     {
-        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10][Math.floor(Math.random() * 10)] * 1000,
+        waitTime: [1, 2, 3, 4, 5][Math.floor(Math.random() * 5)] * 1000,
         alertTime: 5 * 1000,
     },
     {
-        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20][Math.floor(Math.random() * 10)] * 1000,
+        waitTime: [
+            6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        ][Math.floor(Math.random() * 15)] * 1000,
         alertTime: 5 * 1000,
     },
 ];
