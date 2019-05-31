@@ -92,28 +92,28 @@ export default () => {
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
-                logo={<img src={CreateLogo} alt="Create logo" />}
+                logo={<img src={CreateLogo} width="100%" alt="Create logo" />}
                 title="Create"
                 mainText="Create a space for your students to work in"
                 key="create logo"
               />,
               <HowItWorksCard
-                logo={<img src={AdmitLogo} alt="Admit logo" />}
+                logo={<img src={AdmitLogo} height="100%" alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students based on criteria you set"
                 subText="* You can monetize your Tendoledu student experience"
                 key="admit logo"
               />,
               <HowItWorksCard
-                logo={<img src={SelectLogo} alt="Select logo" />}
+                logo={<img src={SelectLogo} height="100%" alt="Select logo" />}
                 title="Select & assign"
                 mainText="Select marketing jobs posted by startups, then assign to students"
                 key="select logo"
               />,
               <HowItWorksCard
-                logo={<img src={DeliverLogo} alt="Deliver logo" />}
+                logo={<img src={DeliverLogo} height="100%" alt="Deliver logo" />}
                 title="Deliver & Get Ratings"
-                mainText="Deliver finished work and get ratings"
+                mainText="Deliver finished work to startups and get ratings from them"
                 key="deliver logo"
               />,
             ]}
@@ -134,13 +134,13 @@ export default () => {
             title="What Will my Students Gain?"
             cards={[
               <YourGainCard
-                logo={<img src={RecognitionLogo} alt="Recognition logo" style={{ maxWidth: '100px' }} />}
+                logo={<img src={WorkLogo} alt="Recognition logo" height="100%" />}
                 title="Hands-on work experience"
                 subtitle="Most course creators only provide their students with content. We help you give your students practical skills and experience. Lead them into the real world market and kill your competition."
                 key="recognition logo"
               />,
               <YourGainCard
-                logo={<img src={WorkLogo} alt="Work logo" style={{ maxWidth: '100px' }} />}
+                logo={<img src={RecognitionLogo} alt="Work logo" height="100%" />}
                 title="Shareable work portfolios"
                 subtitle="After startups rate their projects, your students can showcase their work easily with Tendoledu. Now employers can recognize their work."
                 key="work logo"
