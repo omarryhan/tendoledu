@@ -13,13 +13,13 @@ export const SchoolsSignedUpAlertMessages = [
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
         waitTime: 2 * 1000,
-        alertTime: 7 * 1000,
+        alertTime: 5 * 1000,
     },
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
         waitTime: 12 * 1000,
-        alertTime: 10 * 1000,
+        alertTime: 5 * 1000,
     },
 ];
 
