@@ -18,9 +18,19 @@ export const SchoolsSignedUpAlertMessages = [
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: [
-            6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        ][Math.floor(Math.random() * 15)] * 1000,
+        waitTime: [6, 7, 8, 9, 10, 11][Math.floor(Math.random() * 6)] * 1000,
+        alertTime: 5 * 1000,
+    },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: [12, 13, 14, 15, 16, 17, 18][Math.floor(Math.random() * 7)] * 1000,
+        alertTime: 5 * 1000,
+    },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: [19, 20, 21, 22, 23, 24, 25, 26][Math.floor(Math.random() * 8)] * 1000,
         alertTime: 5 * 1000,
     },
 ];
