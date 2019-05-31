@@ -19,7 +19,7 @@ const FooterText = styled.p`
 `;
 
 const ContactUsAnchor = styled.a`
-  color: white;
+  color: ${COLOR_PALETTE.white.primary()};
   text-decoration: none;
 
   &:hover {

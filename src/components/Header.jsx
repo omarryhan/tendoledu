@@ -42,23 +42,21 @@ const NavMenuItem = styled.div`
   margin: 0 1vw;
 
   ${FONT_SIZES.lg}
-
 `;
 
 const Title = styled.h2`
   ${FONT_SIZES.xxxl}
   margin: 15px 0;
-  color: white;
+  color: ${COLOR_PALETTE.white.primary()};
 `;
 
 const NavMenuAnchor = styled.a`
   text-decoration: none;
-  color: white;
-  // font-weight: bold;
+  color: ${COLOR_PALETTE.white.primary()};
   ${FONT_SIZES.md}
 
   &:hover {
-    color: ${COLOR_PALETTE.white.dark()};;
+    color: ${COLOR_PALETTE.white.primary()};
   }
 `;
 
@@ -92,7 +90,7 @@ const Header = ({ navLinks, setIsModalVisible }) => (
               ? (
                 <NavMenuItem key="Sign Up button">
                   <Button
-                    style={{ color: 'black' }}
+                    style={{ color: COLOR_PALETTE.black.primary() }}
                     variant="contained"
                     color="primary"
                     onClick={() => setIsModalVisible(true)}

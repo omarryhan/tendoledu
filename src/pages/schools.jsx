@@ -118,14 +118,14 @@ export default () => {
               />,
             ]}
             subText="Thousands of students are waiting for you to create your Tendoledu space"
-            color="white"
+            color={COLOR_PALETTE.white.primary()}
           />
           <SignUpButtonDiv
             text="Sign Up Now"
             outsideText="to be the first to use it, it’s free!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
-            outsideTextColor="white"
+            outsideTextColor={COLOR_PALETTE.white.primary()}
           />
         </Section>
 

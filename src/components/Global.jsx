@@ -39,9 +39,9 @@ html body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    // background-color: linear-gradient(${COLOR_PALETTE.black.primary(0.8)}, white);
+    // background-color: linear-gradient(${COLOR_PALETTE.black.primary(0.8)}, ${COLOR_PALETTE.white.primary()});
     // background: linear-gradient(${COLOR_PALETTE.red.primary(0.8)}, ${COLOR_PALETTE.black.primary(0.8)});
-    background-color: #000000;
+    background-color: ${COLOR_PALETTE.black.primary(1)};
     background-image: linear-gradient(147deg, #333333 0%, #434343 74%);
     border-radius: 30px;
 }
