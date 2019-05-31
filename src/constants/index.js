@@ -65,6 +65,9 @@ export const COLOR_PALETTE = Object.freeze({
     blue: {
         primary: opacity => `rgba(0, 174, 239, ${opacity || '1'})`,
     },
+    purple: {
+        primary: opacity => `rgba(136, 0, 247, ${opacity || '1'})`,
+    },
 });
 
 export const SCHOOLS_THEME = Object.freeze({

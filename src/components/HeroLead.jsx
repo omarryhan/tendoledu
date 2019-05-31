@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { FONT_SIZES, media } from '../constants';
+import { FONT_SIZES, media, COLOR_PALETTE } from '../constants';
 
 const LeadContainer = styled.div`
   width: 50%;
@@ -25,6 +25,8 @@ const LeadContainer = styled.div`
 const LeadMessage = styled.p`
   text-align: center;
   ${FONT_SIZES.xxl}
+
+  color: ${COLOR_PALETTE.black.primary()};
 `;
 const HeroLead = ({ message }) => (
   <LeadContainer>

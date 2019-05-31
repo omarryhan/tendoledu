@@ -101,7 +101,6 @@ export default () => {
                 logo={<img src={AdmitLogo} height="100%" alt="Admit logo" />}
                 title="Admit"
                 mainText="Admit students to your Tendoledu space based on criteria you set"
-                subText=""
                 key="admit logo"
               />,
               <HowItWorksCard

@@ -56,7 +56,7 @@ const NavMenuAnchor = styled.a`
   ${FONT_SIZES.md}
 
   &:hover {
-    color: ${COLOR_PALETTE.white.primary()};
+    color: ${COLOR_PALETTE.white.dark()};
   }
 `;
 
