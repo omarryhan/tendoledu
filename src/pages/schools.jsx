@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { SCHOOLS_THEME, COLOR_PALETTE } from '../constants/index';
+import { SCHOOLS_THEME, COLOR_PALETTE, SchoolsSignedUpAlertMessages } from '../constants/index';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Section from '../components/Section';
@@ -17,6 +17,7 @@ import YourGainCard from '../components/YourGainCard';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
+import JustSignedUpAlerts from '../components/JustSignedUpAlerts';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -40,25 +41,25 @@ export default () => {
           {
             href: '#top', // TODO: should be intro
             value: 'Introduction',
+            title: 'Introduction',
           },
           {
             href: '#how-it-works',
             value: 'How it Works',
+            title: 'How it Works',
           },
           {
             href: '#gain',
             value: 'Student Gains',
+            title: 'Student Gains',
           },
-          // {
-          //   href: '#team',
-          //   value: 'The Team',
-          // },
         ]}
       >
         <SEO
           title="Schools"
           description="Give your students actual startup projects to work on. Stand out by giving your students real work experience. Sign up. Create a unique online school. Win over more students!"
         />
+        <JustSignedUpAlerts alertDefinitions={SchoolsSignedUpAlertMessages} />
         <SignUpModal
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}

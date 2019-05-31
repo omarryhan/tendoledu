@@ -36,6 +36,7 @@ export default () => (
   <FooterContainer>
     <ContactUsAnchor
       href="mailto:info@tendoledu.com"
+      title="Contact Us Via Email"
     >
       Contact Us
     </ContactUsAnchor>

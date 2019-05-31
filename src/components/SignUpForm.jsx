@@ -12,6 +12,7 @@ import Button_ from '@material-ui/core/Button';
 import {
  SIGNUP_ROUTE, RECAPTCHA_PUBLIC_KEY, FONT_SIZES, COLOR_PALETTE,
 } from '../constants';
+import { sleep } from '../utils';
 
 
 const recaptchaRef = React.createRef();
@@ -94,13 +95,14 @@ const onSubmit = async (
         modalSubmitHandler();
         resetForm();
         setSubmitting(false);
-    }
-    alert.success('Thank you! You\'ll be hearing from us soon');
+      }
+      alert.success('Thank you! You\'ll be hearing from us soon');
+      await sleep(5000);
+      alert.info(`A ${values.expertise === 'Other' ? 'Marketing' : values.expertise} school just signed up`);
 };
 
 const expertiseOptions = Object.freeze([
     'Marketing',
-    'Finance',
     'Web Development',
     'Graphic Design',
     'Other',

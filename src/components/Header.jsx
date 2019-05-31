@@ -23,9 +23,6 @@ const HeaderContainer = styled.header`
   align-items: center;
 `;
 
-const TitleContainer = styled.div`
-`;
-
 const NavMenuContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -65,6 +62,7 @@ const NavMenuAnchor = styled.a`
   }
 `;
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const Header = ({ navLinks, setIsModalVisible }) => (
   <HeaderContainer>
     <AppBar
@@ -77,13 +75,13 @@ const Header = ({ navLinks, setIsModalVisible }) => (
       }}
     >
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-        <TitleContainer>
+        <a href="#" value="Home Page" style={{ textDecoration: 'none' }}>
           <Title> Tendoledu </Title>
-        </TitleContainer>
+        </a>
         <NavMenuContainer>
           {navLinks.map(item => (
             <NavMenuItem key={item.value}>
-              <NavMenuAnchor href={item.href}>
+              <NavMenuAnchor href={item.href} title={item.title}>
                 {item.value}
               </NavMenuAnchor>
             </NavMenuItem>

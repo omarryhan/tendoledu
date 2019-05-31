@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { FONT_SIZES, COLOR_PALETTE } from '../constants';
 
 const Outline = styled.div`
-  width: 350px;
+  width: 400px;
 
-  height: 550px;
+  height: 600px;
 
   margin: 0 auto;
   margin-bottom: 5vh;
@@ -48,7 +48,7 @@ const SubTitleTextContainer = styled.div`
   line-height: 2em;
 
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: center;
 `;

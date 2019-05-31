@@ -2,6 +2,27 @@ import { generateMedia } from 'styled-media-query';
 import { transitions, positions } from 'react-alert';
 
 
+const SCHOOLS_AVAILABLE = Object.freeze([
+    'Marketing',
+    'Web Development',
+    'Graphic Design',
+]);
+
+export const SchoolsSignedUpAlertMessages = [
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: 2 * 1000,
+        alertTime: 7 * 1000,
+    },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: 12 * 1000,
+        alertTime: 10 * 1000,
+    },
+];
+
 export const TYPOGRAPHY = Object.freeze({
     useNextVariants: true,
     suppressDeprecationWarnings: true,
