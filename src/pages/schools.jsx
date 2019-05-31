@@ -100,20 +100,20 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={AdmitLogo} height="100%" alt="Admit logo" />}
                 title="Admit"
-                mainText="Admit students based on criteria you set"
-                subText="* You can monetize your Tendoledu student experience"
+                mainText="Admit students to your Tendoledu space based on criteria you set"
+                subText=""
                 key="admit logo"
               />,
               <HowItWorksCard
                 logo={<img src={SelectLogo} height="100%" alt="Select logo" />}
                 title="Select & assign"
-                mainText="Select marketing jobs posted by startups, then assign to students"
+                mainText="Select marketing/web Development/graphic design jobs posted by startups and assign to students"
                 key="select logo"
               />,
               <HowItWorksCard
                 logo={<img src={DeliverLogo} height="100%" alt="Deliver logo" />}
                 title="Deliver & Get Ratings"
-                mainText="Deliver finished work to startups and get ratings from them"
+                mainText="Deliver finished student work to startups & get ratings"
                 key="deliver logo"
               />,
             ]}
