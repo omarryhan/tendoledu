@@ -98,7 +98,7 @@ const onSubmit = async (
       }
       alert.success('Thank you! You\'ll be hearing from us soon');
       await sleep(5000);
-      alert.info(`A ${values.expertise === 'Other' ? 'Marketing' : values.expertise} school just signed up 🚀🚀`);
+      alert.success(`A ${values.expertise === 'Other' ? 'Marketing' : values.expertise} school just signed up 🚀🚀`);
 };
 
 const expertiseOptions = Object.freeze([
