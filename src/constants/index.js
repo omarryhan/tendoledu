@@ -44,6 +44,12 @@ export const COLOR_PALETTE = Object.freeze({
     purple: {
         primary: opacity => `rgba(136, 0, 247, ${opacity || '1'})`,
     },
+    anotherPurple: {
+        primary: opacity => `rgba(132, 30, 216, ${opacity || '1'})`,
+    },
+    yetAnotherPurple: {
+        primary: opacity => `rgba(109, 33, 209, ${opacity || '1'})`,
+    },
 });
 
 export const SCHOOLS_THEME = Object.freeze({
@@ -54,9 +60,9 @@ export const SCHOOLS_THEME = Object.freeze({
             mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
-            main: COLOR_PALETTE.red.primary(),
+            main: COLOR_PALETTE.yetAnotherPurple.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            mainWithOpacity: COLOR_PALETTE.red.primary,
+            mainWithOpacity: COLOR_PALETTE.yetAnotherPurple.primary,
         },
         black: {
             main: COLOR_PALETTE.black.primary(),
