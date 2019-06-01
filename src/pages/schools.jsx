@@ -73,7 +73,7 @@ export default () => {
           <HeroSubtitle
             color={muiTheme.palette.black.main}
           >
-            Give Your Students Real Work Experience with Tendoledu
+            Let your students work on real projects posted by Startups
           </HeroSubtitle>
           <HeroImageWrapper>
             <img
@@ -93,7 +93,7 @@ export default () => {
         </Section>
         <Section
           id="how-it-works"
-          backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.7)}
+          backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.85)}
           style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer

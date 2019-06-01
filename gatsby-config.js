@@ -53,7 +53,7 @@ module.exports = {
         short_name: 'Tendoledu',
         start_url: '/',
         background_color: '#fff',
-        theme_color: 'rgba(109, 33, 209)',
+        theme_color: '#4B73E5',
         display: 'minimal-ui',
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },

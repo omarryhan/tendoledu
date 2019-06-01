@@ -8,12 +8,28 @@ const SCHOOLS_AVAILABLE = Object.freeze([
     'Graphic Design',
 ]);
 
+function range(start, end) {
+    return Array(end - start + 1).fill().map((_, idx) => start + idx);
+}
+
 export const SchoolsSignedUpAlertMessages = [
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: [1, 2, 3, 4, 5][Math.floor(Math.random() * 5)] * 1000,
-        alertTime: 24 * 60 * 60 * 1000,
+        waitTime: range(1, 5)[Math.floor(Math.random() * range(1, 5).length)] * 1000,
+        alertTime: 14 * 1000,
+    },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: range(20, 40)[Math.floor(Math.random() * range(20, 40).length)] * 1000,
+        alertTime: 14 * 1000,
+    },
+    {
+        message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: range(60, 80)[Math.floor(Math.random() * range(60, 80).length)] * 1000,
+        alertTime: 14 * 1000,
     },
 ];
 
@@ -50,6 +66,9 @@ export const COLOR_PALETTE = Object.freeze({
     yetAnotherPurple: {
         primary: opacity => `rgba(109, 33, 209, ${opacity || '1'})`,
     },
+    lastPurple: {
+        primary: opacity => `rgba(75, 115, 229, ${opacity || '1'})`,
+    },
 });
 
 export const SCHOOLS_THEME = Object.freeze({
@@ -60,9 +79,9 @@ export const SCHOOLS_THEME = Object.freeze({
             mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
-            main: COLOR_PALETTE.yetAnotherPurple.primary(),
+            main: COLOR_PALETTE.lastPurple.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            mainWithOpacity: COLOR_PALETTE.yetAnotherPurple.primary,
+            mainWithOpacity: COLOR_PALETTE.lastPurple.primary,
         },
         black: {
             main: COLOR_PALETTE.black.primary(),
