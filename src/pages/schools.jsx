@@ -30,7 +30,6 @@ import RecognitionLogo from '../images/recognition.svg';
 
 
 const muiTheme = createMuiTheme(SCHOOLS_THEME, 'schoolsTheme');
-console.log(muiTheme);
 
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
