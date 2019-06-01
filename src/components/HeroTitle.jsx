@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_SIZES, media, COLOR_PALETTE } from '../constants';
+import { FONT_SIZES, media } from '../constants';
 
 
 export default styled.h1`
@@ -10,7 +10,7 @@ export default styled.h1`
     margin-top: 1vh;
     margin-bottom: 1vh;
 
-    color: ${COLOR_PALETTE.black.primary()};
+    color: ${props => props.color};
 
     ${media.lessThan('tablet')`
         text-align: center;

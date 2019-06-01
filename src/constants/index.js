@@ -51,10 +51,24 @@ export const SCHOOLS_THEME = Object.freeze({
         primary: {
             main: COLOR_PALETTE.turquoise.primary(),
             contrastText: COLOR_PALETTE.black.primary(),
+            mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
             main: COLOR_PALETTE.red.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
+            mainWithOpacity: COLOR_PALETTE.red.primary,
+        },
+        black: {
+            main: COLOR_PALETTE.black.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+            light: COLOR_PALETTE.black.light(),
+            mainWithOpacity: COLOR_PALETTE.black.primary,
+        },
+        white: {
+            main: COLOR_PALETTE.white.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+            dark: COLOR_PALETTE.white.dark(),
+            mainWithOpacity: COLOR_PALETTE.white.primary,
         },
     },
     typography: TYPOGRAPHY,
@@ -65,10 +79,24 @@ export const STUDENTS_THEME = Object.freeze({
         primary: {
             main: COLOR_PALETTE.turquoise.primary(),
             contrastText: COLOR_PALETTE.black.primary(),
+            mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
             main: COLOR_PALETTE.red.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
+            mainWithOpacity: COLOR_PALETTE.red.primary,
+        },
+        black: {
+            main: COLOR_PALETTE.black.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+            light: COLOR_PALETTE.black.light(),
+            mainWithOpacity: COLOR_PALETTE.black.primary,
+        },
+        white: {
+            main: COLOR_PALETTE.white.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+            dark: COLOR_PALETTE.white.dark(),
+            mainWithOpacity: COLOR_PALETTE.white.primary,
         },
     },
     typography: TYPOGRAPHY,
@@ -79,10 +107,24 @@ export const STARTUPS_THEME = Object.freeze({
         primary: {
             main: COLOR_PALETTE.turquoise.primary(),
             contrastText: COLOR_PALETTE.black.primary(),
+            mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
             main: COLOR_PALETTE.red.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
+            mainWithOpacity: COLOR_PALETTE.red.primary,
+        },
+        black: {
+            main: COLOR_PALETTE.black.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+            light: COLOR_PALETTE.black.light(),
+            mainWithOpacity: COLOR_PALETTE.black.primary,
+        },
+        white: {
+            main: COLOR_PALETTE.white.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+            dark: COLOR_PALETTE.white.dark(),
+            mainWithOpacity: COLOR_PALETTE.white.primary,
         },
     },
     typography: TYPOGRAPHY,
@@ -93,10 +135,24 @@ export const NOT_FOUND_THEME = Object.freeze({
         primary: {
             main: COLOR_PALETTE.turquoise.primary(),
             contrastText: COLOR_PALETTE.black.primary(),
+            mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
             main: COLOR_PALETTE.red.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
+            mainWithOpacity: COLOR_PALETTE.red.primary,
+        },
+        black: {
+            main: COLOR_PALETTE.black.primary(),
+            contrastText: COLOR_PALETTE.white.primary(),
+            light: COLOR_PALETTE.black.light(),
+            mainWithOpacity: COLOR_PALETTE.black.primary,
+        },
+        white: {
+            main: COLOR_PALETTE.white.primary(),
+            contrastText: COLOR_PALETTE.black.primary(),
+            dark: COLOR_PALETTE.white.dark(),
+            mainWithOpacity: COLOR_PALETTE.white.primary,
         },
     },
     typography: TYPOGRAPHY,

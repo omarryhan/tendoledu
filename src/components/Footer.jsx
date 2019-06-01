@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FOOTER_HEIGHT, COLOR_PALETTE } from '../constants';
+import { useTheme } from '@material-ui/styles';
+import { FOOTER_HEIGHT } from '../constants';
 
 
 const FooterContainer = styled.footer`
     height: ${FOOTER_HEIGHT}px;
-    background-color: ${COLOR_PALETTE.black.primary()};
+    background-color: ${props => props.backgroundColor};
 
     display: flex;
     flex-direction: column;
@@ -14,16 +15,16 @@ const FooterContainer = styled.footer`
 
 const FooterText = styled.p`
   text-align: center;
-  color: ${COLOR_PALETTE.white.primary()};
+  color: ${props => props.color};
   margin: 0 0;
 `;
 
 const ContactUsAnchor = styled.a`
-  color: ${COLOR_PALETTE.white.primary()};
+  color: ${props => props.color};
   text-decoration: none;
 
   &:hover {
-    color: ${COLOR_PALETTE.white.dark()};;
+    color: ${props => props.hoverColor};
   };
 
   font-weight: bold;
@@ -32,21 +33,26 @@ const ContactUsAnchor = styled.a`
   margin: 0 0;
 `;
 
-export default () => (
-  <FooterContainer>
-    <ContactUsAnchor
-      href="mailto:info@tendoledu.com"
-      title="Contact Us Via Email"
-    >
-      Contact Us
-    </ContactUsAnchor>
-    <br />
-    <FooterText>
-      <span role="img" aria-label="Copyright mark">
-        ©
-      </span>
-      {' '}
-      2019 Tendoledu
-    </FooterText>
-  </FooterContainer>
-);
+export default () => {
+  const theme = useTheme();
+  return (
+    <FooterContainer backgroundColor={theme.palette.black.main}>
+      <ContactUsAnchor
+        href="mailto:info@tendoledu.com"
+        title="Contact Us Via Email"
+        color={theme.palette.white.main}
+        hoverColor={theme.palette.white.dark}
+      >
+        Contact Us
+      </ContactUsAnchor>
+      <br />
+      <FooterText color={theme.palette.white.main}>
+        <span role="img" aria-label="Copyright mark">
+          ©
+        </span>
+        {' '}
+        2019 Tendoledu
+      </FooterText>
+    </FooterContainer>
+  );
+};

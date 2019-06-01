@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import { useTheme } from '@material-ui/styles';
 import {
   HEADER_HEIGHT,
   FONT_SIZES,
-  COLOR_PALETTE,
   media,
 } from '../constants';
 import { Text } from './SignUpButtonDiv';
@@ -47,68 +47,76 @@ const NavMenuItem = styled.div`
 const Title = styled.h2`
   ${FONT_SIZES.xxxl}
   margin: 15px 0;
-  color: ${COLOR_PALETTE.white.primary()};
+  color: ${props => props.color};
 `;
 
 const NavMenuAnchor = styled.a`
   text-decoration: none;
-  color: ${COLOR_PALETTE.white.primary()};
+  color: ${props => props.color};
   ${FONT_SIZES.md}
 
   &:hover {
-    color: ${COLOR_PALETTE.white.dark()};
+    color: ${props => props.hoverColor};
   }
 `;
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-const Header = ({ navLinks, setIsModalVisible }) => (
-  <HeaderContainer>
-    <AppBar
-      // color="secondary"
-      style={{
-        height: `${HEADER_HEIGHT}px`,
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: COLOR_PALETTE.black.primary(),
-      }}
-    >
-      <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-        <a href="#" value="Home Page" style={{ textDecoration: 'none' }}>
-          <Title> Tendoledu </Title>
-        </a>
-        <NavMenuContainer>
-          {navLinks.map(item => (
-            <NavMenuItem key={item.value}>
-              <NavMenuAnchor href={item.href} title={item.title}>
-                {item.value}
-              </NavMenuAnchor>
-            </NavMenuItem>
-          ))}
+const Header = ({ navLinks, setIsModalVisible }) => {
+  const theme = useTheme();
+  return (
+    <HeaderContainer>
+      <AppBar
+        // color="secondary"
+        style={{
+          height: `${HEADER_HEIGHT}px`,
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor: theme.palette.black.main,
+        }}
+      >
+        <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+          <a href="#" value="Home Page" style={{ textDecoration: 'none' }}>
+            <Title color={theme.palette.white.main}> Tendoledu </Title>
+          </a>
+          <NavMenuContainer>
+            {navLinks.map(item => (
+              <NavMenuItem key={item.value}>
+                <NavMenuAnchor
+                  href={item.href}
+                  title={item.title}
+                  color={theme.palette.white.main}
+                  hoverColor={theme.palette.white.dark}
+                >
+                  {item.value}
+                </NavMenuAnchor>
+              </NavMenuItem>
+            ))}
 
-          {
-            setIsModalVisible
-              ? (
-                <NavMenuItem key="Sign Up button">
-                  <Button
-                    style={{ color: COLOR_PALETTE.black.primary() }}
-                    variant="contained"
-                    color="primary"
-                    onClick={() => setIsModalVisible(true)}
-                    size="medium"
-                  >
-                    <Text>
-                      Sign Up
-                    </Text>
-                  </Button>
-                </NavMenuItem>
-              )
-            : null
-          }
-        </NavMenuContainer>
-      </Toolbar>
-    </AppBar>
-  </HeaderContainer>
-);
+            {
+              setIsModalVisible
+                ? (
+                  <NavMenuItem key="Sign Up button">
+                    <Button
+                      style={{ color: theme.palette.black.main }}
+                      variant="contained"
+                      color="primary"
+                      onClick={() => setIsModalVisible(true)}
+                      size="medium"
+                    >
+                      <Text>
+                        Sign Up
+                      </Text>
+                    </Button>
+                  </NavMenuItem>
+                )
+              : null
+            }
+          </NavMenuContainer>
+        </Toolbar>
+      </AppBar>
+    </HeaderContainer>
+  );
+};
 
 Header.defaultProps = {
   navLinks: [],

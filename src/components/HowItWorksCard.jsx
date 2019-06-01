@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useTheme } from '@material-ui/styles';
 
 import { COLOR_PALETTE, FONT_SIZES } from '../constants';
 
@@ -16,7 +17,7 @@ const Outline = styled.div`
   margin-left : 1vw;
   padding: 1%;
 
-  background-color: ${COLOR_PALETTE.white.primary()};
+  background-color: ${props => props.backgroundColor};
   box-shadow: 0px 2px 36px -5px ${COLOR_PALETTE.black.primary(0.5)};
 
   border-radius: 10px;
@@ -66,7 +67,7 @@ const SubTextContainer = styled.div`
 
 const Title = styled.h2`
   text-transform: uppercase;
-  color: ${COLOR_PALETTE.red.primary()};
+  color: ${props => props.color};
 `;
 
 const MainText = styled.strong`
@@ -81,36 +82,41 @@ const SubText = styled.strong`
 
 const HowItWorksCard = ({
  logo, title, mainText, subText,
-}) => (
-  <Outline>
-    <LogoContainer>
-      {logo}
-    </LogoContainer>
+}) => {
+  const theme = useTheme();
+  return (
+    <Outline
+      backgroundColor={theme.palette.white.main}
+    >
+      <LogoContainer>
+        {logo}
+      </LogoContainer>
 
-    <TitleContainer>
-      <Title>
-        {title}
-      </Title>
-    </TitleContainer>
+      <TitleContainer>
+        <Title color={theme.palette.secondary.main}>
+          {title}
+        </Title>
+      </TitleContainer>
 
-    <MainTextContainer>
-      <MainText>
-        {mainText}
-      </MainText>
-    </MainTextContainer>
+      <MainTextContainer>
+        <MainText>
+          {mainText}
+        </MainText>
+      </MainTextContainer>
 
-    {subText
-      ? (
-        <SubTextContainer>
-          <SubText>
-            {subText}
-          </SubText>
-        </SubTextContainer>
-        )
-      : null
-    }
-  </Outline>
-);
+      {subText
+        ? (
+          <SubTextContainer>
+            <SubText>
+              {subText}
+            </SubText>
+          </SubTextContainer>
+          )
+        : null
+      }
+    </Outline>
+  );
+};
 
 HowItWorksCard.defaultProps = {
   subText: null,

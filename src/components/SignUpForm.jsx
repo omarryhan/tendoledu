@@ -30,7 +30,7 @@ const StyledField = styled(Field)`
 
   ${FONT_SIZES.lg}
 
-  border: 1.5px solid ${COLOR_PALETTE.black.primary()};
+  border: 1.5px solid black;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 

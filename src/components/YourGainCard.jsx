@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useTheme } from '@material-ui/styles';
 
-import { FONT_SIZES, COLOR_PALETTE } from '../constants';
+import { FONT_SIZES } from '../constants';
 
 const Outline = styled.div`
   width: 400px;
@@ -15,8 +16,7 @@ const Outline = styled.div`
   margin-left : 2vw;
   padding: 1%;
 
-  background-color: ${COLOR_PALETTE.white.primary()};
-  box-shadow: 0px 2px 36px -5px ${COLOR_PALETTE.black.primary(0.7)};
+  box-shadow: 0px 2px 36px -5px rgba(0, 0, 0, 0.6);
 
   border-radius: 10px;
 `;
@@ -57,8 +57,8 @@ const TitleText = styled.strong`
   font-weight: bold;
   ${FONT_SIZES.xl}
   text-transform: uppercase;
-
-  color: ${COLOR_PALETTE.red.primary()};
+  
+  color: ${props => props.color}
 `;
 
 const SubTitleText = styled.p`
@@ -68,26 +68,29 @@ const SubTitleText = styled.p`
 
 const YourGainCard = ({
  logo, title, subtitle,
-}) => (
-  <Outline>
-    <LogoContainer>
-      {logo}
-    </LogoContainer>
+}) => {
+  const theme = useTheme();
+  return (
+    <Outline>
+      <LogoContainer>
+        {logo}
+      </LogoContainer>
 
-    <TitleContainer>
-      <TitleText>
-        {title}
-      </TitleText>
-    </TitleContainer>
+      <TitleContainer>
+        <TitleText color={theme.palette.secondary.main}>
+          {title}
+        </TitleText>
+      </TitleContainer>
 
 
-    <SubTitleTextContainer>
-      <SubTitleText>
-        {subtitle}
-      </SubTitleText>
-    </SubTitleTextContainer>
-  </Outline>
-);
+      <SubTitleTextContainer>
+        <SubTitleText>
+          {subtitle}
+        </SubTitleText>
+      </SubTitleTextContainer>
+    </Outline>
+  );
+};
 
 YourGainCard.propTypes = {
   logo: PropTypes.element.isRequired,

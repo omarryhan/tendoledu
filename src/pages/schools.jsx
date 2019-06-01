@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import { SCHOOLS_THEME, COLOR_PALETTE, SchoolsSignedUpAlertMessages } from '../constants/index';
+import { SCHOOLS_THEME, SchoolsSignedUpAlertMessages } from '../constants/index';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Section from '../components/Section';
@@ -29,6 +29,7 @@ import RecognitionLogo from '../images/recognition.svg';
 
 
 const muiTheme = createMuiTheme(SCHOOLS_THEME, 'schoolsTheme');
+console.log(muiTheme);
 
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -66,8 +67,14 @@ export default () => {
           currentPage="schools"
         />
         <Section id="intro">
-          <HeroTitle> Win Over More Students For Your Online School </HeroTitle>
-          <HeroSubtitle> Give Your Students Real Work Experience with Tendoledu </HeroSubtitle>
+          <HeroTitle color={muiTheme.palette.black.main}>
+            Win Over More Students For Your Online School
+          </HeroTitle>
+          <HeroSubtitle
+            color={muiTheme.palette.black.main}
+          >
+            Give Your Students Real Work Experience with Tendoledu
+          </HeroSubtitle>
           <HeroImageWrapper>
             <img
               src={HeroImage}
@@ -86,7 +93,7 @@ export default () => {
         </Section>
         <Section
           id="how-it-works"
-          backgroundColor={COLOR_PALETTE.red.primary('0.8')}
+          backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.8)}
           style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer
@@ -117,14 +124,14 @@ export default () => {
               />,
             ]}
             subText="Thousands of students are waiting for you to create your Tendoledu space"
-            color={COLOR_PALETTE.white.primary()}
+            color={muiTheme.palette.white.main}
           />
           <SignUpButtonDiv
             text="Sign Up Now"
             outsideText="to be the first to use it, it’s free!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
-            outsideTextColor={COLOR_PALETTE.white.primary()}
+            outsideTextColor={muiTheme.palette.white.main}
           />
         </Section>
 
