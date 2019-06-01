@@ -12,12 +12,13 @@ import HeroSubtitle from '../components/HeroSubtitle';
 import HeroLead from '../components/HeroLead';
 import HowItWorksContainer from '../components/HowItWorksContainer';
 import HowItWorksCard from '../components/HowItWorksCard';
-import YourGainContainer, { SubText } from '../components/YourGainContainer';
 import YourGainCard from '../components/YourGainCard';
+import YourGainContainer, { SubText } from '../components/YourGainContainer';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
 import JustSignedUpAlerts from '../components/JustSignedUpAlerts';
+import LiveOnProductHunt from '../components/LiveOnProductHunt';
 
 import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
@@ -61,6 +62,7 @@ export default () => {
           description="Give your students actual startup projects to work on. Stand out by giving your students real work experience. Sign up. Create a unique online school. Win over more students!"
         />
         <JustSignedUpAlerts alertDefinitions={SchoolsSignedUpAlertMessages} />
+        <LiveOnProductHunt />
         <SignUpModal
           isModalVisible={isModalVisible}
           setIsModalVisible={setIsModalVisible}

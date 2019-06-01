@@ -16,19 +16,19 @@ export const SchoolsSignedUpAlertMessages = [
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(1, 5)[Math.floor(Math.random() * range(1, 5).length)] * 1000,
+        waitTime: range(6, 10)[Math.floor(Math.random() * range(1, 5).length)] * 1000,
         alertTime: 14 * 1000,
     },
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(20, 40)[Math.floor(Math.random() * range(20, 40).length)] * 1000,
+        waitTime: range(25, 45)[Math.floor(Math.random() * range(20, 40).length)] * 1000,
         alertTime: 14 * 1000,
     },
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(60, 80)[Math.floor(Math.random() * range(60, 80).length)] * 1000,
+        waitTime: range(65, 85)[Math.floor(Math.random() * range(60, 80).length)] * 1000,
         alertTime: 14 * 1000,
     },
 ];
@@ -226,7 +226,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 1.35em;
+            font-size: 1.25em;
         `};
     `,
 
@@ -242,7 +242,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 1.05em;
+            font-size: 0.9em;
         `};
     `,
 
@@ -258,7 +258,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 0.9em;
+            font-size: 0.8em;
         `};
     `,
 
@@ -274,7 +274,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 0.8em;
+            font-size: 0.7em;
         `};
     `,
 
@@ -290,7 +290,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.7em;
+            font-size: 0.6em;
         `};
     `,
 
@@ -306,7 +306,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.65em;
+            font-size: 0.55em;
         `};
     `,
 
@@ -322,7 +322,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.6em;
+            font-size: 0.5em;
         `};
     `,
 
@@ -338,7 +338,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.55em;
+            font-size: 0.45em;
         `};
     `,
 
@@ -354,7 +354,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.45em;
+            font-size: 0.4em;
         `};
     `,
 };
