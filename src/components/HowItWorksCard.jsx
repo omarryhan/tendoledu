@@ -34,7 +34,7 @@ const LogoContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  height: 10%;
+  height: 20%;
   width: 80%;
   margin: 0 auto;
 
@@ -45,7 +45,7 @@ const TitleContainer = styled.div`
 `;
 
 const MainTextContainer = styled.div`
-  height: 40%;
+  height: 30%;
   margin: 0 auto;
   padding-top: 3vh;
 

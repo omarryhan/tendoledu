@@ -10,7 +10,7 @@ const JustSignedUpAlerts = ({ alertDefinitions }) => {
     useEffect(() => {
         alertDefinitions.forEach(({ message, waitTime, alertTime }) => {
             setTimeout(
-                () => alert.info(message, { timeout: alertTime }),
+                () => alert.success(message, { timeout: alertTime }),
                 waitTime,
             );
         });

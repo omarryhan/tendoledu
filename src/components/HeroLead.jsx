@@ -4,18 +4,14 @@ import styled from 'styled-components';
 import { FONT_SIZES, media, COLOR_PALETTE } from '../constants';
 
 const LeadContainer = styled.div`
-  width: 50%;
+  width: 80%;
   font-weight:lighter;
 
   ${media.lessThan('laptop')`
-    width: 70%;
+    width: 90%;
   `};
 
   ${media.lessThan('tablet')`
-    width: 80%;
-  `};
-
-  ${media.lessThan('mobileMedium')`
     width: 100%;
   `};
   

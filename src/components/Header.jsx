@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import { StaticBanner } from 'material-ui-banner';
 import {
   HEADER_HEIGHT,
   FONT_SIZES,
@@ -12,6 +13,7 @@ import {
   media,
 } from '../constants';
 import { Text } from './SignUpButtonDiv';
+import LiveOnProductHuntBanner from './LiveOnProductHuntBanner';
 
 
 const HeaderContainer = styled.header`
@@ -107,6 +109,8 @@ const Header = ({ navLinks, setIsModalVisible }) => (
         </NavMenuContainer>
       </Toolbar>
     </AppBar>
+    <StaticBanner />
+    <LiveOnProductHuntBanner />
   </HeaderContainer>
 );
 
