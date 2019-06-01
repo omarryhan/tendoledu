@@ -5,18 +5,23 @@ import { media } from '../constants';
 
 
 const Container = styled.div`
-  margin: 0 20vw;
+  margin: 0 auto;
+  text-align: center;
+
+  ${media.greaterThan('laptop')`
+    width: 50vw;
+  `};
 
   ${media.lessThan('laptop')`
-    margin: 0 5vw;
+    width: 60vw;
   `};
 
   ${media.lessThan('tablet')`
-    margin: 0 0;
+    width: 80vw;
   `};
 
   ${media.lessThan('mobileMedium')`
-    margin: 0 0;
+    width: 90vw;
   `};
 `;
 

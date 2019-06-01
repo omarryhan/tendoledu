@@ -24,6 +24,8 @@ const Layout = styled.div`
     border-radius: 3px;
     background-color: ${PRIMARY_COLOR};
 
+    box-shadow: 0px 2px 20px -5px rgba(0, 0, 0, 0.4);
+
     ${media.greaterThan('tablet')`
         width: 500px;
         bottom: 0;
@@ -70,7 +72,7 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-    ${FONT_SIZES.xxl}
+    ${FONT_SIZES.xxxl}
     color: white;
     margin: 0;
 

@@ -19,8 +19,8 @@ import SignUpButtonDiv from '../components/SignUpButtonDiv';
 import HeroImageWrapper from '../components/HeroImageWrapper';
 import JustSignedUpAlerts from '../components/JustSignedUpAlerts';
 import LiveOnProductHunt from '../components/LiveOnProductHunt';
+import SchoolsHeroImageSvg from '../components/Images/SchoolsHeroImageSvg';
 
-import HeroImage from '../images/hero-schools.svg';
 import CreateLogo from '../images/create.svg';
 import AdmitLogo from '../images/admit.svg';
 import SelectLogo from '../images/select.svg';
@@ -78,10 +78,7 @@ export default () => {
             Let your students work on real projects posted by Startups
           </HeroSubtitle>
           <HeroImageWrapper>
-            <img
-              src={HeroImage}
-              alt="Has a yellow tube where students enter to learn and when exiting, they start applying for jobs"
-            />
+            <SchoolsHeroImageSvg />
           </HeroImageWrapper>
           <HeroLead
             message="It’s really hard to be unique when all course creators do the same thing..."
