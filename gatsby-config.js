@@ -1,5 +1,3 @@
-import { COLOR_PALETTE } from './src/constants/index';
-
 module.exports = {
   siteMetadata: {
     title: 'Tendoledu',
@@ -55,7 +53,7 @@ module.exports = {
         short_name: 'Tendoledu',
         start_url: '/',
         background_color: '#fff',
-        theme_color: COLOR_PALETTE.yetAnotherPurple.primary(),
+        theme_color: 'rgba(109, 33, 209)',
         display: 'minimal-ui',
         icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
