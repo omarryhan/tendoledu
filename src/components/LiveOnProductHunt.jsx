@@ -76,14 +76,14 @@ const TitleWrapper = styled.div`
 
 
     ${media.greaterThan('tablet')`
-        height: 7vh;
+        height: 50px
     `};
 
     ${media.lessThan('tablet')`
-        height: 13vh;
+        height: 30px;
     `};
 
-    padding: 0 2% 0 2%;
+    padding: 0 18% 0 18%;
 `;
 
 const Title = styled.h2`
