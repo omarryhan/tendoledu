@@ -12,7 +12,7 @@ import ProductHuntCat from './Images/ProductHuntCat';
 const PRIMARY_COLOR = '#F15A23';
 const SECONDARY_COLOR = '#2E353F';
 const TIME_TILL_VISIBLE = 4500;
-const REDIRECT_URL = 'https://producthunt.com';
+const REDIRECT_URL = 'https://producthunt.com/posts/tendoledu-for-online-course-creators';
 
 const Layout = styled.div`
     display: ${props => (props.isVisible ? 'block' : 'none')};
@@ -21,7 +21,7 @@ const Layout = styled.div`
 
     border-style: solid;
     border-color: ${SECONDARY_COLOR};
-    border-width: 3px 3px 0 3px;
+    border-width: 2px 2px 0 2px;
     border-radius: 3px;
     background-color: ${PRIMARY_COLOR};
 
@@ -41,14 +41,14 @@ const Layout = styled.div`
     `};
 
     ${media.lessThan('mobileLarge')`
-        width: 70vw;
+        width: 90vw;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     `};
 
     ${media.lessThan('mobileMedium')`
-        width: 85vw;
+        width: 90vw;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -97,6 +97,14 @@ const Title = styled.h2`
 const ImgWrapper = styled.div`
     padding: 4%;
     margin: 0 auto;
+
+    ${media.lessThan('tablet')`
+      width: 80%;
+  `};
+
+  ${media.lessThan('mobileLarge')`
+      width: 70%;
+`};
 `;
 
 const ButtonWrapper = styled.div`
