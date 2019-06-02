@@ -14,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         // 404 page is automatically excluded
-        exclude: ['/students*', '/page-2*', '/copy-of-signin*'],
+        exclude: ['/students*', '/page-2*', '/copy-of-sign-in*'],
       },
     },
     'gatsby-plugin-catch-links',
