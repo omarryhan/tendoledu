@@ -28,14 +28,27 @@ const Layout = styled.div`
     box-shadow: 0px 2px 20px -5px rgba(0, 0, 0, 0.4);
 
     ${media.greaterThan('tablet')`
-        width: 500px;
+        width: 300px;
         bottom: 0;
         right: 0;
     `};
 
     ${media.lessThan('tablet')`
-        width: 90vw;
-        max-height: 80vh;
+        width: 40vw;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    `};
+
+    ${media.lessThan('mobileLarge')`
+        width: 70vw;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    `};
+
+    ${media.lessThan('mobileMedium')`
+        width: 85vw;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -63,7 +76,7 @@ const TitleWrapper = styled.div`
 
 
     ${media.greaterThan('tablet')`
-        height: 5vh;
+        height: 7vh;
     `};
 
     ${media.lessThan('tablet')`
@@ -74,7 +87,7 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h2`
-    ${FONT_SIZES.xxxl}
+    ${FONT_SIZES.xl}
     color: white;
     margin: 0;
 
@@ -82,28 +95,8 @@ const Title = styled.h2`
 `;
 
 const ImgWrapper = styled.div`
-    padding: 1.5%;
+    padding: 4%;
     margin: 0 auto;
-
-    @media (max-height: 1200px) {
-      width: 80%;
-    };
-
-    @media (max-height: 600px) {
-        width: 70%;
-    };
-
-    @media (max-height: 500px) {
-        width: 60%;
-    };
-
-    @media (max-height: 300px) {
-        width: 50%;
-    };
-
-    ${media.lessThan('tablet')`
-        width: 60%;
-    `};
 `;
 
 const ButtonWrapper = styled.div`
@@ -151,7 +144,7 @@ export default () => {
         <ButtonWrapper>
           <Button
             style={{ backgroundColor: SECONDARY_COLOR, color: 'white' }}
-            size="large"
+            size="medium"
             onClick={() => {
                 setIsVisible(false);
                 window.open(REDIRECT_URL);

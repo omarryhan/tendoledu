@@ -74,7 +74,7 @@ export default () => {
           <HeroSubtitle
             color={muiTheme.palette.black.main}
           >
-            Let your students work on real projects posted by Startups
+            Let Your Students Do Work for Startups
           </HeroSubtitle>
           <HeroImageWrapper>
             <SchoolsHeroImageSvg />
@@ -121,8 +121,8 @@ export default () => {
                 title="Select & assign"
                 mainText={(
                   <MainText>
-                    Select marketing/web Development/graphic design jobs
-                    posted by startups and assign to students
+                    Select [Marketing/ Web Development/ Graphic Design] gigs
+                    posted by startups and assign them to students
                   </MainText>
                 )}
                 key="select logo"
