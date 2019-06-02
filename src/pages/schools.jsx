@@ -11,8 +11,8 @@ import HeroTitle from '../components/HeroTitle';
 import HeroSubtitle from '../components/HeroSubtitle';
 import HeroLead from '../components/HeroLead';
 import HowItWorksContainer from '../components/HowItWorksContainer';
-import HowItWorksCard from '../components/HowItWorksCard';
-import YourGainCard from '../components/YourGainCard';
+import HowItWorksCard, { MainText } from '../components/HowItWorksCard';
+import YourGainCard, { SubTitleText } from '../components/YourGainCard';
 import YourGainContainer, { SubText } from '../components/YourGainContainer';
 import SignUpModal from '../components/SignUpModal';
 import SignUpButtonDiv from '../components/SignUpButtonDiv';
@@ -99,25 +99,42 @@ export default () => {
               <HowItWorksCard
                 logo={<img src={CreateLogo} width="100%" alt="Create logo" />}
                 title="Create"
-                mainText="Create a space for your students to work in"
+                mainText={(
+                  <MainText>
+                    Create a space for your students to work in
+                  </MainText>
+                )}
                 key="create logo"
               />,
               <HowItWorksCard
                 logo={<img src={AdmitLogo} height="100%" alt="Admit logo" />}
                 title="Admit"
-                mainText="Admit students to your Tendoledu space based on criteria you set"
+                mainText={(
+                  <MainText>
+                    Admit students to your Tendoledu space based on criteria you set
+                  </MainText>
+                )}
                 key="admit logo"
               />,
               <HowItWorksCard
                 logo={<img src={SelectLogo} height="100%" alt="Select logo" />}
                 title="Select & assign"
-                mainText="Select marketing/web Development/graphic design jobs posted by startups and assign to students"
+                mainText={(
+                  <MainText>
+                    Select marketing/web Development/graphic design jobs
+                    posted by startups and assign to students
+                  </MainText>
+                )}
                 key="select logo"
               />,
               <HowItWorksCard
                 logo={<img src={DeliverLogo} height="100%" alt="Deliver logo" />}
                 title="Deliver & Get Ratings"
-                mainText="Deliver finished student work to startups & get ratings"
+                mainText={(
+                  <MainText>
+                    Deliver finished student work to startups & get ratings
+                  </MainText>
+                )}
                 key="deliver logo"
               />,
             ]}
@@ -140,13 +157,28 @@ export default () => {
               <YourGainCard
                 logo={<img src={WorkLogo} alt="Recognition logo" height="100%" />}
                 title="Hands-on work experience"
-                subtitle="Most course creators only provide their students with content. We help you give your students practical skills and experience. Lead them into the real world market and kill your competition."
+                text={(
+                  <SubTitleText>
+                    Most course creators only provide their students with content.
+                    <br />
+                    We help you give your students practical skills and experience.
+                    <br />
+                    Lead them into the real world market and kill your competition.
+                  </SubTitleText>
+                )}
                 key="recognition logo"
               />,
               <YourGainCard
                 logo={<img src={RecognitionLogo} alt="Work logo" height="100%" />}
                 title="Shareable work portfolios"
-                subtitle="After startups rate their projects, your students can showcase their work easily with Tendoledu. Now employers can recognize their work."
+                text={(
+                  <SubTitleText>
+                    After startups rate their projects, your students
+                     can showcase their work easily with Tendoledu.
+                    <br />
+                    Now employers can recognize their work.
+                  </SubTitleText>
+                )}
                 key="work logo"
               />,
           ]}

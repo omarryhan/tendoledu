@@ -42,7 +42,7 @@ const TitleContainer = styled.div`
 `;
 
 const SubTitleTextContainer = styled.div`
-  height: 30%;
+  height: 40%;
   width: 90%;
   margin: 0 auto;
   line-height: 2em;
@@ -61,13 +61,14 @@ const TitleText = styled.strong`
   color: ${props => props.color}
 `;
 
-const SubTitleText = styled.p`
+export const SubTitleText = styled.p`
   ${FONT_SIZES.lg}
+  margin: 0 0;
 `;
 
 
 const YourGainCard = ({
- logo, title, subtitle,
+ logo, title, text,
 }) => {
   const theme = useTheme();
   return (
@@ -82,11 +83,8 @@ const YourGainCard = ({
         </TitleText>
       </TitleContainer>
 
-
       <SubTitleTextContainer>
-        <SubTitleText>
-          {subtitle}
-        </SubTitleText>
+        {text}
       </SubTitleTextContainer>
     </Outline>
   );
@@ -95,7 +93,7 @@ const YourGainCard = ({
 YourGainCard.propTypes = {
   logo: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  text: PropTypes.element.isRequired,
 };
 
 export default YourGainCard;

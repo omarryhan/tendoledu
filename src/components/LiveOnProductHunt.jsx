@@ -12,6 +12,7 @@ import ProductHuntCat from './Images/ProductHuntCat';
 const PRIMARY_COLOR = '#F15A23';
 const SECONDARY_COLOR = '#2E353F';
 const TIME_TILL_VISIBLE = 1700;
+const REDIRECT_URL = 'https://producthunt.com';
 
 const Layout = styled.div`
     display: ${props => (props.isVisible ? 'block' : 'none')};
@@ -33,7 +34,8 @@ const Layout = styled.div`
     `};
 
     ${media.lessThan('tablet')`
-        width: 50vh;
+        width: 90vw;
+        max-height: 80vh;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -65,7 +67,7 @@ const TitleWrapper = styled.div`
     `};
 
     ${media.lessThan('tablet')`
-        height: 12vh;
+        height: 13vh;
     `};
 
     padding: 0 1.5% 0 1.5%;
@@ -81,7 +83,27 @@ const Title = styled.h2`
 
 const ImgWrapper = styled.div`
     padding: 1.5%;
-    vertical-align: middle;
+    margin: 0 auto;
+
+    @media (max-height: 1200px) {
+      width: 80%;
+    };
+
+    @media (max-height: 600px) {
+        width: 70%;
+    };
+
+    @media (max-height: 500px) {
+        width: 60%;
+    };
+
+    @media (max-height: 300px) {
+        width: 50%;
+    };
+
+    ${media.lessThan('tablet')`
+        width: 60%;
+    `};
 `;
 
 const ButtonWrapper = styled.div`
@@ -130,6 +152,10 @@ export default () => {
           <Button
             style={{ backgroundColor: SECONDARY_COLOR, color: 'white' }}
             size="large"
+            onClick={() => {
+                setIsVisible(false);
+                window.open(REDIRECT_URL);
+            }}
           >
             Join the discussion
           </Button>

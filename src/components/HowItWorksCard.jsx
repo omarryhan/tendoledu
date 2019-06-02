@@ -70,9 +70,10 @@ const Title = styled.h2`
   color: ${props => props.color};
 `;
 
-const MainText = styled.strong`
+export const MainText = styled.strong`
   ${FONT_SIZES.lg}
   font-weight: lighter;
+  margin: 0 0;
 `;
 
 const SubText = styled.strong`
@@ -99,9 +100,7 @@ const HowItWorksCard = ({
       </TitleContainer>
 
       <MainTextContainer>
-        <MainText>
-          {mainText}
-        </MainText>
+        {mainText}
       </MainTextContainer>
 
       {subText
@@ -125,7 +124,7 @@ HowItWorksCard.defaultProps = {
 HowItWorksCard.propTypes = {
   logo: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
-  mainText: PropTypes.string.isRequired,
+  mainText: PropTypes.element.isRequired,
   subText: PropTypes.string,
 };
 
