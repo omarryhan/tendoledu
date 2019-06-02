@@ -73,15 +73,7 @@ const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-
-    ${media.greaterThan('tablet')`
-        height: 50px
-    `};
-
-    ${media.lessThan('tablet')`
-        height: 30px;
-    `};
+    height: 50px;
 
     padding: 0 18% 0 18%;
 `;
