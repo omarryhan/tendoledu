@@ -71,7 +71,7 @@ const HeaderWrapper = styled.div`
 
 const TitleWrapper = styled.div`
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 
 
@@ -83,7 +83,7 @@ const TitleWrapper = styled.div`
         height: 13vh;
     `};
 
-    padding: 0 1.5% 0 1.5%;
+    padding: 0 2% 0 2%;
 `;
 
 const Title = styled.h2`
