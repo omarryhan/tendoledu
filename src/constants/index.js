@@ -188,6 +188,7 @@ export const BREAKPOINTS = Object.freeze({
     mobileSmall: '20em',
     mobileMedium: '23.438em',
     mobileLarge: '25.875em',
+    mobileXLarge: '28.5em',
     tablet: '48em',
     laptop: '68.75em',
     laptopLarge: '90em',

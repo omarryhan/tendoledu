@@ -27,31 +27,28 @@ const Layout = styled.div`
 
     box-shadow: 0px 2px 20px -5px rgba(0, 0, 0, 0.4);
 
-    ${media.greaterThan('tablet')`
+    ${media.greaterThan('laptop')`
         width: 300px;
         bottom: 0;
         right: 0;
     `};
 
+    ${media.lessThan('laptop')`
+      width: 300px;
+      bottom: 0;
+      right: 0;
+    `};
+
     ${media.lessThan('tablet')`
-        width: 40vw;
+        width: 50vw;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 0;
     `};
 
-    ${media.lessThan('mobileLarge')`
-        width: 90vw;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    `};
-
-    ${media.lessThan('mobileMedium')`
-        width: 90vw;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+    ${media.lessThan('mobileXLarge')`
+      width: 70vw;
+      bottom: 0;
+      right: 0;
     `};
 `;
 
@@ -90,13 +87,17 @@ const ImgWrapper = styled.div`
     padding: 4%;
     margin: 0 auto;
 
-    ${media.lessThan('tablet')`
+    @media (max-height: 500px) {
       width: 80%;
-  `};
+    };
 
-  ${media.lessThan('mobileLarge')`
-      width: 70%;
-`};
+    @media (max-height: 400px) {
+      width: 60%;
+    }
+
+    @media (max-height: 300px) {
+      width: 40%;
+    }
 `;
 
 const ButtonWrapper = styled.div`

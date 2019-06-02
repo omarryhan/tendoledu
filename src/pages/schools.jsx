@@ -91,7 +91,7 @@ export default () => {
         </Section>
         <Section
           id="how-it-works"
-          backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.85)}
+          backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.93)}
           style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer
