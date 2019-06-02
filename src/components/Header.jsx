@@ -71,7 +71,7 @@ const Header = ({ navLinks, setIsModalVisible }) => {
           height: `${HEADER_HEIGHT}px`,
           display: 'flex',
           alignItems: 'center',
-          backgroundColor: theme.palette.black.main,
+          backgroundColor: theme.palette.black.lighter,
         }}
       >
         <Toolbar style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>

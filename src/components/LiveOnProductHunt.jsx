@@ -11,7 +11,7 @@ import ProductHuntCat from './Images/ProductHuntCat';
 
 const PRIMARY_COLOR = '#F15A23';
 const SECONDARY_COLOR = '#2E353F';
-const TIME_TILL_VISIBLE = 1700;
+const TIME_TILL_VISIBLE = 4500;
 const REDIRECT_URL = 'https://producthunt.com';
 
 const Layout = styled.div`

@@ -36,7 +36,7 @@ const ContactUsAnchor = styled.a`
 export default () => {
   const theme = useTheme();
   return (
-    <FooterContainer backgroundColor={theme.palette.black.main}>
+    <FooterContainer backgroundColor={theme.palette.black.lighter}>
       <ContactUsAnchor
         href="mailto:info@tendoledu.com"
         title="Contact Us Via Email"

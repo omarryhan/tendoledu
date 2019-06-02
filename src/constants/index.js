@@ -16,7 +16,7 @@ export const SchoolsSignedUpAlertMessages = [
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(15, 20)[Math.floor(Math.random() * range(15, 20).length)] * 1000,
+        waitTime: range(20, 25)[Math.floor(Math.random() * range(20, 25).length)] * 1000,
         alertTime: 14 * 1000,
     },
 ];
@@ -36,7 +36,8 @@ export const COLOR_PALETTE = Object.freeze({
     },
     black: {
         primary: opacity => `rgba(0, 0, 0, ${opacity || '1'})`,
-        light: opacity => `rgb(63, 63, 63, ${opacity || '1'})`,
+        lighter: opacity => `rgb(35, 35, 35, ${opacity || '1'})`,
+        lightest: opacity => `rgb(63, 63, 63, ${opacity || '1'})`,
     },
     white: {
         primary: opacity => `rgba(255, 255, 255, ${opacity || '1'})`,
@@ -74,7 +75,8 @@ export const SCHOOLS_THEME = Object.freeze({
         black: {
             main: COLOR_PALETTE.black.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            light: COLOR_PALETTE.black.light(),
+            lighter: COLOR_PALETTE.black.lighter(),
+            lightest: COLOR_PALETTE.black.lightest(),
             mainWithOpacity: COLOR_PALETTE.black.primary,
         },
         white: {
@@ -102,7 +104,8 @@ export const STUDENTS_THEME = Object.freeze({
         black: {
             main: COLOR_PALETTE.black.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            light: COLOR_PALETTE.black.light(),
+            lighter: COLOR_PALETTE.black.lighter(),
+            lightest: COLOR_PALETTE.black.lightest(),
             mainWithOpacity: COLOR_PALETTE.black.primary,
         },
         white: {
@@ -130,7 +133,8 @@ export const STARTUPS_THEME = Object.freeze({
         black: {
             main: COLOR_PALETTE.black.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            light: COLOR_PALETTE.black.light(),
+            lighter: COLOR_PALETTE.black.lighter(),
+            lightest: COLOR_PALETTE.black.lightest(),
             mainWithOpacity: COLOR_PALETTE.black.primary,
         },
         white: {
@@ -158,7 +162,8 @@ export const NOT_FOUND_THEME = Object.freeze({
         black: {
             main: COLOR_PALETTE.black.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            light: COLOR_PALETTE.black.light(),
+            lighter: COLOR_PALETTE.black.lighter(),
+            lightest: COLOR_PALETTE.black.lightest(),
             mainWithOpacity: COLOR_PALETTE.black.primary,
         },
         white: {
