@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { FONT_SIZES } from '../constants';
+import { FONT_SIZES, media } from '../constants';
 
 const OuterContainer = styled.div`
 
@@ -24,6 +24,16 @@ const SubText = styled.p`
   font-weight: bold;
   ${FONT_SIZES.xxl}
   color: ${props => props.color};
+
+  ${media.greaterThan('tablet')`
+    width: 60%;
+  `};
+
+  ${media.lessThan('tablet')`
+    width: 90%;
+  `};
+
+  margin: 0 auto;
 `;
 
 const CardsContainer = styled.div`

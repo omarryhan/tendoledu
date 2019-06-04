@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 import Section from '../components/Section';
 import HeroTitle from '../components/HeroTitle';
 import HeroSubtitle from '../components/HeroSubtitle';
-import HeroLead from '../components/HeroLead';
+import { LeadContainer, LeadMessage } from '../components/HeroLead';
 import HowItWorksContainer from '../components/HowItWorksContainer';
 import HowItWorksCard, { MainText } from '../components/HowItWorksCard';
 import YourGainCard, { SubTitleText } from '../components/YourGainCard';
@@ -79,9 +79,11 @@ export default () => {
           <HeroImageWrapper>
             <SchoolsHeroImageSvg />
           </HeroImageWrapper>
-          <HeroLead
-            message="It’s really hard to be unique when all course creators do the same thing..."
-          />
+          <LeadContainer>
+            <LeadMessage color="black">
+              It’s really hard to be unique when all course creators do the same thing...
+            </LeadMessage>
+          </LeadContainer>
           <SignUpButtonDiv
             text="Sign Up Here"
             outsideText="to change that!"

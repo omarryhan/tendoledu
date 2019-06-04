@@ -21,6 +21,15 @@ export const SchoolsSignedUpAlertMessages = [
     },
 ];
 
+export const StudentsSignedUpAlertMessages = [
+    {
+        message: 'A student just signed up 🚀🚀',
+        // According to Tendoledu: this is the average time a school signs up. Every minute.
+        waitTime: range(20, 25)[Math.floor(Math.random() * range(20, 25).length)] * 1000,
+        alertTime: 14 * 1000,
+    },
+];
+
 export const TYPOGRAPHY = Object.freeze({
     useNextVariants: true,
     suppressDeprecationWarnings: true,
@@ -97,9 +106,9 @@ export const STUDENTS_THEME = Object.freeze({
             mainWithOpacity: COLOR_PALETTE.turquoise.primary,
         },
         secondary: {
-            main: COLOR_PALETTE.red.primary(),
+            main: COLOR_PALETTE.lastPurple.primary(),
             contrastText: COLOR_PALETTE.white.primary(),
-            mainWithOpacity: COLOR_PALETTE.red.primary,
+            mainWithOpacity: COLOR_PALETTE.lastPurple.primary,
         },
         black: {
             main: COLOR_PALETTE.black.primary(),
@@ -117,6 +126,7 @@ export const STUDENTS_THEME = Object.freeze({
     },
     typography: TYPOGRAPHY,
 });
+
 
 export const STARTUPS_THEME = Object.freeze({
     palette: {
