@@ -20,6 +20,7 @@ export const LeadContainer = styled.div`
 export const LeadMessage = styled.p`
   text-align: center;
   ${FONT_SIZES.xxl}
+  margin: 0 0;
 
   color: ${props => props.color};
 `;

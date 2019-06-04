@@ -5,8 +5,8 @@ export default styled.h2`
     ${FONT_SIZES.xl}
 
     text-align: left;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     color: ${props => props.color};
 

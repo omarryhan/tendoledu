@@ -94,7 +94,6 @@ export default () => {
         <Section
           id="how-it-works"
           backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.93)}
-          style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer
             cards={[
@@ -109,7 +108,7 @@ export default () => {
                 key="create logo"
               />,
               <HowItWorksCard
-                logo={<img src={AdmitLogo} height="100%" alt="Admit logo" />}
+                logo={<img src={AdmitLogo} width="100%" alt="Admit logo" />}
                 title="Admit"
                 mainText={(
                   <MainText>
@@ -119,7 +118,7 @@ export default () => {
                 key="admit logo"
               />,
               <HowItWorksCard
-                logo={<img src={SelectLogo} height="100%" alt="Select logo" />}
+                logo={<img src={SelectLogo} width="100%" alt="Select logo" />}
                 title="Select & assign"
                 mainText={(
                   <MainText>
@@ -130,7 +129,7 @@ export default () => {
                 key="select logo"
               />,
               <HowItWorksCard
-                logo={<img src={DeliverLogo} height="100%" alt="Deliver logo" />}
+                logo={<img src={DeliverLogo} width="100%" alt="Deliver logo" />}
                 title="Deliver & Get Ratings"
                 mainText={(
                   <MainText>
@@ -157,7 +156,7 @@ export default () => {
             title="What Will my Students Gain?"
             cards={[
               <YourGainCard
-                logo={<img src={WorkLogo} alt="Recognition logo" height="100%" />}
+                logo={<img src={WorkLogo} alt="Work logo" height="100%" />}
                 title="Hands-on work experience"
                 text={(
                   <SubTitleText>
@@ -171,7 +170,7 @@ export default () => {
                 key="recognition logo"
               />,
               <YourGainCard
-                logo={<img src={RecognitionLogo} alt="Work logo" height="100%" />}
+                logo={<img src={RecognitionLogo} alt="Recognition logo" height="100%" />}
                 title="Shareable work portfolios"
                 text={(
                   <SubTitleText>

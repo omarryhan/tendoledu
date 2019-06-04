@@ -278,7 +278,7 @@ export const FONT_SIZES = {
         `};
     
         ${media.lessThan('mobileMedium')`
-            font-size: 0.7em;
+            font-size: 0.6em;
         `};
     `,
 
@@ -294,7 +294,7 @@ export const FONT_SIZES = {
         `};
 
         ${media.lessThan('mobileMedium')`
-            font-size: 0.6em;
+            font-size: 0.575em;
         `};
     `,
 

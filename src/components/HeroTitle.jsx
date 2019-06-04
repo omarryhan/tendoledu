@@ -7,8 +7,7 @@ export default styled.h1`
 
     font-weight:bold;
     text-align: left;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin: 5px 0 5px 0;
 
     color: ${props => props.color};
 

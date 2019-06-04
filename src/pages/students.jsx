@@ -22,7 +22,7 @@ import LiveOnProductHunt from '../components/LiveOnProductHunt';
 import StudentsHeroImageSvg from '../images/hero-students.svg';
 
 import WorkLogo from '../images/work-with-bg.svg';
-import PickLogo from '../images/pick.svg';
+import PickLogo from '../images/select.svg';
 import ShareLogo from '../images/share.svg';
 import RecognitionLogo from '../images/recognition.svg';
 
@@ -91,7 +91,6 @@ export default () => {
           </LeadContainer>
           <SignUpButtonDiv
             text="Sign Up Now"
-            outsideText="to change that!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
@@ -99,22 +98,21 @@ export default () => {
         <Section
           id="how-it-works"
           backgroundColor={muiTheme.palette.secondary.mainWithOpacity(0.93)}
-          style={{ borderRadius: '15px' }}
         >
           <HowItWorksContainer
             cards={[
               <HowItWorksCard
-                logo={<img src={PickLogo} width="100%" alt="Create logo" />}
+                logo={<img src={PickLogo} width="100%" alt="Pick logo" />}
                 title="Create"
                 mainText={(
                   <MainText>
                     Pick a school and enter their online work space
                   </MainText>
                 )}
-                key="create logo"
+                key="pick logo"
               />,
               <HowItWorksCard
-                logo={<img src={WorkLogo} height="100%" alt="Admit logo" />}
+                logo={<img src={WorkLogo} width="100%" alt="Work logo" />}
                 title="Admit"
                 mainText={(
                   <MainText>
@@ -122,28 +120,26 @@ export default () => {
                         startups you will also get help from your mentors!
                   </MainText>
                 )}
-                key="admit logo"
+                key="work logo"
               />,
               <HowItWorksCard
-                logo={<img src={ShareLogo} height="100%" alt="Select logo" />}
+                logo={<img src={ShareLogo} width="100%" alt="Share logo" />}
                 title="Select & assign"
                 mainText={(
                   <MainText>
                         Share​ your progress and rated projects ​with employers
                   </MainText>
                 )}
-                key="select logo"
+                key="share logo"
               />,
             ]}
-            subText="Don’t miss out on a chance to work on hundreds of startup projects, build your portfolio and impress your employers"
+            subText="Don’t miss out on a chance to work on hundreds of startup projects. Build your portfolio and impress your employers"
             color={muiTheme.palette.white.main}
           />
           <SignUpButtonDiv
             text="Sign Me Up"
-            outsideText="to be the first to use it, it’s free!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
-            outsideTextColor={muiTheme.palette.white.main}
           />
         </Section>
 
@@ -152,7 +148,7 @@ export default () => {
             title="What Will I Miss Out On If I Don’t Use Tendoledu?"
             cards={[
               <YourGainCard
-                logo={<img src={WorkLogo} alt="Recognition logo" height="100%" />}
+                logo={<img src={WorkLogo} alt="Work logo" height="100%" />}
                 title="Hands-on work experience"
                 text={(
                   <SubTitleText>
@@ -168,7 +164,7 @@ export default () => {
                 key="recognition logo"
               />,
               <YourGainCard
-                logo={<img src={RecognitionLogo} alt="Work logo" height="100%" />}
+                logo={<img src={RecognitionLogo} alt="Recognition logo" height="100%" />}
                 title="Shareable work portfolios"
                 text={(
                   <SubTitleText>
@@ -189,7 +185,6 @@ export default () => {
           />
           <SignUpButtonDiv
             text="Sign Me Up"
-            outsideText="for the free product!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />

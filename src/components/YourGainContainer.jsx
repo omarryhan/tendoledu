@@ -5,18 +5,18 @@ import styled from 'styled-components';
 import { FONT_SIZES } from '../constants';
 
 const OuterContainer = styled.div`
-
+  margin-bottom: 80px;
 `;
 
 const Title = styled.h2`
   text-align: center;
-  margin: 8vh 0 8vh 0;
+  margin: 70px 0 70px 0;
   ${FONT_SIZES.xxxxxl}
 `;
 
 const SubTextContainer = styled.div`
   text-align: center;
-  margin: 10vh 0 3vh 0;
+  margin-top: 80px;
 `;
 
 export const SubText = styled.p`
@@ -33,7 +33,7 @@ const CardsContainer = styled.div`
 `;
 
 const CardsOuterContainer = styled.div`
-
+  
 `;
 
 const YourGainContainer = ({ cards, subText, title }) => (

@@ -5,19 +5,19 @@ import styled from 'styled-components';
 import { FONT_SIZES, media } from '../constants';
 
 const OuterContainer = styled.div`
-
+  margin-bottom: 80px;
 `;
 
 const Title = styled.h2`
   text-align: center;
-  margin: 8vh 0 8vh 0;
+  margin: 70px 0 70px 0;
   ${FONT_SIZES.xxxxxl}
   color: ${props => props.color};
 `;
 
 const SubTextContainer = styled.div`
   text-align: center;
-  margin: 10vh 0 3vh 0;
+  margin-top: 80px;
 `;
 
 const SubText = styled.p`
@@ -26,7 +26,7 @@ const SubText = styled.p`
   color: ${props => props.color};
 
   ${media.greaterThan('tablet')`
-    width: 60%;
+    width: 55%;
   `};
 
   ${media.lessThan('tablet')`

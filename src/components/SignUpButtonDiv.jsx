@@ -13,8 +13,8 @@ const Container = styled.div`
   align-items: center;
 
   margin: 0 auto;
-  margin-bottom: 7vh;
-  margin-top: 7vh;
+  margin-bottom: 30px;
+  margin-top: 30px;
 `;
 
 const FlexItem = styled.div`
@@ -62,21 +62,28 @@ const SignUpButton = ({
       </Button>
     </FlexItem>
 
-    <FlexItem>
-      <OutsideText color={outsideTextColor}>
-        {outsideText}
-      </OutsideText>
-    </FlexItem>
+    {outsideText
+      ? (
+        <FlexItem>
+          <OutsideText color={outsideTextColor}>
+            {outsideText}
+          </OutsideText>
+        </FlexItem>
+        )
+      : null
+    }
+
   </Container>
 );
 
 SignUpButton.defaultProps = {
   outsideTextColor: 'inherit',
+  outsideText: '',
 };
 
 SignUpButton.propTypes = {
   text: PropTypes.string.isRequired,
-  outsideText: PropTypes.string.isRequired,
+  outsideText: PropTypes.string,
   isModalVisible: PropTypes.bool.isRequired,
   setIsModalVisible: PropTypes.func.isRequired,
   outsideTextColor: PropTypes.string,

@@ -27,7 +27,7 @@ const NavMenuContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1vh;
+  padding: 5px;
 
   ${media.lessThan('tablet')`
     display: none;

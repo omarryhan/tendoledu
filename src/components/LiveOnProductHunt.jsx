@@ -70,13 +70,13 @@ const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 80px;
 
-    padding: 0 18% 0 18%;
+    padding: 0 10% 0 10%;
 `;
 
 const Title = styled.h2`
-    ${FONT_SIZES.xl}
+    ${FONT_SIZES.xxl}
     color: white;
     margin: 0;
 

@@ -7,12 +7,12 @@ import { COLOR_PALETTE, FONT_SIZES } from '../constants';
 
 
 const Outline = styled.div`
-  width: 255px;
+  width: 270px;
 
-  height: 430px;
+  height: 500px;
 
   margin: 0 auto;
-  margin-bottom: 5vh;
+  margin-bottom: 10px;
   margin-right: 1vw;
   margin-left : 1vw;
   padding: 1%;
@@ -35,7 +35,7 @@ const LogoContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  height: 20%;
+  height: 15%;
   width: 80%;
   margin: 0 auto;
 
@@ -46,9 +46,10 @@ const TitleContainer = styled.div`
 `;
 
 const MainTextContainer = styled.div`
-  height: 30%;
+  height: 40%;
   margin: 0 auto;
-  padding-top: 3vh;
+  padding-top: 10%;
+  width: 80%;
 
   display: flex;
   align-items: flex-start;
@@ -57,7 +58,7 @@ const MainTextContainer = styled.div`
 `;
 
 const SubTextContainer = styled.div`
-  height: 10%;
+  height: 5%;
 
   display: flex;
   align-items: center;

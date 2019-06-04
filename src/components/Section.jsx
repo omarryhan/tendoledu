@@ -8,5 +8,6 @@ export default styled.section`
     position: ${props => props.position};
 
     margin: 0 auto;
-    padding: 3vh;
+    padding: 15px 2vw 15px 2vw;
+    border-radius: 3px;
 `;
