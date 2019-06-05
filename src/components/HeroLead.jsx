@@ -19,7 +19,7 @@ export const LeadContainer = styled.div`
 
 export const LeadMessage = styled.p`
   text-align: center;
-  ${FONT_SIZES.xxl}
+  ${FONT_SIZES.xl}
   margin: 0 0;
 
   color: ${props => props.color};

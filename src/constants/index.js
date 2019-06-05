@@ -16,7 +16,7 @@ export const SchoolsSignedUpAlertMessages = [
     {
         message: `A ${SCHOOLS_AVAILABLE[Math.floor(Math.random() * SCHOOLS_AVAILABLE.length)]} school just signed up 🚀🚀`,
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(20, 25)[Math.floor(Math.random() * range(20, 25).length)] * 1000,
+        waitTime: range(25, 30)[Math.floor(Math.random() * range(25, 30).length)] * 1000,
         alertTime: 14 * 1000,
     },
 ];
@@ -25,7 +25,7 @@ export const StudentsSignedUpAlertMessages = [
     {
         message: 'A student just signed up 🚀🚀',
         // According to Tendoledu: this is the average time a school signs up. Every minute.
-        waitTime: range(20, 25)[Math.floor(Math.random() * range(20, 25).length)] * 1000,
+        waitTime: range(25, 30)[Math.floor(Math.random() * range(25, 30).length)] * 1000,
         alertTime: 14 * 1000,
     },
 ];

@@ -21,7 +21,7 @@ import JustSignedUpAlerts from '../components/JustSignedUpAlerts';
 import LiveOnProductHunt from '../components/LiveOnProductHunt';
 import StudentsHeroImageSvg from '../images/hero-students.svg';
 
-import WorkLogo from '../images/work-with-bg.svg';
+import WorkLogo from '../images/work.svg';
 import PickLogo from '../images/select.svg';
 import ShareLogo from '../images/share.svg';
 import RecognitionLogo from '../images/recognition.svg';
@@ -112,7 +112,7 @@ export default () => {
                 key="pick logo"
               />,
               <HowItWorksCard
-                logo={<img src={WorkLogo} width="100%" alt="Work logo" />}
+                logo={<img src={WorkLogo} width="80%" alt="Work logo" />}
                 title="Admit"
                 mainText={(
                   <MainText>
@@ -124,7 +124,7 @@ export default () => {
               />,
               <HowItWorksCard
                 logo={<img src={ShareLogo} width="100%" alt="Share logo" />}
-                title="Select & assign"
+                title="Share"
                 mainText={(
                   <MainText>
                         Share​ your progress and rated projects ​with employers
@@ -145,7 +145,7 @@ export default () => {
 
         <Section id="gain">
           <YourGainContainer
-            title="What Will I Miss Out On If I Don’t Use Tendoledu?"
+            title="What Exactly Do I Gain?"
             cards={[
               <YourGainCard
                 logo={<img src={WorkLogo} alt="Work logo" height="100%" />}

@@ -25,7 +25,7 @@ const Outline = styled.div`
 
 const LogoContainer = styled.div`
   height: 40%;
-  padding: 2vh 0;
+  padding-top: 10%;
   width: 80%;
   margin: 0 auto;
 
