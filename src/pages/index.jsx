@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 // In case that failed, we do an app-level redirect
 export default () => {
   useEffect(() => {
-    navigate('/schools/');
+    navigate('/students/');
   }, []);
   return (
     <SEO
