@@ -103,7 +103,7 @@ export default () => {
             cards={[
               <HowItWorksCard
                 logo={<img src={PickLogo} width="100%" alt="Pick logo" />}
-                title="Create"
+                title="Pick"
                 mainText={(
                   <MainText>
                     Pick a school and enter their online work space
@@ -113,7 +113,7 @@ export default () => {
               />,
               <HowItWorksCard
                 logo={<img src={WorkLogo} width="80%" alt="Work logo" />}
-                title="Admit"
+                title="Work"
                 mainText={(
                   <MainText>
                         Work​ with other students on assigned projects from actual
@@ -179,7 +179,7 @@ export default () => {
           ]}
             subText={(
               <SubText>
-                Help impress your employers with your online work!
+                Impress your employers with your online work!
               </SubText>
             )}
           />
