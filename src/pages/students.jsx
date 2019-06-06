@@ -116,8 +116,7 @@ export default () => {
                 title="Work"
                 mainText={(
                   <MainText>
-                        Work​ with other students on assigned projects from actual
-                        startups you will also get help from your mentors!
+                        Work with other students on assigned projects from actual startups.
                   </MainText>
                 )}
                 key="work logo"
