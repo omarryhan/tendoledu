@@ -141,9 +141,9 @@ const SignUpForm = ({ currentPage, onSubmit: modalSubmitHandler }) => {
             </FieldAndFieldErrorWrapper>
 
             <FieldAndFieldErrorWrapper>
-              <StyledLabel htmlFor="expertise">Expertise</StyledLabel>
+              <StyledLabel htmlFor="expertise">Interest</StyledLabel>
               <StyledField component="select" name="expertise" required>
-                <option value="" disabled selected hidden>Select an Expertise</option>
+                <option value="" disabled selected hidden>Select an area of interest</option>
                 {expertiseOptions.map(option => (
                   <option key={option} value={option}>{option}</option>
                 ))}
