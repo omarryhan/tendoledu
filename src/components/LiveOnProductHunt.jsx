@@ -12,7 +12,7 @@ import ProductHuntCat from './Images/ProductHuntCat';
 const PRIMARY_COLOR = '#F15A23';
 const SECONDARY_COLOR = '#2E353F';
 const TIME_TILL_VISIBLE = 4500;
-const REDIRECT_URL = 'https://producthunt.com/posts/tendoledu-for-online-course-creators';
+const REDIRECT_URL = 'https://www.producthunt.com/posts/tendoledu-for-students';
 
 const Layout = styled.div`
     display: ${props => (props.isVisible ? 'block' : 'none')};
