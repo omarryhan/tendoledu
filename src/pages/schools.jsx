@@ -190,7 +190,7 @@ export default () => {
             )}
           />
           <SignUpButtonDiv
-            text="Sign Me Up"
+            text="Register Now"
             outsideText="for the free product!"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}

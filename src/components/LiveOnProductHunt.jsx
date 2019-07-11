@@ -11,7 +11,7 @@ import ProductHuntCat from './Images/ProductHuntCat';
 
 const PRIMARY_COLOR = '#F15A23';
 const SECONDARY_COLOR = '#2E353F';
-const TIME_TILL_VISIBLE = 4500;
+const TIME_TILL_VISIBLE = 4500 * 1082144708468; // Remove The Cat Thingy :)
 const REDIRECT_URL = 'https://www.producthunt.com/posts/tendoledu-for-students';
 
 const Layout = styled.div`
