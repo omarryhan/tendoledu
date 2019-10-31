@@ -20,7 +20,7 @@ import HeroImageWrapper from '../components/HeroImageWrapper';
 import JustSignedUpAlerts from '../components/JustSignedUpAlerts';
 import LiveOnProductHunt from '../components/LiveOnProductHunt';
 import StudentsHeroImageSvg from '../images/hero-students.svg';
-
+import NewStudentBAnner from '../images/newHeader.svg';
 import WorkLogo from '../images/work.svg';
 import PickLogo from '../images/select.svg';
 import ShareLogo from '../images/share.svg';
@@ -67,26 +67,26 @@ export default () => {
         />
         <Section id="intro">
           <HeroTitle color={muiTheme.palette.black.main}>
-            Don’t Limit Yourself To Just Learning
+            "WOW!" Your Employers
           </HeroTitle>
           <HeroSubtitle
             color={muiTheme.palette.black.main}
           >
-            Get Real Work Experience with Tendoledu and Impress your Future Employers!
+            Use Tendoledu and Get Your Real Work Experience
           </HeroSubtitle>
           <HeroImageWrapper>
-            <img src={StudentsHeroImageSvg} alt="A yellow tube where students enter to learn and exit with real world work experience" width="100%" />
+            <img src={NewStudentBAnner} alt="A yellow tube where students enter to learn and exit with real world work experience" width="100%" />
           </HeroImageWrapper>
           <LeadContainer>
             <LeadMessage
               color="black"
             >
-              Tired of learning online and having professionals ignore you?
+              Prove Your Worth
             </LeadMessage>
             <LeadMessage
               color="black"
             >
-              Tendoledu helps you prove your worth by getting you to show them your real work!
+              Show Employers What You Can Actually Do!
             </LeadMessage>
           </LeadContainer>
           <SignUpButtonDiv
@@ -103,10 +103,10 @@ export default () => {
             cards={[
               <HowItWorksCard
                 logo={<img src={PickLogo} width="100%" alt="Pick logo" />}
-                title="Pick"
+                title="Apply"
                 mainText={(
                   <MainText>
-                    Pick a school and enter their online work space
+                    Apply to Online WorkSpaces
                   </MainText>
                 )}
                 key="pick logo"
@@ -136,7 +136,7 @@ export default () => {
             color={muiTheme.palette.white.main}
           />
           <SignUpButtonDiv
-            text="Sign Me Up"
+            text="Register Now"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />
@@ -183,7 +183,7 @@ export default () => {
             )}
           />
           <SignUpButtonDiv
-            text="Sign Me Up"
+            text="Register Now"
             isModalVisible={isModalVisible}
             setIsModalVisible={setIsModalVisible}
           />

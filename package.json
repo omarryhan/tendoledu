@@ -35,7 +35,8 @@
     "react-google-recaptcha": "^1.0.5",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.2.0",
-    "styled-media-query": "^2.1.1"
+    "styled-media-query": "^2.1.1",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -86,12 +87,6 @@
     "test": "yarn tsc",
     "lint:fix": "eslint src/**/*.{js,jsx,tsx,ts,json} --fix",
     "lint:check": "eslint src/**/*.{js,jsx,tsx,ts,json}"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint:fix",
-      "pre-push": "yarn build"
-    }
   },
   "repository": {
     "type": "git",
